@@ -1,0 +1,395 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:Aerodyne_v2
+LIBS:Aether-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title "Aether - Pico Tracker"
+Date "1 feb 2014"
+Rev "1"
+Comp "Aerodyne Labs"
+Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L AAT1217 U?
+U 1 1 52ECD611
+P 4000 3400
+F 0 "U?" H 4000 3900 60  0000 C CNN
+F 1 "AAT1217" V 4000 3400 60  0000 C CNN
+F 2 "" H 4000 3400 60  0000 C CNN
+F 3 "" H 4000 3400 60  0000 C CNN
+	1    4000 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L L L?
+U 1 1 52ECD617
+P 4000 2600
+F 0 "L?" H 4000 2500 60  0000 C CNN
+F 1 "L" H 4000 2650 60  0000 C CNN
+F 2 "~" H 4000 2600 60  0000 C CNN
+F 3 "~" H 4000 2600 60  0000 C CNN
+	1    4000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 52ECD61F
+P 4800 3450
+F 0 "C?" H 4850 3600 60  0000 L CNN
+F 1 "4.7uF" H 4850 3300 60  0000 L CNN
+F 2 "~" H 4800 3450 60  0000 C CNN
+F 3 "~" H 4800 3450 60  0000 C CNN
+F 4 "V" H 4750 3300 60  0001 R CNN "Voltage"
+F 5 "D" H 4750 3600 60  0001 R CNN "Dielectric"
+	1    4800 3450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4500 3800
+$Comp
+L R R?
+U 1 1 52ECD628
+P 3400 3350
+F 0 "R?" H 3400 3450 50  0000 C CNN
+F 1 "R" H 3400 3350 50  0000 C CNN
+F 2 "~" H 3400 3350 60  0000 C CNN
+F 3 "~" H 3400 3350 60  0000 C CNN
+F 4 "W" H 3400 3250 50  0001 C CNN "Power"
+F 5 "%" H 3400 3150 50  0001 C CNN "Tolerance"
+	1    3400 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3400 3600 3400 3700
+Wire Wire Line
+	3400 3700 3500 3700
+$Comp
+L C C?
+U 1 1 52ECD632
+P 2900 3350
+F 0 "C?" H 2950 3500 60  0000 L CNN
+F 1 "4.7uF" H 2950 3200 60  0000 L CNN
+F 2 "~" H 2900 3350 60  0000 C CNN
+F 3 "~" H 2900 3350 60  0000 C CNN
+F 4 "V" H 2850 3200 60  0001 R CNN "Voltage"
+F 5 "D" H 2850 3500 60  0001 R CNN "Dielectric"
+	1    2900 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR?
+U 1 1 52ECD638
+P 2900 2900
+F 0 "#PWR?" H 2900 2850 20  0001 C CNN
+F 1 "+BATT" H 2900 3000 30  0000 C CNN
+F 2 "" H 2900 2900 60  0000 C CNN
+F 3 "" H 2900 2900 60  0000 C CNN
+	1    2900 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2900 2900 3100
+Wire Wire Line
+	2900 3000 3500 3000
+Connection ~ 2900 3000
+Wire Wire Line
+	3400 2600 3400 3100
+Connection ~ 3400 3000
+Wire Wire Line
+	3400 2600 3750 2600
+Wire Wire Line
+	4500 3100 4800 3100
+Wire Wire Line
+	4800 2900 4800 3200
+$Comp
+L GND #PWR?
+U 1 1 52ECD64A
+P 4800 3800
+F 0 "#PWR?" H 4800 3800 30  0001 C CNN
+F 1 "GND" H 4800 3730 30  0001 C CNN
+F 2 "" H 4800 3800 60  0000 C CNN
+F 3 "" H 4800 3800 60  0000 C CNN
+	1    4800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52ECD650
+P 2900 3700
+F 0 "#PWR?" H 2900 3700 30  0001 C CNN
+F 1 "GND" H 2900 3630 30  0001 C CNN
+F 2 "" H 2900 3700 60  0000 C CNN
+F 3 "" H 2900 3700 60  0000 C CNN
+	1    2900 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52ECD656
+P 3400 3900
+F 0 "#PWR?" H 3400 3900 30  0001 C CNN
+F 1 "GND" H 3400 3830 30  0001 C CNN
+F 2 "" H 3400 3900 60  0000 C CNN
+F 3 "" H 3400 3900 60  0000 C CNN
+	1    3400 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3900 3400 3800
+Wire Wire Line
+	3400 3800 3500 3800
+Wire Wire Line
+	2900 3600 2900 3700
+Wire Wire Line
+	4800 3700 4800 3800
+Wire Wire Line
+	4250 2600 4600 2600
+Wire Wire Line
+	4600 2600 4600 3000
+Wire Wire Line
+	4600 3000 4500 3000
+$Comp
+L +3.3V #PWR?
+U 1 1 52ECD663
+P 4800 2900
+F 0 "#PWR?" H 4800 2860 30  0001 C CNN
+F 1 "+3.3V" H 4800 3010 30  0000 C CNN
+F 2 "" H 4800 2900 60  0000 C CNN
+F 3 "" H 4800 2900 60  0000 C CNN
+	1    4800 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 4800 3100
+$Comp
+L MSP430G2553-PW20 U?
+U 1 1 52ECE44D
+P 8100 3050
+F 0 "U?" H 8100 3600 60  0000 C CNN
+F 1 "MSP430G2553-PW20" H 8100 2500 60  0000 C CNN
+F 2 "" H 8100 3050 60  0000 C CNN
+F 3 "" H 8100 3050 60  0000 C CNN
+	1    8100 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN-6 J?
+U 1 1 52ECE45C
+P 3600 4950
+F 0 "J?" H 3600 5300 60  0000 C CNN
+F 1 "CONN-6" H 3600 4600 60  0000 C CNN
+F 2 "~" H 3600 4950 60  0000 C CNN
+F 3 "~" H 3600 4950 60  0000 C CNN
+	1    3600 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52ECE46B
+P 4100 5300
+F 0 "#PWR?" H 4100 5300 30  0001 C CNN
+F 1 "GND" H 4100 5230 30  0001 C CNN
+F 2 "" H 4100 5300 60  0000 C CNN
+F 3 "" H 4100 5300 60  0000 C CNN
+	1    4100 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 52ECE47A
+P 4200 4600
+F 0 "#PWR?" H 4200 4690 20  0001 C CNN
+F 1 "+5V" H 4200 4690 30  0000 C CNN
+F 2 "" H 4200 4600 60  0000 C CNN
+F 3 "" H 4200 4600 60  0000 C CNN
+	1    4200 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4700 4100 4700
+Wire Wire Line
+	4100 4700 4100 5300
+Wire Wire Line
+	4000 4900 4200 4900
+Wire Wire Line
+	4200 4900 4200 4600
+Wire Wire Line
+	4300 5000 4000 5000
+Wire Wire Line
+	4300 5100 4000 5100
+Text Label 4300 4800 0    60   ~ 0
+SBWTDIO
+Text Label 4300 5200 0    60   ~ 0
+SBWTCK
+Wire Wire Line
+	4000 4800 4300 4800
+Wire Wire Line
+	4000 5200 4300 5200
+$Comp
+L GND #PWR?
+U 1 1 52ECE5C9
+P 9000 3600
+F 0 "#PWR?" H 9000 3600 30  0001 C CNN
+F 1 "GND" H 9000 3530 30  0001 C CNN
+F 2 "" H 9000 3600 60  0000 C CNN
+F 3 "" H 9000 3600 60  0000 C CNN
+	1    9000 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3600 9000 2600
+Wire Wire Line
+	9000 2600 8900 2600
+$Comp
+L R R?
+U 1 1 52ECE61E
+P 9100 2350
+F 0 "R?" H 9100 2450 50  0000 C CNN
+F 1 "R" H 9100 2350 50  0000 C CNN
+F 2 "~" H 9100 2350 60  0000 C CNN
+F 3 "~" H 9100 2350 60  0000 C CNN
+F 4 "W" H 9100 2250 50  0001 C CNN "Power"
+F 5 "%" H 9100 2150 50  0001 C CNN "Tolerance"
+	1    9100 2350
+	0    -1   -1   0   
+$EndComp
+Text Label 9200 2900 0    60   ~ 0
+SBWTCK
+Text Label 9200 3000 0    60   ~ 0
+SBWTDIO
+Wire Wire Line
+	8900 2900 9200 2900
+Wire Wire Line
+	8900 3000 9200 3000
+Wire Wire Line
+	9100 2600 9100 3000
+Connection ~ 9100 3000
+$Comp
+L +3.3V #PWR?
+U 1 1 52ECE681
+P 9100 2000
+F 0 "#PWR?" H 9100 1960 30  0001 C CNN
+F 1 "+3.3V" H 9100 2110 30  0000 C CNN
+F 2 "" H 9100 2000 60  0000 C CNN
+F 3 "" H 9100 2000 60  0000 C CNN
+	1    9100 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2000 9100 2100
+$Comp
+L +3.3V #PWR?
+U 1 1 52ECE6CC
+P 7200 2000
+F 0 "#PWR?" H 7200 1960 30  0001 C CNN
+F 1 "+3.3V" H 7200 2110 30  0000 C CNN
+F 2 "" H 7200 2000 60  0000 C CNN
+F 3 "" H 7200 2000 60  0000 C CNN
+	1    7200 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2000 7200 2600
+Wire Wire Line
+	7200 2600 7300 2600
+$Comp
+L C C?
+U 1 1 52ECE6FD
+P 7550 2200
+F 0 "C?" H 7600 2350 60  0000 L CNN
+F 1 "0.1uF" H 7600 2050 60  0000 L CNN
+F 2 "~" H 7550 2200 60  0000 C CNN
+F 3 "~" H 7550 2200 60  0000 C CNN
+F 4 "V" H 7500 2050 60  0001 R CNN "Voltage"
+F 5 "D" H 7500 2350 60  0001 R CNN "Dielectric"
+	1    7550 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C?
+U 1 1 52ECE724
+P 6850 2200
+F 0 "C?" H 6900 2350 60  0000 L CNN
+F 1 "10uF" H 6900 2050 60  0000 L CNN
+F 2 "~" H 6850 2200 60  0000 C CNN
+F 3 "~" H 6850 2200 60  0000 C CNN
+F 4 "V" H 6800 2050 60  0001 R CNN "Voltage"
+F 5 "D" H 6800 2350 60  0001 R CNN "Dielectric"
+	1    6850 2200
+	0    1    -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52ECE733
+P 6500 2200
+F 0 "#PWR?" H 6500 2200 30  0001 C CNN
+F 1 "GND" H 6500 2130 30  0001 C CNN
+F 2 "" H 6500 2200 60  0000 C CNN
+F 3 "" H 6500 2200 60  0000 C CNN
+	1    6500 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52ECE742
+P 7900 2200
+F 0 "#PWR?" H 7900 2200 30  0001 C CNN
+F 1 "GND" H 7900 2130 30  0001 C CNN
+F 2 "" H 7900 2200 60  0000 C CNN
+F 3 "" H 7900 2200 60  0000 C CNN
+	1    7900 2200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7900 2200 7800 2200
+Wire Wire Line
+	6500 2200 6600 2200
+Wire Wire Line
+	7100 2200 7300 2200
+Connection ~ 7200 2200
+Text Label 7100 2800 2    60   ~ 0
+RXI
+Text Notes 4600 5000 0    60   ~ 0
+Out from computer
+Text Notes 4600 5100 0    60   ~ 0
+In to computer
+Text Label 7100 2900 2    60   ~ 0
+TXO
+Text Label 4300 5000 0    60   ~ 0
+RXI
+Text Label 4300 5100 0    60   ~ 0
+TXO
+Text HLabel 6800 2800 0    60   Input ~ 0
+RX
+Text HLabel 6800 2900 0    60   Output ~ 0
+TX
+Wire Wire Line
+	6800 2800 7300 2800
+Wire Wire Line
+	6800 2900 7300 2900
+Text HLabel 6800 3000 0    60   Output ~ 0
+GPS_En
+Text HLabel 9200 3100 2    60   Output ~ 0
+MOSI
+Wire Wire Line
+	9200 3100 8900 3100
+Text HLabel 6800 3200 0    60   Output ~ 0
+SCK
+Text HLabel 6800 3100 0    60   Output ~ 0
+SS
+Wire Wire Line
+	6800 3100 7300 3100
+Wire Wire Line
+	6800 3200 7300 3200
+Text HLabel 6800 3400 0    60   Output ~ 0
+TX_En
+Text HLabel 6800 3300 0    60   Output ~ 0
+TXD
+Text HLabel 6800 2700 0    60   Output ~ 0
+Mod
+$EndSCHEMATC
