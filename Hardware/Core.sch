@@ -594,4 +594,6 @@ Wire Wire Line
 	1100 6200 1200 6200
 Text Label 7000 2700 2    60   ~ 0
 Mod
+Text HLabel 7000 3500 0    60   Output ~ 0
+GPS_Perf
 $EndSCHEMATC
