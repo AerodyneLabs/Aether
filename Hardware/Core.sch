@@ -260,7 +260,7 @@ Text HLabel 9200 3000 2    60   BiDi ~ 0
 TDIO/RST
 Text HLabel 9200 2900 2    60   Input ~ 0
 TCK/TEST
-Text HLabel 9200 2800 2    60   Input ~ 0
+Text HLabel 9200 3200 2    60   Input ~ 0
 PGM_Det
 $Comp
 L OPAMP-DUAL U?
@@ -596,4 +596,89 @@ Text Label 7000 2700 2    60   ~ 0
 Mod
 Text HLabel 7000 3500 0    60   Output ~ 0
 GPS_Perf
+$Comp
+L CRYSTAL X?
+U 1 1 52EF2F5E
+P 5150 1700
+F 0 "X?" H 5150 1850 60  0000 C CNN
+F 1 "CRYSTAL" H 5150 1550 60  0000 C CNN
+F 2 "~" H 5150 1700 60  0000 C CNN
+F 3 "~" H 5150 1700 60  0000 C CNN
+	1    5150 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 52EF2F6D
+P 5500 2050
+F 0 "C?" H 5550 2200 60  0000 L CNN
+F 1 "C" H 5550 1900 60  0000 L CNN
+F 2 "~" H 5500 2050 60  0000 C CNN
+F 3 "~" H 5500 2050 60  0000 C CNN
+F 4 "V" H 5450 1900 60  0001 R CNN "Voltage"
+F 5 "D" H 5450 2200 60  0001 R CNN "Dielectric"
+	1    5500 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 52EF2F88
+P 4800 2050
+F 0 "C?" H 4850 2200 60  0000 L CNN
+F 1 "C" H 4850 1900 60  0000 L CNN
+F 2 "~" H 4800 2050 60  0000 C CNN
+F 3 "~" H 4800 2050 60  0000 C CNN
+F 4 "V" H 4750 1900 60  0001 R CNN "Voltage"
+F 5 "D" H 4750 2200 60  0001 R CNN "Dielectric"
+	1    4800 2050
+	-1   0    0    -1  
+$EndComp
+Text Label 5600 1700 0    60   ~ 0
+XOut
+Text Label 4700 1700 2    60   ~ 0
+XIn
+Wire Wire Line
+	4700 1700 4900 1700
+Wire Wire Line
+	5400 1700 5600 1700
+Wire Wire Line
+	5500 1800 5500 1700
+Connection ~ 5500 1700
+Wire Wire Line
+	4800 1800 4800 1700
+Connection ~ 4800 1700
+$Comp
+L GND #PWR?
+U 1 1 52EF30D2
+P 5500 2400
+F 0 "#PWR?" H 5500 2400 30  0001 C CNN
+F 1 "GND" H 5500 2330 30  0001 C CNN
+F 2 "" H 5500 2400 60  0000 C CNN
+F 3 "" H 5500 2400 60  0000 C CNN
+	1    5500 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52EF30E1
+P 4800 2400
+F 0 "#PWR?" H 4800 2400 30  0001 C CNN
+F 1 "GND" H 4800 2330 30  0001 C CNN
+F 2 "" H 4800 2400 60  0000 C CNN
+F 3 "" H 4800 2400 60  0000 C CNN
+	1    4800 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2400 4800 2300
+Wire Wire Line
+	5500 2300 5500 2400
+Text Label 9200 2700 0    60   ~ 0
+XIn
+Text Label 9200 2800 0    60   ~ 0
+XOut
+Wire Wire Line
+	8900 2700 9200 2700
+Wire Wire Line
+	8900 2800 9200 2800
 $EndSCHEMATC
