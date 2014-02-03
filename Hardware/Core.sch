@@ -8,7 +8,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
 Title "Aether - Pico Tracker"
-Date "2 feb 2014"
+Date "3 feb 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -32,7 +32,7 @@ L L L?
 U 1 1 52ECD617
 P 2600 1500
 F 0 "L?" H 2600 1400 60  0000 C CNN
-F 1 "L" H 2600 1550 60  0000 C CNN
+F 1 "4.7uH" H 2600 1550 60  0000 C CNN
 F 2 "~" H 2600 1500 60  0000 C CNN
 F 3 "~" H 2600 1500 60  0000 C CNN
 	1    2600 1500
