@@ -196,17 +196,15 @@ Text HLabel 7000 2800 0    60   Input ~ 0
 RX
 Text HLabel 7000 2900 0    60   Output ~ 0
 TX
-Text HLabel 6500 3600 0    60   Output ~ 0
+Text HLabel 7000 3400 0    60   Output ~ 0
 GPS_En
-Text HLabel 9000 3100 2    60   Output ~ 0
-DATA
-Text HLabel 7000 3200 0    60   Output ~ 0
+Text HLabel 7000 3800 0    60   Output ~ 0
 SCK
-Text HLabel 7000 3100 0    60   Output ~ 0
+Text HLabel 9000 3900 2    60   Output ~ 0
 SS
-Text HLabel 6500 3400 0    60   Output ~ 0
+Text HLabel 9000 3800 2    60   Output ~ 0
 TX_En
-Text HLabel 6500 3300 0    60   Output ~ 0
+Text HLabel 7000 3900 0    60   Output ~ 0
 TXD
 Text HLabel 6400 5800 2    60   Output ~ 0
 Mod
@@ -214,7 +212,7 @@ Text HLabel 9000 3000 2    60   BiDi ~ 0
 TDIO/RST
 Text HLabel 9000 2900 2    60   Input ~ 0
 TCK/TEST
-Text HLabel 9600 3300 2    60   Input ~ 0
+Text HLabel 9000 3300 2    60   Input ~ 0
 PGM_Det
 $Comp
 L OPAMP-DUAL U4
@@ -350,10 +348,6 @@ Wire Wire Line
 Wire Wire Line
 	9000 3100 8700 3100
 Wire Wire Line
-	7000 3100 7300 3100
-Wire Wire Line
-	7000 3200 7300 3200
-Wire Wire Line
 	2500 6800 2500 7000
 Wire Wire Line
 	1700 6200 1900 6200
@@ -419,9 +413,9 @@ Text Label 1100 6200 2    60   ~ 0
 AF
 Wire Wire Line
 	1100 6200 1200 6200
-Text Label 6500 3800 2    60   ~ 0
+Text Label 6500 3600 2    60   ~ 0
 AF
-Text HLabel 6500 3500 0    60   Output ~ 0
+Text HLabel 7000 3300 0    60   Output ~ 0
 GPS_Perf
 $Comp
 L CRYSTAL X2
@@ -544,7 +538,7 @@ F 8 "X5R" H 3550 2500 60  0001 R CNN "Dielectric"
 	1    3600 2350
 	1    0    0    -1  
 $EndComp
-Text HLabel 9000 3200 2    60   Input ~ 0
+Text HLabel 9000 3200 2    60   Output ~ 0
 SCL
 Wire Wire Line
 	9000 3200 8700 3200
@@ -580,7 +574,7 @@ F 6 "296-28431-1-ND" H 8000 3250 60  0001 C CNN "Distributor Part No"
 	1    8000 3250
 	1    0    0    -1  
 $EndComp
-Text HLabel 9600 3400 2    60   Output ~ 0
+Text HLabel 7000 3200 0    60   Output ~ 0
 Stat
 $Comp
 L +BATT #PWR061
@@ -755,6 +749,32 @@ F 8 "X7R" H 5050 6500 60  0000 R CNN "Dielectric"
 	1    5100 6350
 	1    0    0    -1  
 $EndComp
-Text HLabel 6500 3900 0    60   Output ~ 0
+Text HLabel 7000 3500 0    60   Output ~ 0
 CLK_En
+Wire Wire Line
+	9000 3300 8700 3300
+Wire Wire Line
+	7000 3300 7300 3300
+Wire Wire Line
+	7000 3400 7300 3400
+Wire Wire Line
+	8700 3800 9000 3800
+Wire Wire Line
+	8700 3900 9000 3900
+Wire Wire Line
+	7000 3800 7300 3800
+Wire Wire Line
+	7000 3900 7300 3900
+Text HLabel 9000 3100 2    60   BiDi ~ 0
+SDA
+Text HLabel 7000 3700 0    60   Output ~ 0
+MOSI
+Wire Wire Line
+	6500 3600 7300 3600
+Wire Wire Line
+	7000 3700 7300 3700
+Wire Wire Line
+	7000 3200 7300 3200
+Wire Wire Line
+	7000 3500 7300 3500
 $EndSCHEMATC
