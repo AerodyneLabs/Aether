@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/3/2014 5:14:27 PM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/5/2014 6:58:03 AM
 
 BeginCmp
 TimeStamp = /52E9D9F3;
@@ -285,6 +285,48 @@ TimeStamp = /52EDCAB3;
 Reference = J1;
 ValeurCmp = PRGM;
 IdModule  = HDRV6W38P254_6X1-LOCK;
+EndCmp
+
+BeginCmp
+TimeStamp = /52F26485;
+Reference = J2;
+ValeurCmp = CONN-2;
+IdModule  = HDRV2W38P254_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52F263D4;
+Reference = J3;
+ValeurCmp = CONN-2;
+IdModule  = HDRV2W38P254_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52F23CB1;
+Reference = J4;
+ValeurCmp = CONN-2;
+IdModule  = HDRV2W38P254_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52F23BAF;
+Reference = J5;
+ValeurCmp = CONN-2;
+IdModule  = HDRV2W38P254_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52F26D83;
+Reference = J6;
+ValeurCmp = CONN-3;
+IdModule  = HDRV3W38P254_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52F26D74;
+Reference = J7;
+ValeurCmp = CONN-3;
+IdModule  = HDRV3W38P254_3X1;
 EndCmp
 
 BeginCmp
