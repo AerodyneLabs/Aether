@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/5/2014 6:58:03 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/5/2014 8:14:27 PM
 
 BeginCmp
 TimeStamp = /52E9D9F3;
@@ -11,7 +11,7 @@ BeginCmp
 TimeStamp = /52EDBE30;
 Reference = B1;
 ValeurCmp = AA;
-IdModule  = BATT-AA-BK92;
+IdModule  = BATT-AA-BK53;
 EndCmp
 
 BeginCmp
@@ -484,6 +484,13 @@ IdModule  = RESC1005-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /52ECD56F/52F2E641;
+Reference = R14;
+ValeurCmp = 10k;
+IdModule  = RESC1005-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /52E9B1A2/52E9B1BE;
 Reference = U1;
 ValeurCmp = ANTENOVA-UB;
@@ -528,8 +535,8 @@ EndCmp
 BeginCmp
 TimeStamp = /52ECD56F/52EF2F5E;
 Reference = X2;
-ValeurCmp = CRYSTAL;
-IdModule  = XTAL-2SMD-60x35;
+ValeurCmp = 8MHz;
+IdModule  = XTAL-2SMD-50X32;
 EndCmp
 
 EndListe

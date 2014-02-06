@@ -8,7 +8,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
 Title "Aether - Pico Tracker"
-Date "5 feb 2014"
+Date "6 feb 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -212,7 +212,7 @@ Text HLabel 9000 3000 2    60   BiDi ~ 0
 TDIO/RST
 Text HLabel 9000 2900 2    60   Input ~ 0
 TCK/TEST
-Text HLabel 9000 3300 2    60   Input ~ 0
+Text HLabel 9500 3300 2    60   Input ~ 0
 PGM_Det
 $Comp
 L OPAMP-DUAL U4
@@ -422,9 +422,10 @@ L CRYSTAL X2
 U 1 1 52EF2F5E
 P 5150 1700
 F 0 "X2" H 5150 1850 60  0000 C CNN
-F 1 "CRYSTAL" H 5150 1550 60  0000 C CNN
+F 1 "8MHz" H 5150 1550 60  0000 C CNN
 F 2 "~" H 5150 1700 60  0000 C CNN
 F 3 "~" H 5150 1700 60  0000 C CNN
+F 4 "535-10630-1-ND" H 5150 1700 60  0001 C CNN "Distributor Part No"
 	1    5150 1700
 	1    0    0    -1  
 $EndComp
@@ -777,4 +778,17 @@ Wire Wire Line
 	7000 3200 7300 3200
 Wire Wire Line
 	7000 3500 7300 3500
+$Comp
+L R R14
+U 1 1 52F2E641
+P 9250 3300
+F 0 "R14" H 9250 3400 50  0000 C CNN
+F 1 "10k" H 9250 3300 50  0000 C CNN
+F 2 "~" H 9250 3300 60  0000 C CNN
+F 3 "~" H 9250 3300 60  0000 C CNN
+F 4 "W" H 9250 3200 50  0001 C CNN "Power"
+F 5 "%" H 9250 3100 50  0001 C CNN "Tolerance"
+	1    9250 3300
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
