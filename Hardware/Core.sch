@@ -168,9 +168,9 @@ Text HLabel 7000 3300 0    60   Output ~ 0
 GPS_En
 Text HLabel 7000 3800 0    60   Output ~ 0
 SCK
-Text HLabel 9000 3900 2    60   Output ~ 0
-SS
 Text HLabel 9000 3800 2    60   Output ~ 0
+SS
+Text HLabel 9000 3900 2    60   Output ~ 0
 TX_En
 Text HLabel 7000 3900 0    60   Output ~ 0
 TXD
@@ -381,7 +381,7 @@ Text Label 1100 6200 2    60   ~ 0
 AF
 Wire Wire Line
 	1100 6200 1200 6200
-Text Label 6500 3600 2    60   ~ 0
+Text Label 6600 3500 2    60   ~ 0
 AF
 Text HLabel 7000 3200 0    60   Output ~ 0
 GPS_Perf
@@ -550,7 +550,7 @@ Text Notes 5300 6900 0    60   ~ 0
 Butterworth LPF
 Wire Wire Line
 	5100 5300 6300 5300
-Text HLabel 7000 3500 0    60   Output ~ 0
+Text HLabel 7000 3600 0    60   Output ~ 0
 CLK_En
 Wire Wire Line
 	9000 3300 8700 3300
@@ -571,13 +571,13 @@ SDA
 Text HLabel 7000 3700 0    60   Output ~ 0
 MOSI
 Wire Wire Line
-	6500 3600 7300 3600
+	7000 3600 7300 3600
 Wire Wire Line
 	7000 3700 7300 3700
 Wire Wire Line
 	7000 3200 7300 3200
 Wire Wire Line
-	7000 3500 7300 3500
+	6600 3500 7300 3500
 $Comp
 L C C24
 U 1 1 52F5954D
