@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/7/2014 8:18:28 PM
+Cmp-Mod V01 Created by PcbNew date = 2/8/2014 12:45:48 PM
 
 BeginCmp
 TimeStamp = /52E9D9F3;
@@ -11,7 +11,7 @@ BeginCmp
 TimeStamp = /52EDBE30;
 Reference = B1;
 ValeurCmp = AA;
-IdModule  = BATT-AA-BK53;
+IdModule  = BATT-AA-BK92;
 EndCmp
 
 BeginCmp
