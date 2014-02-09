@@ -8,7 +8,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
 Title "Aether - Pico Tracker"
-Date "8 feb 2014"
+Date "9 feb 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -16,16 +16,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Sheet
-S 3200 3300 1000 1000
-U 52E9B1A2
-F0 "GPS" 50
-F1 "GPS.sch" 50
-F2 "TX" O R 4200 3400 60 
-F3 "RX" I R 4200 3500 60 
-F4 "GPS_En" I R 4200 3700 60 
-F5 "GPS_Perf" I R 4200 3800 60 
-$EndSheet
 $Sheet
 S 7200 3300 1000 1000
 U 52E9B8BD
@@ -66,11 +56,7 @@ Wire Wire Line
 	8900 3900 9000 3900
 Connection ~ 8900 3800
 Wire Wire Line
-	4200 3400 5200 3400
-Wire Wire Line
-	4200 3500 5200 3500
-Wire Wire Line
-	4200 3700 5200 3700
+	4200 4000 5200 4000
 $Comp
 L BATTERY B1
 U 1 1 52EDBE30
@@ -171,11 +157,11 @@ F 3 "" H 4000 6000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4400 5700 4400 3400
-Connection ~ 4400 3400
+	4400 5700 4400 3700
+Connection ~ 4400 3700
 Wire Wire Line
-	4500 5800 4500 3500
-Connection ~ 4500 3500
+	4500 5800 4500 3800
+Connection ~ 4500 3800
 Wire Wire Line
 	4800 5500 4800 4500
 Wire Wire Line
@@ -183,7 +169,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 5900 5000 4700
 Wire Wire Line
-	5200 3800 4200 3800
+	5200 4100 4200 4100
 $Comp
 L LED D2
 U 1 1 52EF8E5A
@@ -286,13 +272,13 @@ S 5200 3300 1000 1500
 U 52ECD56F
 F0 "Core" 50
 F1 "Core.sch" 50
-F2 "RX" I L 5200 3400 60 
-F3 "TX" O L 5200 3500 60 
-F4 "GPS_En" O L 5200 3700 60 
+F2 "RX" I L 5200 3700 60 
+F3 "TX" O L 5200 3800 60 
+F4 "GPS_En" O L 5200 4000 60 
 F5 "TDIO/RST" B L 5200 4500 60 
 F6 "TCK/TEST" I L 5200 4700 60 
 F7 "PGM_Det" I L 5200 4600 60 
-F8 "GPS_Perf" O L 5200 3800 60 
+F8 "GPS_Perf" O L 5200 4100 60 
 F9 "Stat" O R 6200 4700 60 
 F10 "SDA" B R 6200 3500 60 
 F11 "SCL" O R 6200 3400 60 
@@ -303,6 +289,8 @@ F15 "TXD" O R 6200 4000 60
 F16 "Mod" O R 6200 4200 60 
 F17 "CLK_En" O R 6200 4100 60 
 F18 "MOSI" O R 6200 3800 60 
+F19 "E1" B L 5200 3400 60 
+F20 "E2" B L 5200 3500 60 
 $EndSheet
 $Comp
 L CONN-2 J5
@@ -395,7 +383,7 @@ F 1 "CONN-2" H 3900 2000 60  0000 C CNN
 F 2 "~" H 3900 2150 60  0000 C CNN
 F 3 "~" H 3900 2150 60  0000 C CNN
 	1    3900 2150
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L CONN-2 J2
@@ -528,4 +516,30 @@ F 8 "5%" H 7300 4850 50  0001 C CNN "Tolerance"
 	1    7300 5050
 	0    -1   -1   0   
 $EndComp
+$Sheet
+S 3200 3300 1000 1000
+U 52E9B1A2
+F0 "GPS" 50
+F1 "GPS.sch" 50
+F2 "TX" O R 4200 3700 60 
+F3 "RX" I R 4200 3800 60 
+F4 "GPS_En" I R 4200 4000 60 
+F5 "GPS_Perf" I R 4200 4100 60 
+$EndSheet
+Wire Wire Line
+	4200 3700 5200 3700
+Wire Wire Line
+	4200 3800 5200 3800
+Wire Wire Line
+	5200 3400 4800 3400
+Wire Wire Line
+	4800 3400 4800 2100
+Wire Wire Line
+	4800 2100 4200 2100
+Wire Wire Line
+	4200 2200 4700 2200
+Wire Wire Line
+	4700 2200 4700 3500
+Wire Wire Line
+	4700 3500 5200 3500
 $EndSCHEMATC
