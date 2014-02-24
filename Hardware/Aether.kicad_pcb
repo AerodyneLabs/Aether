@@ -3461,8 +3461,8 @@
     )
   )
 
-  (module FIDUCIAL-1MM   locked (layer F.Cu) (tedit 530AD9BE) (tstamp 530AF84D)
-    (at 156.5 96.75)
+  (module FIDUCIAL-1MM (layer F.Cu) (tedit 530AD9BE) (tstamp 530AF84D)
+    (at 134.25 96.75)
     (fp_text reference FIDUCIAL-1MM-3 (at 0 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
