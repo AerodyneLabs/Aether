@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = 2/8/2014 12:45:48 PM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 2/23/2014 10:21:47 PM
 
 BeginCmp
 TimeStamp = /52E9D9F3;
@@ -190,14 +190,14 @@ IdModule  = CAPC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52F02988;
+TimeStamp = /52ECD56F/52F5A09E;
 Reference = C26;
 ValeurCmp = 0.1uF;
 IdModule  = CAPC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52F02B45;
+TimeStamp = /52ECD56F/52F5A101;
 Reference = C27;
 ValeurCmp = 1000pF;
 IdModule  = CAPC1005-N;
@@ -218,35 +218,35 @@ IdModule  = CAPC2012-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52F02B50;
+TimeStamp = /52ECD56F/52F5A150;
 Reference = C30;
 ValeurCmp = 1000pF;
 IdModule  = CAPC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52EF2F88;
+TimeStamp = /52ECD56F/52F59BE8;
 Reference = C31;
-ValeurCmp = C;
+ValeurCmp = 22pF;
 IdModule  = CAPC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52F02B5B;
+TimeStamp = /52ECD56F/52F5A17D;
 Reference = C32;
 ValeurCmp = 1000pF;
 IdModule  = CAPC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52EF2F6D;
+TimeStamp = /52ECD56F/52F59C29;
 Reference = C33;
-ValeurCmp = C;
+ValeurCmp = 22pF;
 IdModule  = CAPC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52ECE6FD;
+TimeStamp = /52ECD56F/52F59E18;
 Reference = C34;
 ValeurCmp = 0.1uF;
 IdModule  = CAPC1005-N;
@@ -262,14 +262,14 @@ EndCmp
 BeginCmp
 TimeStamp = /52EF8F5F;
 Reference = D1;
-ValeurCmp = LED;
+ValeurCmp = STAT;
 IdModule  = LEDC1608-N;
 EndCmp
 
 BeginCmp
 TimeStamp = /52EF8E5A;
 Reference = D2;
-ValeurCmp = LED;
+ValeurCmp = PWR;
 IdModule  = LEDC1608-N;
 EndCmp
 
@@ -402,19 +402,19 @@ EndCmp
 BeginCmp
 TimeStamp = /52EF8FE3;
 Reference = R1;
-ValeurCmp = R;
-IdModule  = RESC1608-N;
+ValeurCmp = 120;
+IdModule  = RESC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52EF8E3F;
+TimeStamp = /52F5ABE2;
 Reference = R2;
-ValeurCmp = R;
-IdModule  = RESC1608-N;
+ValeurCmp = 120;
+IdModule  = RESC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52E9B1A2/52EF67CC;
+TimeStamp = /52E9B1A2/52F5BCF8;
 Reference = R3;
 ValeurCmp = 10k;
 IdModule  = RESC1005-N;
@@ -463,35 +463,35 @@ IdModule  = RESC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52F02A80;
+TimeStamp = /52ECD56F/52F5A1CC;
 Reference = R10;
 ValeurCmp = 16k;
 IdModule  = RESC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52F02A8B;
+TimeStamp = /52ECD56F/52F5A1F9;
 Reference = R11;
 ValeurCmp = 16k;
 IdModule  = RESC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52F02A96;
+TimeStamp = /52ECD56F/52F5A204;
 Reference = R12;
 ValeurCmp = 16k;
 IdModule  = RESC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52EF83E3;
+TimeStamp = /52ECD56F/52F59C6E;
 Reference = R13;
 ValeurCmp = 10k;
 IdModule  = RESC1005-N;
 EndCmp
 
 BeginCmp
-TimeStamp = /52ECD56F/52F2E641;
+TimeStamp = /52ECD56F/52F59E59;
 Reference = R14;
 ValeurCmp = 10k;
 IdModule  = RESC1005-N;

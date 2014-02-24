@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 2 4
 Title "Aether - Pico Tracker"
-Date "9 feb 2014"
+Date "24 feb 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -378,10 +378,13 @@ U 1 1 52ECC2E9
 P 8250 5700
 F 0 "C20" H 8300 5850 60  0000 L CNN
 F 1 "470pF" H 8300 5550 60  0000 L CNN
-F 2 "~" H 8250 5700 60  0000 C CNN
+F 2 "CAPC1005-N" H 8250 5700 60  0001 C CNN
 F 3 "~" H 8250 5700 60  0000 C CNN
-F 4 "V" H 8200 5550 60  0001 R CNN "Voltage"
-F 5 "D" H 8200 5850 60  0001 R CNN "Dielectric"
+F 4 "Yageo" H 8250 5700 60  0001 C CNN "MFR Name"
+F 5 "CC0402KRX7R9BB471" H 8250 5700 60  0001 C CNN "MFR Part No"
+F 6 "311-1028-1-ND" H 8250 5700 60  0001 C CNN "Distributor Part No"
+F 7 "50V" H 8200 5550 60  0001 R CNN "Voltage"
+F 8 "X7R" H 8200 5850 60  0001 R CNN "Dielectric"
 	1    8250 5700
 	0    -1   -1   0   
 $EndComp

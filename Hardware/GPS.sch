@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 4 4
 Title "Aether - Pico Tracker"
-Date "9 feb 2014"
+Date "24 feb 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -353,22 +353,6 @@ F 6 "IRLML6401PBFCT-ND" H 4300 3200 60  0001 C CNN "Distributor Part No"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R4
-U 1 1 52EF2A4F
-P 3850 3500
-F 0 "R4" H 3850 3600 50  0000 C CNN
-F 1 "100" H 3850 3500 50  0000 C CNN
-F 2 "RESC1005-N" H 3850 3500 60  0001 C CNN
-F 3 "~" H 3850 3500 60  0000 C CNN
-F 4 "Yageo" H 3850 3500 60  0001 C CNN "MFR Name"
-F 5 "RC0402JR-07100RL" H 3850 3500 60  0001 C CNN "MFR Part No"
-F 6 "311-100JRCT-ND" H 3850 3500 60  0001 C CNN "Distributor Part No"
-F 7 "1/16W" H 3850 3400 50  0001 C CNN "Power"
-F 8 "5%" H 3850 3300 50  0001 C CNN "Tolerance"
-	1    3850 3500
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR065
 U 1 1 52EF2A9A
 P 4900 3800
@@ -522,5 +506,21 @@ F 7 "1/16W" H 3500 3050 50  0001 C CNN "Power"
 F 8 "5%" H 3500 2950 50  0001 C CNN "Tolerance"
 	1    3500 3150
 	0    -1   -1   0   
+$EndComp
+$Comp
+L R R4
+U 1 1 530ACEAC
+P 3850 3500
+F 0 "R4" H 3850 3600 50  0000 C CNN
+F 1 "120" H 3850 3500 50  0000 C CNN
+F 2 "RESC1005_N" H 3850 3500 60  0001 C CNN
+F 3 "~" H 3850 3500 60  0000 C CNN
+F 4 "Samsung" H 3850 3500 60  0001 C CNN "MFR Name"
+F 5 "RC1005J121CS" H 3850 3500 60  0001 C CNN "MFR Part No"
+F 6 "1276-4354-1-ND" H 3850 3500 60  0001 C CNN "Distributor Part No"
+F 7 "1/16W" H 3850 3400 50  0001 C CNN "Power"
+F 8 "5%" H 3850 3300 50  0001 C CNN "Tolerance"
+	1    3850 3500
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
