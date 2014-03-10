@@ -6,8 +6,10 @@
 #define SMPLRATE 65536
 #define pwmDepth SYSCLK/SMPLRATE
 #define lutDepth 64
+#define lowDelta 1200
+#define highDelta 2200
 uint16_t phaseAccumulator = 0;
-uint16_t phaseDelta = 1200;
+uint16_t phaseDelta = lowDelta;
 const uint16_t baudRate = 65536 / 1200;
 uint16_t baudCount = 0;
 const uint8_t lut[lutDepth] = {
@@ -33,25 +35,43 @@ const uint8_t lut[lutDepth] = {
  * main.c
  */
 int main(void) {
-    WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
+	WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 
-    // Set clock to 7.8 MHz
-    BCSCTL1 = CALBC1_16MHZ;
-    DCOCTL = CALDCO_16MHZ;
+	// Set clock to 16 MHz
+	BCSCTL1 = CALBC1_16MHZ;DCOCTL = CALDCO_16MHZ;
 
-    P1DIR |= BIT6;
-    P1SEL |= BIT6;
+	// Initialize ports
+	P1DIR = 0xff;	P1OUT = 0x00;
+	P2DIR = 0xff;	P2OUT = 0x00;
+	P3DIR = 0xff;	P3OUT = 0x00;
 
-    // Initialize timer
-    CCTL0 = CCIE;				// CCR0 interrupt enabled
-    CCTL1 = CCIE;				// CCR1 interrupt enabled
-    CCR0 = pwmDepth;					// Set PWM period
-    CCR1 = lut[0];		// Set initial duty cycle
-    TACTL = TASSEL_2 | MC_1 | TACLR;	// SMCLK, count up, enable int, clear TA1R
-    TACCTL1 = OUTMOD_7;
+	/* Configure UART */
+	UCA0CTL1 = UCSWRST;	// Put USCI in reset
+	// Setup registers
+	UCA0CTL0 = UCMODE_0;
+	UCA0CTL1 = UCSSEL_2 + UCSWRST;
+	UCA0BR0 = 104;
+	UCA0BR1 = 0;
+	UCA0MCTL = UCBRF3 + UCOS16;
+	// Setup pins
+	P1SEL |= BIT1 + BIT2;
+	P1SEL2 |= BIT1 + BIT2;
+	// Release reset
+	UCA0CTL1 &= ~UCSWRST;
 
-    _BIS_SR(LPM0_bits | GIE);	// Enter LPM0 w/ interrupt
-    //_BIS_SR(GIE);
+	/* Configure DDS */
+	// Setup pin
+	P1DIR |= BIT6;		// Output
+	P1SEL |= BIT6;		// PWM mode
+	// Initialize timer
+	CCTL0 = CCIE;		// CCR0 interrupt enabled
+	CCTL1 = CCIE;		// CCR1 interrupt enabled
+	CCR0 = pwmDepth;	// Set PWM period
+	CCR1 = lut[0];		// Set initial duty cycle
+	TACTL = TASSEL_2 | MC_1 | TACLR;	// SMCLK, count up, enable int, clear TA1R
+	TACCTL1 = OUTMOD_7;	// Reset/Set mode
+
+	_BIS_SR(LPM0_bits | GIE);	// Enter LPM0 w/ interrupt
 }
 
 #pragma vector=TIMER0_A0_VECTOR
@@ -60,10 +80,10 @@ __interrupt void TIMER0_A0_ISR(void) {
 	CCR1 = lut[phaseAccumulator >> 10];
 	baudCount++;
 	if(baudCount >= baudRate) {
-		if(phaseDelta == 1200) {
-			phaseDelta = 2200;
+		if(phaseDelta == lowDelta) {
+			phaseDelta = highDelta;
 		} else {
-			phaseDelta = 1200;
+			phaseDelta = lowDelta;
 		}
 		baudCount = 0;
 	}
