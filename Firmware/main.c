@@ -1,6 +1,8 @@
 #include <msp430.h> 
 #include <stdint.h>
 
+#include "ringBuf.h"
+
 #define SYSCLK 16000000
 
 #define SMPLRATE 65536
@@ -31,6 +33,14 @@ const uint8_t lut[lutDepth] = {
 		80, 90, 101, 111
 };
 
+#define configAddr 0x1080
+#define configLength 64
+
+ringBuf txBuf;
+ringBuf rxBuf;
+
+void putC(const uint8_t c);
+
 /*
  * main.c
  */
@@ -38,12 +48,18 @@ int main(void) {
 	WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 
 	// Set clock to 16 MHz
-	BCSCTL1 = CALBC1_16MHZ;DCOCTL = CALDCO_16MHZ;
+	BCSCTL1 = CALBC1_16MHZ;
+	DCOCTL = CALDCO_16MHZ;
 
 	// Initialize ports
 	P1DIR = 0xff;	P1OUT = 0x00;
 	P2DIR = 0xff;	P2OUT = 0x00;
 	P3DIR = 0xff;	P3OUT = 0x00;
+
+	/* Configure Flash Memory Controller */
+	FCTL2 = FWKEY + FSSEL_1 + (FN0 + FN2 + FN3 + FN5);
+	FCTL1 = FWKEY;
+	FCTL3 = FWKEY;
 
 	/* Configure UART */
 	UCA0CTL1 = UCSWRST;	// Put USCI in reset
@@ -58,8 +74,10 @@ int main(void) {
 	P1SEL2 |= BIT1 + BIT2;
 	// Release reset
 	UCA0CTL1 &= ~UCSWRST;
-	// Enable interrupts
+	// Enable interrupt
 	IE2 |= UCA0RXIE;
+	// Initialize buffers
+	ringBuf_init(&txBuf);
 
 	/* Configure DDS */
 	// Setup pin
@@ -73,9 +91,20 @@ int main(void) {
 	TACTL = TASSEL_2 | MC_1 | TACLR;	// SMCLK, count up, enable int, clear TA1R
 	TACCTL1 = OUTMOD_7;	// Reset/Set mode
 
+	putC('H');
+	putC('e');
+	putC('l');
+	putC('l');
+	putC('o');
+	putC('!');
+	putC('\n');
+
 	_BIS_SR(LPM0_bits | GIE);	// Enter LPM0 w/ interrupt
 }
 
+/**
+ * Timer A0 Interrupt Service Routine - DDS
+ */
 #pragma vector=TIMER0_A0_VECTOR
 __interrupt void TIMER0_A0_ISR(void) {
 	phaseAccumulator += phaseDelta;
@@ -91,14 +120,43 @@ __interrupt void TIMER0_A0_ISR(void) {
 	}
 }
 
+/**
+ * USCI Receive Interrupt Service Routine
+ */
 #pragma vector=USCIAB0RX_VECTOR
 __interrupt void USCIAB0RX_ISR(void) {
+	uint8_t c;
+
+	// USCI A0 Interrupt
 	if(IFG2 & UCA0RXIFG) {
-		UCA0TXBUF = UCA0RXBUF+1;
+		c = UCA0RXBUF;										// Read received byte
+		if(rxBuf.count < RINGBUF_SIZE) {					// Ensure RX buffer has space
+			rxBuf.buf[rxBuf.head++] = c;					// Add RX to head and increment
+			if(rxBuf.head >= RINGBUF_SIZE) rxBuf.head = 0;	// Wrap buffer head
+			rxBuf.count++;									// Update buffer count
+		}
+
 	}
+
 }
 
+/**
+ * USCI Transmit Interrupt Service Routine
+ */
 #pragma vector=USCIAB0TX_VECTOR
 __interrupt void USCIAB0TX_ISR(void) {
 
+	// USCI A0 Interrupt
+	if(IFG2 & UCA0TXIFG) {
+		UCA0TXBUF = txBuf.buf[txBuf.tail++];				// TX from tail and increment
+		if(txBuf.tail >= RINGBUF_SIZE) txBuf.tail = 0;		// Wrap buffer tail
+		txBuf.count--;										// Update buffer count
+		if(txBuf.count == 0) IE2 &= ~UCA0TXIE;				// Disable interrupt if buffer empty
+	}
+
+}
+
+void putC(const uint8_t c) {
+	ringBuf_put(&txBuf, c);
+	IE2 |= UCA0TXIE;
 }
