@@ -58,6 +58,8 @@ int main(void) {
 	P1SEL2 |= BIT1 + BIT2;
 	// Release reset
 	UCA0CTL1 &= ~UCSWRST;
+	// Enable interrupts
+	IE2 |= UCA0RXIE;
 
 	/* Configure DDS */
 	// Setup pin
@@ -87,4 +89,16 @@ __interrupt void TIMER0_A0_ISR(void) {
 		}
 		baudCount = 0;
 	}
+}
+
+#pragma vector=USCIAB0RX_VECTOR
+__interrupt void USCIAB0RX_ISR(void) {
+	if(IFG2 & UCA0RXIFG) {
+		UCA0TXBUF = UCA0RXBUF+1;
+	}
+}
+
+#pragma vector=USCIAB0TX_VECTOR
+__interrupt void USCIAB0TX_ISR(void) {
+
 }
