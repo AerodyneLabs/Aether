@@ -35,7 +35,7 @@ void ringBuf_put(ringBuf *this, const uint8_t c) {
 	}
 }
 
-void ringBuf_flush(ringBuf *this, const uint8_t clearBuffer) {
+void ringBuf_flush(ringBuf *this) {
 	this->count = 0;
 	this->head = 0;
 	this->tail = 0;

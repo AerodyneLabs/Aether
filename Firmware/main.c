@@ -41,6 +41,9 @@ ringBuf rxBuf;
 
 void putC(const uint8_t c);
 
+void getConfig(void);
+void setConfig(void);
+
 /*
  * main.c
  */
@@ -99,7 +102,10 @@ int main(void) {
 	putC('!');
 	putC('\n');
 
-	_BIS_SR(LPM0_bits | GIE);	// Enter LPM0 w/ interrupt
+	//_BIS_SR(LPM0_bits | GIE);	// Enter LPM0 w/ interrupt
+	_BIS_SR(GIE);
+
+	getConfig();
 }
 
 /**
@@ -159,4 +165,29 @@ __interrupt void USCIAB0TX_ISR(void) {
 void putC(const uint8_t c) {
 	ringBuf_put(&txBuf, c);
 	IE2 |= UCA0TXIE;
+}
+
+void getConfig(void) {
+	uint8_t *mem = (uint8_t *) configAddr;
+	uint8_t count = 0;
+	uint8_t cycle = 0;
+
+	// Transmit configuration data
+	for(cycle = 8; cycle > 0; cycle--) {		// 8 cycles
+		for(count = 8; count > 0; count--) {	// 8 bytes
+			putC(*mem++);
+		}
+		putC('\n');								// Signal end of cycle
+		while(txBuf.count > 0);					// Wait for transmission to finish
+	}
+}
+
+void setConfig(void) {
+	uint8_t *mem = (uint8_t *) configAddr;
+
+	FCTL1 = FWKEY + ERASE;	// Enable erase mode
+	*mem = 0x00;			// Dummy write to trigger erase
+	while(FCTL3 & WAIT);	// Wait for erase to complete
+	//FCTL1 = FWKEY + WRT;	// Enable write mode
+	//TODO setConfig
 }
