@@ -111,7 +111,7 @@ int main(void) {
 	putC('l');
 	putC('o');
 	putC('!');
-	//putC('\r');
+	putC('\r');
 	putC('\n');
 
 	__enable_interrupt();
@@ -125,7 +125,6 @@ int main(void) {
 			// Detect end of packet
 			if((status & SERIAL_CR) && (rxChar == '\n')) {		// End of packet detected
 				status |= SERIAL_PKT;
-				P1OUT |= BIT0;
 			} else {					// Normal data
 				status &= ~SERIAL_CR;	// Clear CR status
 				if(rxChar == '\r') status |= SERIAL_CR;	// Update CR
@@ -152,6 +151,7 @@ int main(void) {
 						putC('0');
 						putC('.');
 						putC('1');
+						putC('\r');
 						putC('\n');
 						break;
 					}
@@ -225,7 +225,7 @@ void getConfig(void) {
 		for(count = 8; count > 0; count--) {	// 8 bytes
 			putC(*mem++);
 		}
-		putC('\n');								// Signal end of cycle
+		putC('\r');	putC('\n');								// Signal end of cycle
 		while(txBuf.count > 0);					// Wait for transmission to finish
 	}
 }
