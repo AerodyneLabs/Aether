@@ -37,15 +37,16 @@ const uint8_t lut[lutDepth] = {
 #define configLength 64
 
 uint8_t status = 0x00;
-#define SERIAL_CMD 0x01
-//#define  0x02
-//#define  0x04
+#define SERIAL_RX 0x01
+#define SERIAL_CR 0x02
+#define SERIAL_PKT 0x04
 //#define  0x08
 //#define  0x10
 //#define  0x20
 //#define  0x40
 //#define  0x80
 
+uint8_t rxChar;
 ringBuf txBuf;
 ringBuf rxBuf;
 
@@ -110,7 +111,7 @@ int main(void) {
 	putC('l');
 	putC('o');
 	putC('!');
-	//putC('\r');
+	putC('\r');
 	putC('\n');
 
 	__enable_interrupt();
@@ -118,7 +119,25 @@ int main(void) {
 
 	uint8_t c;
 	while(1) {
-		if(status & SERIAL_CMD) {
+
+		// Process incoming serial character
+		if(status & SERIAL_RX) {
+			// Detect end of packet
+			if((status & SERIAL_CR) && (rxChar == '\n')) {		// End of packet detected
+				status |= SERIAL_PKT;
+			} else {					// Normal data
+				status &= ~SERIAL_CR;	// Clear CR status
+				if(rxChar == '\r') status |= SERIAL_CR;	// Update CR
+				// Add character to buffer
+				if(!ringBuf_full(&rxBuf)) {
+					ringBuf_put(&rxBuf, rxChar);
+				}
+			}
+			status &= ~SERIAL_RX;
+		}
+
+		// Process incoming serial packet
+		if(status & SERIAL_PKT) {
 			while(ringBuf_empty(&rxBuf) == 0) {
 				c = ringBuf_get(&rxBuf);
 				if(c == 'G') {
@@ -132,12 +151,13 @@ int main(void) {
 						putC('0');
 						putC('.');
 						putC('1');
+						putC('\r');
 						putC('\n');
 						break;
 					}
 				}
 			}
-			status &= ~SERIAL_CMD;
+			status &= ~SERIAL_PKT;
 		}
 		LPM1;
 	}
@@ -166,23 +186,12 @@ __interrupt void TIMER0_A0_ISR(void) {
  */
 #pragma vector=USCIAB0RX_VECTOR
 __interrupt void USCIAB0RX_ISR(void) {
-	uint8_t c;
-
-	// USCI A0 Interrupt
+	// USCI A0 RX Interrupt
 	if(IFG2 & UCA0RXIFG) {
-		c = UCA0RXBUF;										// Read received byte
-		if(c == '\n') {										// End of packet
-			status |= SERIAL_CMD;							// Set status bit
-			LPM4_EXIT;										// Signal full power transition
-			return;											// Done here
-		}
-		if(rxBuf.count < RINGBUF_SIZE) {					// Ensure RX buffer has space
-			rxBuf.buf[rxBuf.head++] = c;					// Add RX to head and increment
-			if(rxBuf.head >= RINGBUF_SIZE) rxBuf.head = 0;	// Wrap buffer head
-			rxBuf.count++;									// Update buffer count
-		}
+		rxChar = UCA0RXBUF;		// Read received byte
+		status |= SERIAL_RX;	// Set RX flag
+		LPM4_EXIT;				// Allow processing in main
 	}
-
 }
 
 /**
@@ -216,7 +225,7 @@ void getConfig(void) {
 		for(count = 8; count > 0; count--) {	// 8 bytes
 			putC(*mem++);
 		}
-		putC('\n');								// Signal end of cycle
+		putC('\r');	putC('\n');								// Signal end of cycle
 		while(txBuf.count > 0);					// Wait for transmission to finish
 	}
 }
