@@ -49,6 +49,7 @@ uint8_t status = 0x00;
 uint8_t rxChar;
 ringBuf txBuf;
 ringBuf rxBuf;
+ringBuf rxPkt;
 
 void putC(const uint8_t c);
 
@@ -124,6 +125,8 @@ int main(void) {
 		if(status & SERIAL_RX) {
 			// Detect end of packet
 			if((status & SERIAL_CR) && (rxChar == '\n')) {		// End of packet detected
+				rxPkt = rxBuf;
+				ringBuf_flush(&rxBuf);
 				status |= SERIAL_PKT;
 			} else {					// Normal data
 				status &= ~SERIAL_CR;	// Clear CR status
@@ -138,10 +141,10 @@ int main(void) {
 
 		// Process incoming serial packet
 		if(status & SERIAL_PKT) {
-			while(ringBuf_empty(&rxBuf) == 0) {
-				c = ringBuf_get(&rxBuf);
+			while(ringBuf_empty(&rxPkt) == 0) {
+				c = ringBuf_get(&rxPkt);
 				if(c == 'G') {
-					c = ringBuf_get(&rxBuf);
+					c = ringBuf_get(&rxPkt);
 					switch(c) {
 					case 'C':
 						getConfig();
