@@ -141,23 +141,21 @@ int main(void) {
 
 		// Process incoming serial packet
 		if(status & SERIAL_PKT) {
-			while(ringBuf_empty(&rxPkt) == 0) {
+			c = ringBuf_get(&rxPkt);
+			if(c == 'G') {
 				c = ringBuf_get(&rxPkt);
-				if(c == 'G') {
-					c = ringBuf_get(&rxPkt);
-					switch(c) {
-					case 'C':
-						getConfig();
-						break;
-					case 'V':
-						putC('v');
-						putC('0');
-						putC('.');
-						putC('1');
-						putC('\r');
-						putC('\n');
-						break;
-					}
+				switch(c) {
+				case 'C':
+					getConfig();
+					break;
+				case 'V':
+					putC('v');
+					putC('0');
+					putC('.');
+					putC('1');
+					putC('\r');
+					putC('\n');
+					break;
 				}
 			}
 			status &= ~SERIAL_PKT;
