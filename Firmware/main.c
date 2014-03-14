@@ -35,12 +35,15 @@ const uint8_t lut[lutDepth] = {
 
 #define configAddr 0x1080
 #define configLength 64
+uint8_t *mem = (uint8_t *) configAddr;
+uint8_t count = 0;
+uint8_t cycle = 0;
 
 uint8_t status = 0x00;
 #define SERIAL_RX 0x01
 #define SERIAL_CR 0x02
 #define SERIAL_PKT 0x04
-//#define  0x08
+#define MODE_CONFIG 0x08
 //#define  0x10
 //#define  0x20
 //#define  0x40
@@ -55,6 +58,7 @@ void putC(const uint8_t c);
 
 void getConfig(void);
 void setConfig(void);
+void lockConfig(void);
 
 /*
  * main.c
@@ -142,7 +146,8 @@ int main(void) {
 		// Process incoming serial packet
 		if(status & SERIAL_PKT) {
 			c = ringBuf_get(&rxPkt);
-			if(c == 'G') {
+			switch(c) {
+			case 'G':
 				c = ringBuf_get(&rxPkt);
 				switch(c) {
 				case 'C':
@@ -155,6 +160,21 @@ int main(void) {
 					putC('1');
 					putC('\r');
 					putC('\n');
+					break;
+				}
+				break;
+			case 'S':
+				c = ringBuf_get(&rxPkt);
+				switch(c) {
+				case 'C':
+					setConfig();
+					break;
+				case 'M':
+					if(!status & MODE_CONFIG) break;
+					for(count = 8; count > 0; count--) {
+						*mem++ = ringBuf_get(&rxPkt);
+					}
+					if(--cycle == 0) lockConfig();
 					break;
 				}
 			}
@@ -217,9 +237,9 @@ void putC(const uint8_t c) {
 }
 
 void getConfig(void) {
-	uint8_t *mem = (uint8_t *) configAddr;
-	uint8_t count = 0;
-	uint8_t cycle = 0;
+	mem = (uint8_t *) configAddr;
+	count = 0;
+	cycle = 8;
 
 	// Transmit configuration data
 	for(cycle = 8; cycle > 0; cycle--) {		// 8 cycles
@@ -232,11 +252,19 @@ void getConfig(void) {
 }
 
 void setConfig(void) {
-	uint8_t *mem = (uint8_t *) configAddr;
-
+	mem = (uint8_t *) configAddr;
 	FCTL1 = FWKEY + ERASE;	// Enable erase mode
 	*mem = 0x00;			// Dummy write to trigger erase
-	while(FCTL3 & WAIT);	// Wait for erase to complete
-	//FCTL1 = FWKEY + WRT;	// Enable write mode
-	//TODO setConfig
+	while(!FCTL3 & WAIT);	// Wait for erase to complete
+	FCTL1 = FWKEY + WRT;	// Enable write mode
+	count = 0;
+	cycle = 8;
+	P1OUT |= BIT0;
+	status |= MODE_CONFIG;
+}
+
+void lockConfig(void) {
+	FCTL1 = FWKEY;
+	P1OUT &= ~BIT0;
+	status &= ~MODE_CONFIG;
 }
