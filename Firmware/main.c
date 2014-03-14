@@ -36,6 +36,16 @@ const uint8_t lut[lutDepth] = {
 #define configAddr 0x1080
 #define configLength 64
 
+uint8_t status = 0x00;
+#define SERIAL_CMD 0x01
+//#define  0x02
+//#define  0x04
+//#define  0x08
+//#define  0x10
+//#define  0x20
+//#define  0x40
+//#define  0x80
+
 ringBuf txBuf;
 ringBuf rxBuf;
 
@@ -100,12 +110,37 @@ int main(void) {
 	putC('l');
 	putC('o');
 	putC('!');
+	//putC('\r');
 	putC('\n');
 
-	//_BIS_SR(LPM0_bits | GIE);	// Enter LPM0 w/ interrupt
-	_BIS_SR(GIE);
+	__enable_interrupt();
+	LPM1;
 
-	getConfig();
+	uint8_t c;
+	while(1) {
+		if(status & SERIAL_CMD) {
+			while(ringBuf_empty(&rxBuf) == 0) {
+				c = ringBuf_get(&rxBuf);
+				if(c == 'G') {
+					c = ringBuf_get(&rxBuf);
+					switch(c) {
+					case 'C':
+						getConfig();
+						break;
+					case 'V':
+						putC('v');
+						putC('0');
+						putC('.');
+						putC('1');
+						putC('\n');
+						break;
+					}
+				}
+			}
+			status &= ~SERIAL_CMD;
+		}
+		LPM1;
+	}
 }
 
 /**
@@ -136,12 +171,16 @@ __interrupt void USCIAB0RX_ISR(void) {
 	// USCI A0 Interrupt
 	if(IFG2 & UCA0RXIFG) {
 		c = UCA0RXBUF;										// Read received byte
+		if(c == '\n') {										// End of packet
+			status |= SERIAL_CMD;							// Set status bit
+			LPM4_EXIT;										// Signal full power transition
+			return;											// Done here
+		}
 		if(rxBuf.count < RINGBUF_SIZE) {					// Ensure RX buffer has space
 			rxBuf.buf[rxBuf.head++] = c;					// Add RX to head and increment
 			if(rxBuf.head >= RINGBUF_SIZE) rxBuf.head = 0;	// Wrap buffer head
 			rxBuf.count++;									// Update buffer count
 		}
-
 	}
 
 }
