@@ -67,7 +67,7 @@ F 5 "D" H 3750 3900 60  0001 R CNN "Dielectric"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3800 3500 3800 3400
+	3800 2500 3800 3500
 Wire Wire Line
 	3800 3400 5400 3400
 Wire Wire Line
@@ -89,7 +89,7 @@ F 5 "D" H 4150 4100 60  0001 R CNN "Dielectric"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4200 3700 4200 3600
+	4200 2600 4200 3700
 Wire Wire Line
 	4200 3600 5400 3600
 Wire Wire Line
@@ -291,4 +291,27 @@ Connection ~ 7000 4100
 Wire Wire Line
 	4600 3700 4600 3400
 Connection ~ 4600 3400
+$Comp
+L +3.3V #PWR?
+U 1 1 53B0965B
+P 3800 2500
+F 0 "#PWR?" H 3800 2460 30  0001 C CNN
+F 1 "+3.3V" H 3800 2610 30  0000 C CNN
+F 2 "" H 3800 2500 60  0000 C CNN
+F 3 "" H 3800 2500 60  0000 C CNN
+	1    3800 2500
+	1    0    0    -1  
+$EndComp
+Connection ~ 3800 3400
+Wire Wire Line
+	3400 2700 3400 2600
+Wire Wire Line
+	3400 2600 4200 2600
+Connection ~ 3800 2600
+Connection ~ 4200 3600
+Wire Wire Line
+	5400 3800 5200 3800
+Wire Wire Line
+	5200 3800 5200 3400
+Connection ~ 5200 3400
 $EndSCHEMATC
