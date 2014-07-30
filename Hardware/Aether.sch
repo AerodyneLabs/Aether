@@ -54,8 +54,8 @@ $EndSheet
 $Sheet
 S 7200 3300 1000 1000
 U 52E9B8BD
-F0 "Transmitter" 50
-F1 "Transmitter.sch" 50
+F0 "Transceiver" 50
+F1 "Transceiver.sch" 50
 F2 "SCLK" I L 7200 3400 60 
 F3 "MISO" O L 7200 3600 60 
 F4 "MOSI" I L 7200 3500 60 
