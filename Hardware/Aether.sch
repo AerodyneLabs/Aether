@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title "Aether - Pico Tracker"
-Date "30 jul 2014"
+Date "31 jul 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -62,5 +62,17 @@ F4 "MOSI" I L 7200 3500 60
 F5 "CS" I L 7200 3700 60 
 F6 "RF" U R 8200 3400 60 
 F7 "RFGnd" U R 8200 3600 60 
+$EndSheet
+$Sheet
+S 3200 5300 1000 1000
+U 53DAAA08
+F0 "Power" 50
+F1 "Power.sch" 50
+F2 "SEL" I R 4200 5600 60 
+F3 "CE" I R 4200 5400 60 
+F4 "~TE" I R 4200 5500 60 
+F5 "RATE" I R 4200 5700 60 
+F6 "Solar+" I L 3200 5400 60 
+F7 "Solar-" I L 3200 5500 60 
 $EndSheet
 $EndSCHEMATC
