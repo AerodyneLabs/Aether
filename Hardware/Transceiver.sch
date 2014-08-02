@@ -508,4 +508,12 @@ Wire Wire Line
 	5500 5300 5400 5300
 Text Notes 5600 5100 0    60   ~ 0
 VCXO Out - 10%-90%\nLO Input - 1.4 p-p AC
+Text HLabel 4700 2900 0    60   Input ~ 0
+~XCVR_EN
+Text HLabel 4700 3000 0    60   Output ~ 0
+XCVR_IRQ
+Wire Wire Line
+	4700 2900 5000 2900
+Wire Wire Line
+	4700 3000 5000 3000
 $EndSCHEMATC
