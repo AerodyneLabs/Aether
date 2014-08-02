@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 5
 Title "Aether - Pico Tracker"
-Date "30 jul 2014"
+Date "2 aug 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -67,8 +67,6 @@ F 5 "D" H 3750 3900 60  0001 R CNN "Dielectric"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3800 2500 3800 3500
-Wire Wire Line
 	3800 3400 5400 3400
 Wire Wire Line
 	5400 3500 5300 3500
@@ -88,8 +86,6 @@ F 5 "D" H 4150 4100 60  0001 R CNN "Dielectric"
 	1    4200 3950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4200 2600 4200 3700
 Wire Wire Line
 	4200 3600 5400 3600
 Wire Wire Line
@@ -294,24 +290,66 @@ Connection ~ 4600 3400
 $Comp
 L +3.3V #PWR?
 U 1 1 53B0965B
-P 3800 2500
-F 0 "#PWR?" H 3800 2460 30  0001 C CNN
-F 1 "+3.3V" H 3800 2610 30  0000 C CNN
-F 2 "" H 3800 2500 60  0000 C CNN
-F 3 "" H 3800 2500 60  0000 C CNN
-	1    3800 2500
+P 3400 1500
+F 0 "#PWR?" H 3400 1460 30  0001 C CNN
+F 1 "+3.3V" H 3400 1610 30  0000 C CNN
+F 2 "" H 3400 1500 60  0000 C CNN
+F 3 "" H 3400 1500 60  0000 C CNN
+	1    3400 1500
 	1    0    0    -1  
 $EndComp
-Connection ~ 3800 3400
-Wire Wire Line
-	3400 2700 3400 2600
-Wire Wire Line
-	3400 2600 4200 2600
-Connection ~ 3800 2600
 Connection ~ 4200 3600
 Wire Wire Line
 	5400 3800 5200 3800
 Wire Wire Line
 	5200 3800 5200 3400
 Connection ~ 5200 3400
+$Comp
+L MOSFET-P Q?
+U 1 1 53DC7561
+P 3300 2100
+F 0 "Q?" H 3200 2050 60  0000 R CNN
+F 1 "MOSFET-P" V 3500 2100 60  0000 C CNN
+F 2 "~" H 3300 2100 60  0000 C CNN
+F 3 "~" H 3300 2100 60  0000 C CNN
+	1    3300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2300 3400 2700
+Wire Wire Line
+	3800 2500 3800 3500
+Wire Wire Line
+	3800 2500 3400 2500
+Connection ~ 3400 2500
+Connection ~ 3800 3400
+Wire Wire Line
+	4200 1700 4200 3700
+Wire Wire Line
+	3400 1500 3400 1900
+Wire Wire Line
+	3300 1700 4200 1700
+Connection ~ 3400 1700
+$Comp
+L R R?
+U 1 1 53DC774B
+P 3050 1700
+F 0 "R?" H 3050 1800 50  0000 C CNN
+F 1 "10k" H 3050 1700 50  0000 C CNN
+F 2 "~" H 3050 1700 60  0000 C CNN
+F 3 "~" H 3050 1700 60  0000 C CNN
+F 4 "W" H 3050 1600 50  0001 C CNN "Power"
+F 5 "%" H 3050 1500 50  0001 C CNN "Tolerance"
+	1    3050 1700
+	1    0    0    -1  
+$EndComp
+Text HLabel 2600 2000 0    60   Input ~ 0
+GPS_EN
+Wire Wire Line
+	2600 2000 3100 2000
+Wire Wire Line
+	2800 1700 2700 1700
+Wire Wire Line
+	2700 1700 2700 2000
+Connection ~ 2700 2000
 $EndSCHEMATC
