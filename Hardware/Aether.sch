@@ -8,7 +8,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 5
 Title "Aether - Pico Tracker"
-Date "2 aug 2014"
+Date "14 aug 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -40,6 +40,7 @@ F3 "GPS_DO" O L 5200 3500 60
 F4 "GPS_PPS" I L 5200 3700 60 
 F5 "USB_DP" B R 6200 3400 60 
 F6 "USB_DM" B R 6200 3500 60 
+F7 "GPS_EN" O L 5200 3400 60 
 $EndSheet
 $Sheet
 S 3200 3300 1000 1000
@@ -83,4 +84,12 @@ F8 "~PG" O R 4200 5800 60
 F9 "STAT2" O R 4200 6000 60 
 F10 "STAT1" O R 4200 5900 60 
 $EndSheet
+Wire Wire Line
+	5200 3400 4200 3400
+Wire Wire Line
+	5200 3500 4200 3500
+Wire Wire Line
+	5200 3600 4200 3600
+Wire Wire Line
+	5200 3700 4200 3700
 $EndSCHEMATC

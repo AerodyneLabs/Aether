@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 2 5
 Title "Aether - Pico Tracker"
-Date "30 jul 2014"
+Date "14 aug 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -593,4 +593,6 @@ Wire Wire Line
 	9000 3200 9000 3100
 Wire Wire Line
 	9700 3100 9700 3200
+Text HLabel 3800 1600 0    60   Output ~ 0
+GPS_EN
 $EndSCHEMATC
