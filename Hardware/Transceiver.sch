@@ -8,7 +8,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 5
 Title "Aether - Pico Tracker"
-Date "2 aug 2014"
+Date "15 aug 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"

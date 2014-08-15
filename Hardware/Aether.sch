@@ -8,7 +8,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 5
 Title "Aether - Pico Tracker"
-Date "14 aug 2014"
+Date "15 aug 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -41,6 +41,8 @@ F4 "GPS_PPS" I L 5200 3700 60
 F5 "USB_DP" B R 6200 3400 60 
 F6 "USB_DM" B R 6200 3500 60 
 F7 "GPS_EN" O L 5200 3400 60 
+F8 "Mod" O R 6200 4200 60 
+F9 "LO_EN" O R 6200 4100 60 
 $EndSheet
 $Sheet
 S 3200 3300 1000 1000

@@ -8,7 +8,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 5
 Title "Aether - Pico Tracker"
-Date "14 aug 2014"
+Date "15 aug 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -245,7 +245,7 @@ L R R?
 U 1 1 53D712C8
 P 8200 4250
 F 0 "R?" H 8200 4350 50  0000 C CNN
-F 1 "R" H 8200 4250 50  0000 C CNN
+F 1 "10k" H 8200 4250 50  0000 C CNN
 F 2 "~" H 8200 4250 60  0000 C CNN
 F 3 "~" H 8200 4250 60  0000 C CNN
 F 4 "W" H 8200 4150 50  0001 C CNN "Power"
@@ -521,7 +521,7 @@ L CRYSTAL X?
 U 1 1 53D85D0D
 P 9350 2500
 F 0 "X?" H 9350 2650 60  0000 C CNN
-F 1 "CRYSTAL" H 9350 2350 60  0000 C CNN
+F 1 "32.768k" H 9350 2350 60  0000 C CNN
 F 2 "~" H 9350 2500 60  0000 C CNN
 F 3 "~" H 9350 2500 60  0000 C CNN
 	1    9350 2500
@@ -595,4 +595,10 @@ Wire Wire Line
 	9700 3100 9700 3200
 Text HLabel 3800 1600 0    60   Output ~ 0
 GPS_EN
+Text HLabel 4200 5900 2    60   Output ~ 0
+Mod
+Text Label 3900 5900 2    60   ~ 0
+DAC1
+Text HLabel 4200 5800 2    60   Output ~ 0
+LO_EN
 $EndSCHEMATC
