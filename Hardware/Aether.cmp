@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/17/2014 6:05:16 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/17/2014 3:09:16 PM
 
 BeginCmp
 TimeStamp = /53F08CF1/53F08F5A;
@@ -29,6 +29,76 @@ IdModule  = CAPC1608-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /53F09D80/53F09F7F;
+Reference = C4;
+ValeurCmp = 33pF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F0A168;
+Reference = C5;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09F70;
+Reference = C6;
+ValeurCmp = 100pF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09F5A;
+Reference = C7;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09EEB;
+Reference = C8;
+ValeurCmp = 2.2uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09F15;
+Reference = C9;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09EB9;
+Reference = C10;
+ValeurCmp = C;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F10CAE;
+Reference = C11;
+ValeurCmp = C;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F10C84;
+Reference = C12;
+ValeurCmp = C;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09F06;
+Reference = FB1;
+ValeurCmp = FERRITE;
+IdModule  = INDC1608-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F08CF1/53F08F69;
 Reference = L1;
 ValeurCmp = DNP;
@@ -36,8 +106,22 @@ IdModule  = INDC1608-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /53F09D80/53F10C9F;
+Reference = L2;
+ValeurCmp = L;
+IdModule  = INDC1608-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F08CF1/53F0917E;
 Reference = Q1;
+ValeurCmp = BSS84;
+IdModule  = SOT95P280-3N-GDS;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F10853;
+Reference = Q2;
 ValeurCmp = BSS84;
 IdModule  = SOT95P280-3N-GDS;
 EndCmp
@@ -64,10 +148,59 @@ IdModule  = RESC1608-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /53F09D80/53F09E0E;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09E29;
+Reference = R5;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09E52;
+Reference = R6;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F10754;
+Reference = R7;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F10E64;
+Reference = R8;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F08CF1/53F08CF9;
 Reference = U1;
 ValeurCmp = VENUS838LPX-L;
 IdModule  = LGA69;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F09DA1;
+Reference = U2;
+ValeurCmp = SI4464;
+IdModule  = QFN50P400X400-21N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F09D80/53F10549;
+Reference = X1;
+ValeurCmp = 27MHz;
+IdModule  = OSCCC320X250-N;
 EndCmp
 
 EndListe
