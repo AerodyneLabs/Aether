@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/17/2014 3:09:16 PM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/18/2014 2:24:40 AM
 
 BeginCmp
 TimeStamp = /53F08CF1/53F08F5A;
@@ -92,6 +92,27 @@ IdModule  = CAPC1608-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /53F1594C/53F15B9D;
+Reference = C13;
+ValeurCmp = 10uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/53F1AA7D;
+Reference = C14;
+ValeurCmp = 10uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/53F15D92;
+Reference = D1;
+ValeurCmp = MBR0520L;
+IdModule  = SOD3716-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F09D80/53F09F06;
 Reference = FB1;
 ValeurCmp = FERRITE;
@@ -110,6 +131,13 @@ TimeStamp = /53F09D80/53F10C9F;
 Reference = L2;
 ValeurCmp = L;
 IdModule  = INDC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/53F15A45;
+Reference = L3;
+ValeurCmp = 4.7uH;
+IdModule  = INDC3225-N;
 EndCmp
 
 BeginCmp
@@ -183,6 +211,27 @@ IdModule  = RESC1608-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /53F1594C/53F15ABC;
+Reference = R9;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/53F15A5D;
+Reference = R10;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/53F15A78;
+Reference = R11;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F08CF1/53F08CF9;
 Reference = U1;
 ValeurCmp = VENUS838LPX-L;
@@ -194,6 +243,13 @@ TimeStamp = /53F09D80/53F09DA1;
 Reference = U2;
 ValeurCmp = SI4464;
 IdModule  = QFN50P400X400-21N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/53F159CD;
+Reference = U3;
+ValeurCmp = AAT1217;
+IdModule  = SOT95P280-6N;
 EndCmp
 
 BeginCmp

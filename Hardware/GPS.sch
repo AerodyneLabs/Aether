@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title ""
-Date "17 aug 2014"
+Date "18 aug 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -33,22 +33,6 @@ Wire Wire Line
 	3000 2900 3000 3200
 Wire Wire Line
 	3000 3100 5100 3100
-$Comp
-L R R2
-U 1 1 53F08D35
-P 3450 2900
-F 0 "R2" H 3450 3000 50  0000 C CNN
-F 1 "10k" H 3450 2900 50  0000 C CNN
-F 2 "~" H 3450 2900 60  0000 C CNN
-F 3 "~" H 3450 2900 60  0000 C CNN
-F 4 "Rohm" H 3450 2900 60  0001 C CNN "MFR Name"
-F 5 "MCR03ERTJ103" H 3450 2900 60  0001 C CNN "MFR Part No"
-F 6 "RHM10KCGCT-ND" H 3450 2900 60  0001 C CNN "Distributor Part No"
-F 7 "1/10W" H 3450 2800 50  0001 C CNN "Power"
-F 8 "5%" H 3450 2700 50  0001 C CNN "Tolerance"
-	1    3450 2900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3200 2900 3000 2900
 Connection ~ 3000 3100
@@ -371,6 +355,22 @@ F 6 "587-1242-1-ND" H 3000 3450 60  0001 C CNN "Distributor Part No"
 F 7 "10V" H 2950 3300 60  0001 R CNN "Voltage"
 F 8 "X7R" H 2950 3600 60  0001 R CNN "Dielectric"
 	1    3000 3450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 53F1AFE8
+P 3450 2900
+F 0 "R2" H 3450 3000 50  0000 C CNN
+F 1 "30k" H 3450 2900 50  0000 C CNN
+F 2 "~" H 3450 2900 60  0000 C CNN
+F 3 "~" H 3450 2900 60  0000 C CNN
+F 4 "Rohm" H 3450 2900 60  0001 C CNN "MFR Name"
+F 5 "MCR03ERTJ303" H 3450 2900 60  0001 C CNN "MFR Part No"
+F 6 "RHM30KCGCT-ND" H 3450 2900 60  0001 C CNN "Distributor Part No"
+F 7 "1/10W" H 3450 2800 50  0001 C CNN "Power"
+F 8 "5%" H 3450 2700 50  0001 C CNN "Tolerance"
+	1    3450 2900
 	-1   0    0    -1  
 $EndComp
 $EndSCHEMATC
