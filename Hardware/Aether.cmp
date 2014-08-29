@@ -1,10 +1,24 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/19/2014 4:25:51 PM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/29/2014 2:26:35 AM
 
 BeginCmp
 TimeStamp = /53F08CF1/53F08F5A;
 Reference = AE1;
 ValeurCmp = W3011A;
 IdModule  = ANT-W3011A;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540023CD;
+Reference = B1;
+ValeurCmp = 3.7v;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/54003508;
+Reference = B2;
+ValeurCmp = BATTERY;
+IdModule  = ;
 EndCmp
 
 BeginCmp
@@ -115,6 +129,27 @@ EndCmp
 BeginCmp
 TimeStamp = /53F1594C/53F3C2B6;
 Reference = C16;
+ValeurCmp = 10uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540029ED;
+Reference = C17;
+ValeurCmp = 10uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/5400243B;
+Reference = C18;
+ValeurCmp = 10uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/54002450;
+Reference = C19;
 ValeurCmp = 10uF;
 IdModule  = CAPC1608-N;
 EndCmp
@@ -253,6 +288,90 @@ IdModule  = RESC1608-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /53F1594C/54002A1A;
+Reference = R12;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540030F7;
+Reference = R13;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/54003678;
+Reference = R14;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540036B7;
+Reference = R15;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/54003697;
+Reference = R16;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540036AC;
+Reference = R17;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/5400261F;
+Reference = R18;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540025E6;
+Reference = R19;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/54003C0F;
+Reference = R20;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540038E7;
+Reference = R21;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540038DC;
+Reference = R22;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/540023DC;
+Reference = TH1;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F08CF1/53F08CF9;
 Reference = U1;
 ValeurCmp = VENUS838LPX-L;
@@ -278,6 +397,13 @@ TimeStamp = /53F1594C/53F3C277;
 Reference = U4;
 ValeurCmp = LM3671;
 IdModule  = SOT95P280-5N;
+EndCmp
+
+BeginCmp
+TimeStamp = /53F1594C/54002378;
+Reference = U5;
+ValeurCmp = MCP73871;
+IdModule  = QFN50P400X400-21N;
 EndCmp
 
 BeginCmp

@@ -8,7 +8,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
 Title "Aether - Pico Tracker"
-Date "19 aug 2014"
+Date "29 aug 2014"
 Rev "1"
 Comp "Aerodyne Labs"
 Comment1 "Ethan Harstad - eharstad@aerodynelabs.com"
@@ -50,5 +50,14 @@ S 5800 4700 1000 1000
 U 53F1594C
 F0 "Power" 60
 F1 "Power.sch" 60
+F2 "SW+" O L 5800 4800 60 
+F3 "SW-" I L 5800 4900 60 
+F4 "SEL" I R 6800 4800 60 
+F5 "PROG2" I R 6800 4900 60 
+F6 "~TE" I R 6800 5100 60 
+F7 "CE" I R 6800 5000 60 
+F8 "PG" O R 6800 5200 60 
+F9 "STAT2" O R 6800 5300 60 
+F10 "STAT1" O R 6800 5400 60 
 $EndSheet
 $EndSCHEMATC
