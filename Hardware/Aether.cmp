@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/29/2014 2:26:35 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 8/29/2014 7:43:25 PM
 
 BeginCmp
 TimeStamp = /53F08CF1/53F08F5A;
@@ -155,6 +155,83 @@ IdModule  = CAPC1608-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /5400F413/54010EB5;
+Reference = C20;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54011C4D;
+Reference = C21;
+ValeurCmp = 1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/540112D0;
+Reference = C22;
+ValeurCmp = C;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54010AAE;
+Reference = C23;
+ValeurCmp = 10uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/540112B5;
+Reference = C24;
+ValeurCmp = C;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54010BFD;
+Reference = C25;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54011D9F;
+Reference = C26;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54010E83;
+Reference = C27;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54010E8B;
+Reference = C28;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54010E93;
+Reference = C29;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/5401154D;
+Reference = C30;
+ValeurCmp = 0.1uF;
+IdModule  = CAPC1608-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F1594C/53F15D92;
 Reference = D1;
 ValeurCmp = MBR0520L;
@@ -166,6 +243,20 @@ TimeStamp = /53F09D80/53F09F06;
 Reference = FB1;
 ValeurCmp = FERRITE;
 IdModule  = INDC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54010E9B;
+Reference = FB2;
+ValeurCmp = FERRITE;
+IdModule  = INDC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/5401146A;
+Reference = J1;
+ValeurCmp = ICSP-CORTEX;
+IdModule  = CONN-TC-2030-NL;
 EndCmp
 
 BeginCmp
@@ -365,6 +456,20 @@ IdModule  = RESC1608-N;
 EndCmp
 
 BeginCmp
+TimeStamp = /5400F413/54011FF5;
+Reference = R23;
+ValeurCmp = 10k;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/54011555;
+Reference = R24;
+ValeurCmp = R;
+IdModule  = RESC1608-N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F1594C/540023DC;
 Reference = TH1;
 ValeurCmp = 10k;
@@ -407,10 +512,24 @@ IdModule  = QFN50P400X400-21N;
 EndCmp
 
 BeginCmp
+TimeStamp = /5400F413/54010940;
+Reference = U6;
+ValeurCmp = STM32L100RBT6;
+IdModule  = QFP50P1200X1200-64N;
+EndCmp
+
+BeginCmp
 TimeStamp = /53F09D80/53F10549;
 Reference = X1;
 ValeurCmp = 27MHz;
 IdModule  = OSCCC320X250-N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5400F413/540112A6;
+Reference = X2;
+ValeurCmp = CRYSTAL;
+IdModule  = ;
 EndCmp
 
 EndListe
