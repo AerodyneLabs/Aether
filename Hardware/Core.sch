@@ -648,9 +648,9 @@ Text HLabel 7000 4300 2    60   Output ~ 0
 XCVR_SCLK
 Text HLabel 7000 4200 2    60   Output ~ 0
 ~XCVR_SEL
-Text HLabel 8900 2100 2    60   Input ~ 0
+Text HLabel 7000 5400 2    60   Input ~ 0
 ~XCVR_INT
-Text HLabel 8900 1600 2    60   Output ~ 0
+Text HLabel 7000 5500 2    60   Output ~ 0
 XCVR_SDN
 Wire Wire Line
 	7000 4200 6800 4200
@@ -660,4 +660,28 @@ Wire Wire Line
 	7000 4400 6800 4400
 Wire Wire Line
 	7000 4500 6800 4500
+Wire Wire Line
+	7000 5400 6800 5400
+Text HLabel 7300 1600 2    60   Output ~ 0
+LO_EN
+Text HLabel 7300 1700 2    60   Output ~ 0
+LO_MOD
+Text HLabel 7300 1400 2    60   Output ~ 0
+GPS_MOSI
+Text HLabel 7300 1500 2    60   Input ~ 0
+GPS_MISO
+Wire Wire Line
+	7300 1400 6800 1400
+Wire Wire Line
+	7300 1500 6800 1500
+Wire Wire Line
+	7300 1600 6800 1600
+Wire Wire Line
+	7300 1700 6800 1700
+Text HLabel 7300 1300 2    60   Output ~ 0
+GPS_EN
+Text HLabel 7300 1200 2    60   Input ~ 0
+GPS_PPS
+Wire Wire Line
+	7300 1300 6800 1300
 $EndSCHEMATC
