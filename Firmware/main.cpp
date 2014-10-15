@@ -25,7 +25,7 @@ uint16_t baudInc = 1200;
 uint32_t baudTemp = 0;
 
 uint16_t phaseAcc = 0;
-uint16_t phaseInc = 2200;
+uint16_t phaseInc = 1200;
 uint16_t dacAmplitude = 1000;
 uint16_t dacOffset = 2047;
 int32_t dacTemp;
@@ -83,7 +83,7 @@ void init_dac(void) {
 
 void init_timer(void) {
 	// Enable peripheral clock
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM6, ENABLE);
 
 	// Configure timer
 	TIM_TimeBaseInitTypeDef timerInit;
@@ -91,19 +91,19 @@ void init_timer(void) {
 	timerInit.TIM_CounterMode = TIM_CounterMode_Up;
 	timerInit.TIM_Prescaler = 1;
 	timerInit.TIM_Period = 100;
-	TIM_TimeBaseInit(TIM2, &timerInit);
+	TIM_TimeBaseInit(TIM6, &timerInit);
 
 	// Enable timer
-	TIM_Cmd(TIM2, ENABLE);
+	TIM_Cmd(TIM6, ENABLE);
 
 	// Enable update event interrupt
-	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+	TIM_ITConfig(TIM6, TIM_IT_Update, ENABLE);
 }
 
 void init_nvic(void) {
 	// Configure NVIC
 	NVIC_InitTypeDef nvicInit;
-	nvicInit.NVIC_IRQChannel = TIM2_IRQn;
+	nvicInit.NVIC_IRQChannel = TIM6_IRQn;
 	nvicInit.NVIC_IRQChannelPreemptionPriority = 0;
 	nvicInit.NVIC_IRQChannelSubPriority = 1;
 	nvicInit.NVIC_IRQChannelCmd = ENABLE;
@@ -128,10 +128,10 @@ int main(void) {
 	}
 }
 
-extern "C" void TIM2_IRQHandler() {
-	if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) {
+extern "C" void TIM6_IRQHandler() {
+	if(TIM_GetITStatus(TIM6, TIM_IT_Update) != RESET) {
 		// Clear interrupt flag
-		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+		TIM_ClearITPendingBit(TIM6, TIM_IT_Update);
 
 		// Increment baud accumulator
 		baudTemp = baudAcc + baudInc;
