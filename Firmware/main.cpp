@@ -21,14 +21,18 @@ int16_t lut[LUT_STEPS] = {	// Q0.15
 };
 
 uint16_t baudAcc = 0;
-uint16_t baudInc = 1200;
+uint16_t baudInc = 1200 << 2;
 uint32_t baudTemp = 0;
 
+#define HIGH_PHASE_INC 2200 << 2
+#define LOW_PHASE_INC 1200 << 2
 uint16_t phaseAcc = 0;
-uint16_t phaseInc = 1200;
+uint16_t phaseInc = LOW_PHASE_INC;
 uint16_t dacAmplitude = 1000;
 uint16_t dacOffset = 2047;
 int32_t dacTemp;
+
+bool dacUpdateFlag = false;
 
 void init(void);
 void init_mco(void);
@@ -68,7 +72,7 @@ void init_dac(void) {
 
 	// Configure DAC
 	DAC_InitTypeDef dacInit;
-	dacInit.DAC_Trigger = DAC_Trigger_Software;
+	dacInit.DAC_Trigger = DAC_Trigger_T6_TRGO;
 	dacInit.DAC_WaveGeneration = DAC_WaveGeneration_None;
 	dacInit.DAC_OutputBuffer = DAC_OutputBuffer_Enable;
 	DAC_Init(DAC_Channel_1, &dacInit);
@@ -90,7 +94,7 @@ void init_timer(void) {
 	timerInit.TIM_ClockDivision = TIM_CKD_DIV1;
 	timerInit.TIM_CounterMode = TIM_CounterMode_Up;
 	timerInit.TIM_Prescaler = 1;
-	timerInit.TIM_Period = 100;
+	timerInit.TIM_Period = 40;
 	TIM_TimeBaseInit(TIM6, &timerInit);
 
 	// Enable timer
@@ -98,6 +102,9 @@ void init_timer(void) {
 
 	// Enable update event interrupt
 	TIM_ITConfig(TIM6, TIM_IT_Update, ENABLE);
+
+	// Enable update event trigger output
+	TIM_SelectOutputTrigger(TIM6, TIM_TRGOSource_Update);
 }
 
 void init_nvic(void) {
@@ -124,7 +131,41 @@ int main(void) {
 	init();
 
 	while(1) {
-		// Empty loop
+		if(dacUpdateFlag) {
+			// Increment baud accumulator
+			baudTemp = baudAcc + baudInc;
+
+			// Check for baud overflow: next symbol
+			if(baudTemp > 0xffff) {
+				if(phaseInc == HIGH_PHASE_INC) {
+					phaseInc = LOW_PHASE_INC;
+					dacAmplitude = 1067;
+				} else {
+					phaseInc = HIGH_PHASE_INC;
+					dacAmplitude = 2000;
+				}
+				// Store corrected baud accumulator
+				baudAcc = (uint16_t)(baudTemp - 0xffff);
+			} else {
+				// Store new baud accumulator
+				baudAcc = (uint16_t)baudTemp;
+			}
+
+			// Increment phase accumulator
+			phaseAcc += phaseInc;
+
+			// Multiply lut by amplitude
+			dacTemp = lut[phaseAcc >> PHASE_BIT_SHIFT] * dacAmplitude;
+			// Strip fractional bits from result
+			dacTemp >>= LUT_FRAC_BITS;
+			// Apply offset
+			dacTemp += dacOffset;
+
+			// Write new value to DAC
+			DAC_SetChannel1Data(DAC_Align_12b_R, (uint16_t)dacTemp);
+
+			dacUpdateFlag = false;
+		}
 	}
 }
 
@@ -133,37 +174,7 @@ extern "C" void TIM6_IRQHandler() {
 		// Clear interrupt flag
 		TIM_ClearITPendingBit(TIM6, TIM_IT_Update);
 
-		// Increment baud accumulator
-		baudTemp = baudAcc + baudInc;
-
-		// Check for baud overflow: next symbol
-		if(baudTemp > 0xffff) {
-			if(phaseInc == 2200) {
-				phaseInc = 1200;
-				dacAmplitude = 1067;
-			} else {
-				phaseInc = 2200;
-				dacAmplitude = 2000;
-			}
-			// Store corrected baud accumulator
-			baudAcc = (uint16_t)(baudTemp - 0xffff);
-		} else {
-			// Store new baud accumulator
-			baudAcc = (uint16_t)baudTemp;
-		}
-
-		// Increment phase accumulator
-		phaseAcc += phaseInc;
-
-		// Multiply lut by amplitude
-		dacTemp = lut[phaseAcc >> PHASE_BIT_SHIFT] * dacAmplitude;
-		// Strip fractional bits from result
-		dacTemp >>= LUT_FRAC_BITS;
-		// Apply offset
-		dacTemp += dacOffset;
-
-		// Write new value to DAC
-		DAC_SetChannel1Data(DAC_Align_12b_R, (uint16_t)dacTemp);
-		DAC_SoftwareTriggerCmd(DAC_Channel_1, ENABLE);
+		// Set dac update flag
+		dacUpdateFlag = true;
 	}
 }
