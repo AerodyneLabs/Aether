@@ -99,7 +99,7 @@
     <File name="cmsis_lib" path="" type="2"/>
     <File name="cmsis_lib/Include/stm32l1xx_gpio.h" path="cmsis_lib/Include/stm32l1xx_gpio.h" type="1"/>
     <File name="cmsis_lib/Source/stm32l1xx_syscfg.c" path="cmsis_lib/Source/stm32l1xx_syscfg.c" type="1"/>
-    <File name="main.cpp" path="../main.cpp" type="1"/>
+    <File name="main.cpp" path="main.cpp" type="1"/>
     <File name="syscalls" path="" type="2"/>
     <File name="cmsis_boot/stm32l1xx.h" path="cmsis_boot/stm32l1xx.h" type="1"/>
     <File name="cmsis_lib/Source/stm32l1xx_dac.c" path="cmsis_lib/Source/stm32l1xx_dac.c" type="1"/>
