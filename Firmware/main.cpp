@@ -35,10 +35,37 @@ int32_t dacTemp;
 bool dacUpdateFlag = false;
 
 void init(void);
+void init_rcc(void);
 void init_mco(void);
 void init_dac(void);
 void init_timer(void);
 void init_nvic(void);
+
+void init_rcc(void) {
+	// Deintialize clocks
+	RCC_DeInit();
+
+	// Enable HSI
+	RCC_HSICmd(ENABLE);
+	// Wait for HSI
+	while(RCC_GetFlagStatus(RCC_FLAG_HSIRDY) == RESET);
+
+	// Configure PLL
+	RCC_PLLConfig(RCC_PLLSource_HSI, RCC_PLLMul_6, RCC_PLLDiv_3);
+	// Enable PLL
+	RCC_PLLCmd(ENABLE);
+	// Wait for PLL
+	while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET);
+
+	// Set PLL as SYSCLK
+	RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
+	// Configure AHB
+	RCC_HCLKConfig(RCC_SYSCLK_Div1);
+	// Configure APB1
+	RCC_PCLK1Config(RCC_HCLK_Div1);
+	// Configure APB2
+	RCC_PCLK2Config(RCC_HCLK_Div1);
+}
 
 void init_mco(void) {
 	// Configure pin
@@ -118,6 +145,8 @@ void init_nvic(void) {
 }
 
 void init(void) {
+	init_rcc();
+
 	// Enable GPIO clocks
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
 
