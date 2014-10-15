@@ -5,19 +5,26 @@
 #include <stm32l1xx_tim.h>
 #include <misc.h>
 
+#define LUT_FRAC_BITS 15
 #define LUT_STEPS 32
-uint16_t lut[LUT_STEPS] = {
-	2047, 2437, 2812, 3158,
-	3461, 3710, 3895, 4009,
-	4047, 4009, 3895, 3710,
-	3461, 3158, 2812, 2437,
-	2047, 1657, 1282, 936,
-	633, 384, 199, 85,
-	47, 85, 199, 384,
-	633, 936, 1282, 1657
+#define LUT_BITS 5
+#define PHASE_BIT_SHIFT (16 - LUT_BITS)
+int16_t lut[LUT_STEPS] = {
+	0, 6393, 12539, 18204,
+	23170, 27245, 30273, 32137,
+	32767, 32137, 30273, 27245,
+	23170, 18204, 12539, 6393,
+	0, -6393, -12539, -18204,
+	-23170, -27245, -30273, -32137,
+	-32767, -32137, -30273, -27245,
+	-23170, -18204, -12539, -6393
 };
-uint16_t phase = 0;
-uint16_t step = 2200;
+
+uint16_t phaseAcc = 0;
+uint16_t phaseInc = 2200;
+uint16_t dacAmplitude = 1000;
+uint16_t dacOffset = 2047;
+int32_t dacTemp;
 
 void init(void) {
 	// Enable peripheral clocks
@@ -76,8 +83,11 @@ void init(void) {
 extern "C" void TIM2_IRQHandler() {
 	if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) {
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-		phase += step;
-		DAC_SetChannel1Data(DAC_Align_12b_R, lut[phase >> 11]);
+		phaseAcc += phaseInc;
+		dacTemp = lut[phaseAcc >> PHASE_BIT_SHIFT] * dacAmplitude;
+		dacTemp >>= LUT_FRAC_BITS;
+		dacTemp += dacOffset;
+		DAC_SetChannel1Data(DAC_Align_12b_R, (uint16_t)dacTemp);
 		DAC_SoftwareTriggerCmd(DAC_Channel_1, ENABLE);
 	}
 }
