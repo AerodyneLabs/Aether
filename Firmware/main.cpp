@@ -30,30 +30,41 @@ uint16_t dacAmplitude = 1000;
 uint16_t dacOffset = 2047;
 int32_t dacTemp;
 
-void init(void) {
-	// Enable peripheral clocks
-	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_DAC, ENABLE);
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+void init(void);
+void init_mco(void);
+void init_dac(void);
+void init_timer(void);
+void init_nvic(void);
 
-	// Configure GPIO
+void init_mco(void) {
+	// Configure pin
 	GPIO_InitTypeDef gpioInit;
-	// DAC pin
-	gpioInit.GPIO_Mode = GPIO_Mode_AN;
-	gpioInit.GPIO_Pin = GPIO_Pin_4;
-	gpioInit.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOA, &gpioInit);
-	// MCO pin
 	gpioInit.GPIO_Mode = GPIO_Mode_AF;
 	gpioInit.GPIO_OType = GPIO_OType_PP;
 	gpioInit.GPIO_Pin = GPIO_Pin_8;
 	gpioInit.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	gpioInit.GPIO_Speed = GPIO_Speed_10MHz;
 	GPIO_Init(GPIOA, &gpioInit);
+
+	// Connect pin
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource8, GPIO_AF_MCO);
 
 	// Configure MCO
 	RCC_MCOConfig(RCC_MCOSource_SYSCLK, RCC_MCODiv_16);
+}
+
+void init_dac(void) {
+	// Enable peripheral clock
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_DAC, ENABLE);
+
+	// Configure pin
+	GPIO_InitTypeDef gpioInit;
+	gpioInit.GPIO_Mode = GPIO_Mode_AN;
+	gpioInit.GPIO_OType = GPIO_OType_PP;
+	gpioInit.GPIO_Pin = GPIO_Pin_4;
+	gpioInit.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	gpioInit.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_Init(GPIOA, &gpioInit);
 
 	// Configure DAC
 	DAC_InitTypeDef dacInit;
@@ -61,9 +72,18 @@ void init(void) {
 	dacInit.DAC_WaveGeneration = DAC_WaveGeneration_None;
 	dacInit.DAC_OutputBuffer = DAC_OutputBuffer_Enable;
 	DAC_Init(DAC_Channel_1, &dacInit);
+
+	// Enable DAC
 	DAC_Cmd(DAC_Channel_1, ENABLE);
-	DAC_SetChannel1Data(DAC_Align_12b_R, 0x7ff);
+
+	// Set output to minimum
+	DAC_SetChannel1Data(DAC_Align_12b_R, 0x000);
 	DAC_SoftwareTriggerCmd(DAC_Channel_1, ENABLE);
+}
+
+void init_timer(void) {
+	// Enable peripheral clock
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 
 	// Configure timer
 	TIM_TimeBaseInitTypeDef timerInit;
@@ -72,9 +92,15 @@ void init(void) {
 	timerInit.TIM_Prescaler = 1;
 	timerInit.TIM_Period = 100;
 	TIM_TimeBaseInit(TIM2, &timerInit);
-	TIM_Cmd(TIM2, ENABLE);
-	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
 
+	// Enable timer
+	TIM_Cmd(TIM2, ENABLE);
+
+	// Enable update event interrupt
+	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+}
+
+void init_nvic(void) {
 	// Configure NVIC
 	NVIC_InitTypeDef nvicInit;
 	nvicInit.NVIC_IRQChannel = TIM2_IRQn;
@@ -82,6 +108,24 @@ void init(void) {
 	nvicInit.NVIC_IRQChannelSubPriority = 1;
 	nvicInit.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&nvicInit);
+}
+
+void init(void) {
+	// Enable GPIO clocks
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+
+	init_mco();
+	init_dac();
+	init_timer();
+	init_nvic();
+}
+
+int main(void) {
+	init();
+
+	while(1) {
+		// Empty loop
+	}
 }
 
 extern "C" void TIM2_IRQHandler() {
@@ -121,13 +165,5 @@ extern "C" void TIM2_IRQHandler() {
 		// Write new value to DAC
 		DAC_SetChannel1Data(DAC_Align_12b_R, (uint16_t)dacTemp);
 		DAC_SoftwareTriggerCmd(DAC_Channel_1, ENABLE);
-	}
-}
-
-int main(void) {
-	init();
-
-	while(1) {
-		// Empty loop
 	}
 }
