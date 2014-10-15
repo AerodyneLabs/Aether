@@ -5,6 +5,8 @@
 #include <stm32l1xx_tim.h>
 #include <misc.h>
 
+#define HZ_SCALE 1.3106
+
 #define LUT_FRAC_BITS 15
 #define LUT_STEPS 32
 #define LUT_BITS 5
@@ -21,11 +23,11 @@ int16_t lut[LUT_STEPS] = {	// Q0.15
 };
 
 uint16_t baudAcc = 0;
-uint16_t baudInc = 1200 << 2;
+uint16_t baudInc = 1573;
 uint32_t baudTemp = 0;
 
-#define HIGH_PHASE_INC 2200 << 2
-#define LOW_PHASE_INC 1200 << 2
+#define HIGH_PHASE_INC 2883
+#define LOW_PHASE_INC 1573
 uint16_t phaseAcc = 0;
 uint16_t phaseInc = LOW_PHASE_INC;
 uint16_t dacAmplitude = 1000;
@@ -120,8 +122,8 @@ void init_timer(void) {
 	TIM_TimeBaseInitTypeDef timerInit;
 	timerInit.TIM_ClockDivision = TIM_CKD_DIV1;
 	timerInit.TIM_CounterMode = TIM_CounterMode_Up;
-	timerInit.TIM_Prescaler = 1;
-	timerInit.TIM_Period = 40;
+	timerInit.TIM_Prescaler = 32 - 1;
+	timerInit.TIM_Period = 20 - 1;
 	TIM_TimeBaseInit(TIM6, &timerInit);
 
 	// Enable timer
