@@ -9,7 +9,7 @@
 #define LUT_STEPS 32
 #define LUT_BITS 5
 #define PHASE_BIT_SHIFT (16 - LUT_BITS)
-int16_t lut[LUT_STEPS] = {
+int16_t lut[LUT_STEPS] = {	// Q0.15
 	0, 6393, 12539, 18204,
 	23170, 27245, 30273, 32137,
 	32767, 32137, 30273, 27245,
@@ -19,6 +19,10 @@ int16_t lut[LUT_STEPS] = {
 	-32767, -32137, -30273, -27245,
 	-23170, -18204, -12539, -6393
 };
+
+uint16_t baudAcc = 0;
+uint16_t baudInc = 1200;
+uint32_t baudTemp = 0;
 
 uint16_t phaseAcc = 0;
 uint16_t phaseInc = 2200;
@@ -82,11 +86,39 @@ void init(void) {
 
 extern "C" void TIM2_IRQHandler() {
 	if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) {
+		// Clear interrupt flag
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+
+		// Increment baud accumulator
+		baudTemp = baudAcc + baudInc;
+
+		// Check for baud overflow: next symbol
+		if(baudTemp > 0xffff) {
+			if(phaseInc == 2200) {
+				phaseInc = 1200;
+				dacAmplitude = 1067;
+			} else {
+				phaseInc = 2200;
+				dacAmplitude = 2000;
+			}
+			// Store corrected baud accumulator
+			baudAcc = (uint16_t)(baudTemp - 0xffff);
+		} else {
+			// Store new baud accumulator
+			baudAcc = (uint16_t)baudTemp;
+		}
+
+		// Increment phase accumulator
 		phaseAcc += phaseInc;
+
+		// Multiply lut by amplitude
 		dacTemp = lut[phaseAcc >> PHASE_BIT_SHIFT] * dacAmplitude;
+		// Strip fractional bits from result
 		dacTemp >>= LUT_FRAC_BITS;
+		// Apply offset
 		dacTemp += dacOffset;
+
+		// Write new value to DAC
 		DAC_SetChannel1Data(DAC_Align_12b_R, (uint16_t)dacTemp);
 		DAC_SoftwareTriggerCmd(DAC_Channel_1, ENABLE);
 	}
