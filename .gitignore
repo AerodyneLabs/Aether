@@ -50,4 +50,8 @@ local.properties
 
 # Debug files
 Debug/
+
+# CoIDE
 *.pbxproj
+*.comarker
+*.cogui
