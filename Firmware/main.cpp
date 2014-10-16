@@ -3,6 +3,7 @@
 #include <stm32l1xx_gpio.h>
 #include <stm32l1xx_dac.h>
 #include <stm32l1xx_tim.h>
+#include <stm32l1xx_usart.h>
 #include <misc.h>
 
 #define HZ_SCALE 1.3106
@@ -41,6 +42,7 @@ void init_rcc(void);
 void init_mco(void);
 void init_dac(void);
 void init_timer(void);
+void init_uart(void);
 void init_nvic(void);
 
 void init_rcc(void) {
@@ -136,6 +138,37 @@ void init_timer(void) {
 	TIM_SelectOutputTrigger(TIM6, TIM_TRGOSource_Update);
 }
 
+void init_uart(void) {
+	// Enable peripheral clock
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+
+	// Configure pins
+	GPIO_InitTypeDef gpioInit;
+	gpioInit.GPIO_Mode = GPIO_Mode_AF;
+	gpioInit.GPIO_OType = GPIO_OType_PP;
+	gpioInit.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_3;
+	gpioInit.GPIO_PuPd = GPIO_PuPd_UP;
+	gpioInit.GPIO_Speed = GPIO_Speed_40MHz;
+	GPIO_Init(GPIOA, &gpioInit);
+
+	// Connect pins
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
+
+	// Configure UART
+	USART_InitTypeDef uartInit;
+	uartInit.USART_BaudRate = 9600;
+	uartInit.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+	uartInit.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+	uartInit.USART_Parity = USART_Parity_No;
+	uartInit.USART_StopBits = USART_StopBits_1;
+	uartInit.USART_WordLength = USART_WordLength_8b;
+	USART_Init(USART2, &uartInit);
+
+	// Enable UART
+	USART_Cmd(USART2, ENABLE);
+}
+
 void init_nvic(void) {
 	// Configure NVIC
 	NVIC_InitTypeDef nvicInit;
@@ -155,13 +188,25 @@ void init(void) {
 	init_mco();
 	init_dac();
 	init_timer();
+	init_uart();
 	init_nvic();
 }
 
 int main(void) {
+	uint16_t beaconCount = 0;
+	uint8_t beaconChar = 'a';
+
 	init();
 
 	while(1) {
+		if(beaconCount++ == 0) {
+			USART_SendData(USART2, beaconChar++);
+			if(beaconChar > '{') {
+				beaconChar = 'a';
+				USART_SendData(USART2, '\n');
+			}
+		}
+
 		if(dacUpdateFlag) {
 			// Increment baud accumulator
 			baudTemp = baudAcc + baudInc;
