@@ -45,7 +45,6 @@ void init_mco(void);
 void init_dac(void);
 void init_timer(void);
 void init_uart(void);
-void init_nvic(void);
 
 void init_rcc(void) {
 	// Deintialize clocks
@@ -138,6 +137,14 @@ void init_timer(void) {
 
 	// Enable update event trigger output
 	TIM_SelectOutputTrigger(TIM6, TIM_TRGOSource_Update);
+
+	// Configure NVIC
+	NVIC_InitTypeDef nvicInit;
+	nvicInit.NVIC_IRQChannel = TIM6_IRQn;
+	nvicInit.NVIC_IRQChannelPreemptionPriority = 0;
+	nvicInit.NVIC_IRQChannelSubPriority = 1;
+	nvicInit.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&nvicInit);
 }
 
 void init_uart(void) {
@@ -171,16 +178,6 @@ void init_uart(void) {
 	USART_Cmd(USART2, ENABLE);
 }
 
-void init_nvic(void) {
-	// Configure NVIC
-	NVIC_InitTypeDef nvicInit;
-	nvicInit.NVIC_IRQChannel = TIM6_IRQn;
-	nvicInit.NVIC_IRQChannelPreemptionPriority = 0;
-	nvicInit.NVIC_IRQChannelSubPriority = 1;
-	nvicInit.NVIC_IRQChannelCmd = ENABLE;
-	NVIC_Init(&nvicInit);
-}
-
 void init(void) {
 	init_rcc();
 
@@ -191,7 +188,6 @@ void init(void) {
 	init_dac();
 	init_timer();
 	init_uart();
-	init_nvic();
 }
 
 int main(void) {
