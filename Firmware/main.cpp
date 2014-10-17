@@ -39,8 +39,8 @@ int32_t dacTemp;
 
 bool dacUpdateFlag = false;
 
-RingBuffer txBuffer(64);
-RingBuffer rxBuffer(64);
+RingBuffer *txBuffer;
+RingBuffer *rxBuffer;
 
 void init(void);
 void init_rcc(void);
@@ -179,6 +179,17 @@ void init_uart(void) {
 
 	// Enable UART
 	USART_Cmd(USART2, ENABLE);
+
+	// Enable interrupts
+	USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
+
+	// Configure NVIC
+	NVIC_InitTypeDef nvicInit;
+	nvicInit.NVIC_IRQChannel = USART2_IRQn;
+	nvicInit.NVIC_IRQChannelPreemptionPriority = 0;
+	nvicInit.NVIC_IRQChannelSubPriority = 1;
+	nvicInit.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&nvicInit);
 }
 
 void init(void) {
@@ -194,18 +205,18 @@ void init(void) {
 }
 
 int main(void) {
-	uint16_t beaconCount = 0;
-	uint8_t beaconChar = 'a';
+	// Create objects
+	rxBuffer = new RingBuffer(32);
+	txBuffer = new RingBuffer(32);
 
+	// Initialize MCU
 	init();
 
+	// Main loop
 	while(1) {
-		if(beaconCount++ == 0) {
-			USART_SendData(USART2, beaconChar++);
-			if(beaconChar > '{') {
-				beaconChar = 'a';
-				USART_SendData(USART2, '\n');
-			}
+		if(rxBuffer->isEmpty() == false) {
+			// Serial data needs to be processed
+			USART_SendData(USART2, rxBuffer->read());
 		}
 
 		if(dacUpdateFlag) {
@@ -241,8 +252,15 @@ int main(void) {
 			// Write new value to DAC
 			DAC_SetChannel1Data(DAC_Align_12b_R, (uint16_t)dacTemp);
 
+			// Clear update flag
 			dacUpdateFlag = false;
 		}
+	}
+}
+
+extern "C" void USART2_IRQHandler() {
+	if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET) {
+		rxBuffer->write((uint8_t)USART_ReceiveData(USART2));
 	}
 }
 
