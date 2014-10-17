@@ -39,6 +39,9 @@ int32_t dacTemp;
 
 bool dacUpdateFlag = false;
 
+RingBuffer txBuffer(64);
+RingBuffer rxBuffer(64);
+
 void init(void);
 void init_rcc(void);
 void init_mco(void);
@@ -53,14 +56,14 @@ void init_rcc(void) {
 	// Enable HSI
 	RCC_HSICmd(ENABLE);
 	// Wait for HSI
-	while(RCC_GetFlagStatus(RCC_FLAG_HSIRDY) == RESET);
+	while(RCC_GetFlagStatus(RCC_FLAG_HSIRDY) == RESET) {};
 
 	// Configure PLL
 	RCC_PLLConfig(RCC_PLLSource_HSI, RCC_PLLMul_6, RCC_PLLDiv_3);
 	// Enable PLL
 	RCC_PLLCmd(ENABLE);
 	// Wait for PLL
-	while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET);
+	while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET) {};
 
 	// Set PLL as SYSCLK
 	RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
