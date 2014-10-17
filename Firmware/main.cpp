@@ -6,6 +6,8 @@
 #include <stm32l1xx_usart.h>
 #include <misc.h>
 
+#include "RingBuffer.h"
+
 #define HZ_SCALE 1.3106
 
 #define LUT_FRAC_BITS 15
