@@ -83,32 +83,33 @@
   <Files>
     <File name="cmsis_lib/Source/stm32l1xx_tim.c" path="cmsis_lib/Source/stm32l1xx_tim.c" type="1"/>
     <File name="cmsis_lib/Include" path="" type="2"/>
+    <File name="src/main.cpp" path="src/main.cpp" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
-    <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
     <File name="cmsis_lib/Include/stm32l1xx_rcc.h" path="cmsis_lib/Include/stm32l1xx_rcc.h" type="1"/>
+    <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
-    <File name="cmsis_boot/system_stm32l1xx.c" path="cmsis_boot/system_stm32l1xx.c" type="1"/>
+    <File name="src/RingBuffer.cpp" path="src/RingBuffer.cpp" type="1"/>
+    <File name="src" path="" type="2"/>
     <File name="cmsis_lib/Source/stm32l1xx_rcc.c" path="cmsis_lib/Source/stm32l1xx_rcc.c" type="1"/>
+    <File name="cmsis_boot/system_stm32l1xx.c" path="cmsis_boot/system_stm32l1xx.c" type="1"/>
     <File name="cmsis_lib/Source/stm32l1xx_gpio.c" path="cmsis_lib/Source/stm32l1xx_gpio.c" type="1"/>
+    <File name="src/RingBuffer.h" path="src/RingBuffer.h" type="1"/>
     <File name="cmsis_lib/Include/stm32l1xx_dac.h" path="cmsis_lib/Include/stm32l1xx_dac.h" type="1"/>
     <File name="cmsis_lib/Source/stm32l1xx_usart.c" path="cmsis_lib/Source/stm32l1xx_usart.c" type="1"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="cmsis_lib/Include/stm32l1xx_usart.h" path="cmsis_lib/Include/stm32l1xx_usart.h" type="1"/>
     <File name="cmsis_lib/Source" path="" type="2"/>
-    <File name="RingBuffer.h" path="RingBuffer.h" type="1"/>
     <File name="cmsis_lib/Include/stm32l1xx_syscfg.h" path="cmsis_lib/Include/stm32l1xx_syscfg.h" type="1"/>
     <File name="cmsis" path="" type="2"/>
-    <File name="cmsis_lib" path="" type="2"/>
-    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="cmsis_boot/Startup/startup_stm32l1xx_hd.c" path="cmsis_boot/Startup/startup_stm32l1xx_hd.c" type="1"/>
-    <File name="cmsis_lib/Source/stm32l1xx_syscfg.c" path="cmsis_lib/Source/stm32l1xx_syscfg.c" type="1"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
+    <File name="cmsis_lib" path="" type="2"/>
     <File name="cmsis_lib/Include/stm32l1xx_gpio.h" path="cmsis_lib/Include/stm32l1xx_gpio.h" type="1"/>
-    <File name="main.cpp" path="main.cpp" type="1"/>
-    <File name="RingBuffer.cpp" path="RingBuffer.cpp" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_syscfg.c" path="cmsis_lib/Source/stm32l1xx_syscfg.c" type="1"/>
     <File name="syscalls" path="" type="2"/>
     <File name="cmsis_boot/stm32l1xx.h" path="cmsis_boot/stm32l1xx.h" type="1"/>
-    <File name="cmsis_lib/Include/stm32l1xx_tim.h" path="cmsis_lib/Include/stm32l1xx_tim.h" type="1"/>
     <File name="cmsis_lib/Source/stm32l1xx_dac.c" path="cmsis_lib/Source/stm32l1xx_dac.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_tim.h" path="cmsis_lib/Include/stm32l1xx_tim.h" type="1"/>
     <File name="cmsis_lib/Include/misc.h" path="cmsis_lib/Include/misc.h" type="1"/>
     <File name="cmsis_boot/Startup" path="" type="2"/>
     <File name="cmsis_boot/system_stm32l1xx.h" path="cmsis_boot/system_stm32l1xx.h" type="1"/>
