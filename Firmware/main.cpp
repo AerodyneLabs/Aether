@@ -204,6 +204,18 @@ void init(void) {
 	init_uart();
 }
 
+void uart_transmit(uint8_t *str) {
+	// Copy string into transmit buffer
+	while(*str != '\0') {
+		// Copy character
+		txBuffer->write(*str);
+		// Increment pointer
+		str++;
+	}
+	// Enable transmit interrupt
+	USART_ITConfig(USART2, USART_IT_TXE, ENABLE);
+}
+
 int main(void) {
 	// Create objects
 	rxBuffer = new RingBuffer(32);
@@ -216,7 +228,9 @@ int main(void) {
 	while(1) {
 		if(rxBuffer->isEmpty() == false) {
 			// Serial data needs to be processed
-			USART_SendData(USART2, rxBuffer->read());
+			//USART_SendData(USART2, rxBuffer->read());
+			uint8_t str[4] = {'[', rxBuffer->read(), ']', '\0'};
+			uart_transmit(str);
 		}
 
 		if(dacUpdateFlag) {
@@ -260,7 +274,17 @@ int main(void) {
 
 extern "C" void USART2_IRQHandler() {
 	if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET) {
+		// Receive buffer full
 		rxBuffer->write((uint8_t)USART_ReceiveData(USART2));
+	} else if (USART_GetITStatus(USART2, USART_IT_TXE) != RESET) {
+		// Transmit buffer empty
+		if(txBuffer->isEmpty() == false) {
+			// Still have data to transmit
+			USART_SendData(USART2, txBuffer->read());
+		} else {
+			// Out of data
+			USART_ITConfig(USART2, USART_IT_TXE, DISABLE);
+		}
 	}
 }
 
