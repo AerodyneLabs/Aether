@@ -228,7 +228,6 @@ int main(void) {
 	while(1) {
 		if(rxBuffer->isEmpty() == false) {
 			// Serial data needs to be processed
-			//USART_SendData(USART2, rxBuffer->read());
 			uint8_t str[4] = {'[', rxBuffer->read(), ']', '\0'};
 			uart_transmit(str);
 		}

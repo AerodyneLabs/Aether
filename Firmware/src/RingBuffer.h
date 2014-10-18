@@ -1,3 +1,6 @@
+#ifndef RING_BUFFER_H_
+#define RING_BUFFER_H_
+
 #include <stdint.h>
 
 class RingBuffer {
@@ -23,3 +26,5 @@ private:
 	RingBuffer(RingBuffer&& other) = delete;
 	*/
 };
+
+#endif
