@@ -1,3 +1,0 @@
-[submodule "Firmware/lib/TinyGPSPlus"]
-	path = Firmware/lib/TinyGPSPlus
-	url = https://github.com/mikalhart/TinyGPSPlus.git
