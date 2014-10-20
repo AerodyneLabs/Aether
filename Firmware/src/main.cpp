@@ -5,8 +5,10 @@
 #include <stm32l1xx_tim.h>
 #include <stm32l1xx_usart.h>
 #include <misc.h>
+#include <stdio.h>
 
 #include "RingBuffer.h"
+#include "VenusGPS.h"
 
 #define HZ_SCALE 1.3106
 
@@ -204,11 +206,11 @@ void init(void) {
 	init_uart();
 }
 
-void uart_transmit(uint8_t *str) {
+void uart_transmit(char *str) {
 	// Copy string into transmit buffer
 	while(*str != '\0') {
 		// Copy character
-		txBuffer->write(*str);
+		txBuffer->write((uint8_t)*str);
 		// Increment pointer
 		str++;
 	}
@@ -218,8 +220,9 @@ void uart_transmit(uint8_t *str) {
 
 int main(void) {
 	// Create objects
-	rxBuffer = new RingBuffer(32);
-	txBuffer = new RingBuffer(32);
+	rxBuffer = new RingBuffer(64);
+	txBuffer = new RingBuffer(64);
+	VenusGPS gps = VenusGPS();
 
 	// Initialize MCU
 	init();
@@ -228,8 +231,15 @@ int main(void) {
 	while(1) {
 		if(rxBuffer->isEmpty() == false) {
 			// Serial data needs to be processed
-			uint8_t str[4] = {'[', rxBuffer->read(), ']', '\0'};
-			uart_transmit(str);
+			uint8_t c = rxBuffer->read();
+			bool isValid = gps.encode((char)c);
+			if(isValid) {
+				char str[16];
+				sprintf(str, "Lat: %+02i %02u.%03u\n", gps.latDeg, gps.latMin, gps.latFrac);
+				uart_transmit(str);
+				sprintf(str, "Lon: %+03i %02u.%03u\n", gps.lonDeg, gps.lonMin, gps.lonFrac);
+				uart_transmit(str);
+			}
 		}
 
 		if(dacUpdateFlag) {
