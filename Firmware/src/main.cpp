@@ -7,6 +7,7 @@
 #include <misc.h>
 #include <stdio.h>
 
+#include "APRSPacket.h"
 #include "RingBuffer.h"
 #include "VenusGPS.h"
 
