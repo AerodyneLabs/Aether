@@ -44,6 +44,7 @@ bool dacUpdateFlag = false;
 
 RingBuffer *txBuffer;
 RingBuffer *rxBuffer;
+APRSPacket *pkt;
 
 void init(void);
 void init_rcc(void);
@@ -224,6 +225,8 @@ int main(void) {
 	rxBuffer = new RingBuffer(64);
 	txBuffer = new RingBuffer(64);
 	VenusGPS gps = VenusGPS();
+	pkt = new APRSPacket("NV1K-11");
+	pkt->setDestAddress("APRS-0");
 
 	// Initialize MCU
 	init();

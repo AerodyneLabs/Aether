@@ -65,8 +65,8 @@ public:
 private:
 	// Packet data
 	static const char flagByte = 0x7e;
-	char destAddr[8];
-	char srcAddr[8];
+	char destAddr[7];
+	char srcAddr[7];
 	char digiAddr[57];
 	static const char ctrlByte = 0x03;
 	static const char pidByte = 0xf0;
@@ -89,6 +89,13 @@ private:
 		APRS_FRAME_CHECK,
 		APRS_POST_FLAG
 	} curField;
+
+	/**
+	 * Convert text form callsign to AX.25 callsign.
+	 * @param in  Pointer to input address string.
+	 * @param out Pointer to output address string.
+	 */
+	void encodeAddress(const char *in, char *out);
 
 	/* Required by style guide but cause problems with gcc
 	APRSPacket(const APRSPacket& other) = delete;
