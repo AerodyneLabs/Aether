@@ -37,9 +37,9 @@ class ApplicationWindow(QtGui.QMainWindow):
         fileMenu.addSeparator()
         fileMenu.addAction(exitAction)
 
-        tabWidget = QtGui.QTabWidget()
-        tabWidget.addTab(ConfigurationTab(), 'Configuration')
-        tabWidget.addTab(FirmwareTab(), 'Firmware')
+        tabWidget = QtGui.QTabWidget(self)
+        tabWidget.addTab(ConfigurationTab(tabWidget), 'Configuration')
+        tabWidget.addTab(FirmwareTab(tabWidget), 'Firmware')
         self.setCentralWidget(tabWidget)
 
         self.show()
