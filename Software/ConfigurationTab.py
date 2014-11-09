@@ -25,6 +25,7 @@ class ConfigurationTab(QtGui.QWidget):
 
         self.profile_tabs = QtGui.QTabWidget(self)
         self.profile_tabs.setTabPosition(QtGui.QTabWidget.TabPosition.West)
+        self.profile_tabs.setMovable(True)
         layout.addWidget(self.profile_tabs)
 
         button_layout = QtGui.QHBoxLayout()
@@ -40,8 +41,8 @@ class ConfigurationTab(QtGui.QWidget):
         self.setLayout(layout)
 
     def create_profile(self):
-        tab = ProfileTab(self.profile_tabs)
         name = "Profile {:d}".format(self.profile_tabs.count() + 1)
+        tab = ProfileTab(name, self.profile_tabs)
         self.profile_tabs.addTab(tab, name)
 
     def duplicate_profile(self):
