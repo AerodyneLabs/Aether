@@ -1,4 +1,5 @@
-from PySide import QtGui
+from PySide import QtCore, QtGui
+from ProfileConditionsModel import *
 
 class ProfileTab(QtGui.QWidget):
 
@@ -22,6 +23,26 @@ class ProfileTab(QtGui.QWidget):
         name_layout.addWidget(profile_name_transmit)
         meta_layout.addRow('Profile Name:', name_layout)
         layout.addLayout(meta_layout)
+
+        conditions_frame = QtGui.QGroupBox("Conditions", self)
+        conditions_layout = QtGui.QVBoxLayout()
+        self.conditions_view = QtGui.QTableView(conditions_frame)
+        self.conditions_view.horizontalHeader().setResizeMode(QtGui.QHeaderView.ResizeMode.Stretch)
+        self.conditions_model = ProfileConditionsModel()
+        self.conditions_view.setModel(self.conditions_model)
+        conditions_layout.addWidget(self.conditions_view)
+        conditions_frame.setLayout(conditions_layout)
+
+        outputs_frame = QtGui.QGroupBox("Outputs", self)
+        outputs_layout = QtGui.QVBoxLayout()
+        self.outputs_view = QtGui.QTreeView(outputs_frame)
+        outputs_layout.addWidget(self.outputs_view)
+        outputs_frame.setLayout(outputs_layout)
+
+        splitter = QtGui.QSplitter(QtCore.Qt.Vertical)
+        splitter.addWidget(conditions_frame)
+        splitter.addWidget(outputs_frame)
+        layout.addWidget(splitter)
 
         self.setLayout(layout)
 
