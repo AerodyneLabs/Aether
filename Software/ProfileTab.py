@@ -1,7 +1,11 @@
 from PySide import QtCore, QtGui
 from ProfileConditionsModel import *
+from ComboDelegate import *
 
 class ProfileTab(QtGui.QWidget):
+
+    conditionals = ['<', '>', '=']
+    variables = ['Altitude', 'Voltage']
 
     def __init__(self, name="", parent=None):
         QtGui.QWidget.__init__(self, parent)
@@ -27,9 +31,17 @@ class ProfileTab(QtGui.QWidget):
         conditions_frame = QtGui.QGroupBox("Conditions", self)
         conditions_layout = QtGui.QVBoxLayout()
         self.conditions_view = QtGui.QTableView(conditions_frame)
-        self.conditions_view.horizontalHeader().setResizeMode(QtGui.QHeaderView.ResizeMode.Stretch)
+        self.conditions_view.setEditTriggers(
+            QtGui.QAbstractItemView.AllEditTriggers)
+        self.conditions_view.horizontalHeader().setResizeMode(
+            QtGui.QHeaderView.ResizeMode.Stretch)
         self.conditions_model = ProfileConditionsModel()
+        self.conditions_model.insertRows(0, 2)
         self.conditions_view.setModel(self.conditions_model)
+        self.conditions_view.setItemDelegateForColumn(1, ComboDelegate(
+            self.conditions_model.variables, self.conditions_view))
+        self.conditions_view.setItemDelegateForColumn(2, ComboDelegate(
+            self.conditions_model.conditionals, self.conditions_view))
         conditions_layout.addWidget(self.conditions_view)
         conditions_frame.setLayout(conditions_layout)
 
