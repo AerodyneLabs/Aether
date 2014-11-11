@@ -1,6 +1,9 @@
 from PySide import QtCore, QtGui
 from ProfileConditionsModel import *
 from ComboDelegate import *
+from OutputTreeModel import *
+from Node import *
+from APRSNode import *
 
 class ProfileTab(QtGui.QWidget):
 
@@ -48,6 +51,11 @@ class ProfileTab(QtGui.QWidget):
         outputs_frame = QtGui.QGroupBox("Outputs", self)
         outputs_layout = QtGui.QVBoxLayout()
         self.outputs_view = QtGui.QTreeView(outputs_frame)
+        self.outputs_root = Node("Outputs")
+        test_node1 = APRSNode('Test 1', self.outputs_root)
+        test_node1 = APRSNode('Test 2', self.outputs_root)
+        self.outputs_model = OutputTreeModel(self.outputs_root)
+        self.outputs_view.setModel(self.outputs_model)
         outputs_layout.addWidget(self.outputs_view)
         outputs_frame.setLayout(outputs_layout)
 
