@@ -9,6 +9,7 @@ class ProfileTab(QtGui.QWidget):
 
     conditionals = ['<', '>', '=']
     variables = ['Altitude', 'Voltage']
+    output_types = ['APRS', 'DominoEX']
 
     def __init__(self, name="", parent=None):
         super(ProfileTab, self).__init__(parent)
@@ -33,13 +34,15 @@ class ProfileTab(QtGui.QWidget):
 
         conditions_frame = QtGui.QGroupBox("Conditions", self)
         conditions_layout = QtGui.QVBoxLayout()
+        conditions_add = QtGui.QPushButton("Add Condition", conditions_frame)
+        conditions_add.clicked.connect(self.add_condition)
+        conditions_layout.addWidget(conditions_add)
         self.conditions_view = QtGui.QTableView(conditions_frame)
         self.conditions_view.setEditTriggers(
             QtGui.QAbstractItemView.AllEditTriggers)
         self.conditions_view.horizontalHeader().setResizeMode(
             QtGui.QHeaderView.ResizeMode.Stretch)
         self.conditions_model = ProfileConditionsModel()
-        self.conditions_model.insertRows(0, 2)
         self.conditions_view.setModel(self.conditions_model)
         self.conditions_view.setItemDelegateForColumn(1, ComboDelegate(
             self.conditions_model.variables, self.conditions_view))
@@ -50,10 +53,16 @@ class ProfileTab(QtGui.QWidget):
 
         outputs_frame = QtGui.QGroupBox("Outputs", self)
         outputs_layout = QtGui.QVBoxLayout()
+        outputs_meta = QtGui.QHBoxLayout()
+        self.outputs_type = QtGui.QComboBox(outputs_frame)
+        self.outputs_type.addItems(self.output_types)
+        outputs_meta.addWidget(self.outputs_type)
+        outputs_add = QtGui.QPushButton("Add Output", outputs_frame)
+        outputs_add.clicked.connect(self.add_output)
+        outputs_meta.addWidget(outputs_add)
+        outputs_layout.addLayout(outputs_meta)
         self.outputs_view = QtGui.QTreeView(outputs_frame)
         self.outputs_root = Node("Outputs")
-        test_node1 = APRSNode('Test 1', self.outputs_root)
-        test_node1 = APRSNode('Test 2', self.outputs_root)
         self.outputs_model = OutputTreeModel(self.outputs_root)
         self.outputs_view.setModel(self.outputs_model)
         outputs_layout.addWidget(self.outputs_view)
@@ -70,3 +79,12 @@ class ProfileTab(QtGui.QWidget):
         index = self.parentWidget().currentIndex()
         name = self.profile_name_field.text()
         self.parentWidget().parentWidget().setTabText(index, name)
+
+    def add_condition(self):
+        self.conditions_model.insertRows(0, 1)
+
+    def add_output(self):
+        new_type = self.output_types[self.outputs_type.currentIndex()]
+        if new_type == 'APRS':
+            output = APRSNode("Unnamed")
+            self.outputs_model.addRow(output)

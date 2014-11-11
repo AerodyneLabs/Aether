@@ -11,8 +11,22 @@ class Node(object):
     def addChild(self, child):
         self._children.append(child)
 
+    def insertChild(self, position, child):
+        if position < 0 or position > len(self._children):
+            return False
+
+        self._children.insert(position, child)
+        child._parent = self
+        return True
+
     def name(self):
         return self._name
+
+    def setName(self, name):
+        self._name = name
+
+    def prefix(self):
+        return None
 
     def child(self, row):
         return self._children[row]
