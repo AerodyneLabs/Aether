@@ -27,12 +27,19 @@ class OutputTreeModel(QtCore.QAbstractItemModel):
             if index.column() == 0:
                 return node.name()
 
+    def setData(self, index, value, role=QtCore.Qt.EditRole):
+        if not index.isValid():
+            return False
+
+        if role == QtCore.Qt.EditRole:
+            node = index.internalPointer()
+            #TODO save value to node
+            return True
+
     def headerData(self, section, orientation, role):
         if role == QtCore.Qt.DisplayRole:
             if section == 0:
                 return "Outputs"
-            else:
-                return "Blah"
 
     def flags(self, index):
         return (QtCore.Qt.ItemIsEnabled |
@@ -59,3 +66,11 @@ class OutputTreeModel(QtCore.QAbstractItemModel):
             return self.createIndex(row, column, child_node)
         else:
             return QtCore.QModelIndex()
+
+    def getNode(self, index):
+        if index.isValid():
+            node = index.internalPointer()
+            if node:
+                return node
+
+        return self._root

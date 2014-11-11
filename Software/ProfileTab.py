@@ -11,7 +11,7 @@ class ProfileTab(QtGui.QWidget):
     variables = ['Altitude', 'Voltage']
 
     def __init__(self, name="", parent=None):
-        QtGui.QWidget.__init__(self, parent)
+        super(ProfileTab, self).__init__(parent)
         self.name = name
         self.initUI()
 

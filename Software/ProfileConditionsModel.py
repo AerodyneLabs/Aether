@@ -7,19 +7,19 @@ class ProfileConditionsModel(QtCore.QAbstractTableModel):
     conditionals = ['=', '<', '>']
 
     def __init__(self, data = [], parent = None):
-        QtCore.QAbstractTableModel.__init__(self, parent)
-        self.__data = data
+        super(ProfileConditionsModel, self).__init__(parent)
+        self._data = list(data)
 
     def columnCount(self, parent):
         return len(self.headings)
 
     def rowCount(self, parent):
-        return len(self.__data)
+        return len(self._data)
 
     def data(self, index, role=QtCore.Qt.DisplayRole):
         row = index.row()
         col = index.column()
-        data = self.__data[row][col]
+        data = self._data[row][col]
 
         if role == QtCore.Qt.DisplayRole:
             if col == 1:
@@ -38,22 +38,22 @@ class ProfileConditionsModel(QtCore.QAbstractTableModel):
 
     def setData(self, index, value, role = QtCore.Qt.EditRole):
         if role == QtCore.Qt.EditRole:
-            self.__data[index.row()][index.column()] = value
+            self._data[index.row()][index.column()] = value
             self.dataChanged.emit(index,index)
             return True
 
     def insertRows(self, position, rows, parent=QtCore.QModelIndex()):
         self.beginInsertRows(parent, position, position + rows - 1)
         for i in range(rows):
-            self.__data.insert(position, ['', 0, 0, 0]);
+            self._data.insert(position, ['', 0, 0, 0]);
         self.endInsertRows()
         return True
 
     def removeRows(self, position, rows, parent=QtCore.QModelIndex()):
         self.beginRemoveRows(parent, position, position + rows - 1)
         for i in range(rows):
-            val = self.__data[position]
-            self.__data.remove(val)
+            val = self._data[position]
+            self._data.remove(val)
         self.endRemoveRows()
         return True
 

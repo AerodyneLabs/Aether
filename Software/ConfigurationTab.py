@@ -4,7 +4,7 @@ from ProfileTab import *
 class ConfigurationTab(QtGui.QWidget):
 
     def __init__(self, parent=None):
-        QtGui.QWidget.__init__(self, parent)
+        super(ConfigurationTab, self).__init__(parent)
         self.initUI()
 
     def initUI(self):
@@ -43,7 +43,8 @@ class ConfigurationTab(QtGui.QWidget):
     def create_profile(self):
         name = "Profile {:d}".format(self.profile_tabs.count() + 1)
         tab = ProfileTab(name, self.profile_tabs)
-        self.profile_tabs.addTab(tab, name)
+        self.profile_tabs.insertTab(0, tab, name)
+        self.profile_tabs.setCurrentIndex(0)
 
     def duplicate_profile(self):
         pass
