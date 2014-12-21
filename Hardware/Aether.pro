@@ -1,4 +1,4 @@
-update=12/18/2014 7:38:23 PM
+update=12/21/2014 5:00:14 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -37,3 +37,6 @@ LibDir=../../KiCadLib
 LibName1=power
 LibName2=Symbols/SiliconLabs
 LibName3=Symbols/STMicroelectronics
+LibName4=Symbols/Sensors
+LibName5=Symbols/Passives
+LibName6=Symbols/Actives
