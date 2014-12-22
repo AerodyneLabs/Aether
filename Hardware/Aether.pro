@@ -1,4 +1,4 @@
-update=12/21/2014 5:00:14 PM
+update=12/21/2014 10:59:09 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -40,3 +40,4 @@ LibName3=Symbols/STMicroelectronics
 LibName4=Symbols/Sensors
 LibName5=Symbols/Passives
 LibName6=Symbols/Actives
+LibName7=Symbols/Connectors
