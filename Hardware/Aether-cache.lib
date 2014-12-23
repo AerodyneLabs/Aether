@@ -199,10 +199,10 @@ F0 "D" -150 100 60 V V L CNN
 F1 "Diode-Schottky" -50 100 60 V V L CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
-F4 "Value" 0 0 60 H I C CNN "Vendor"
-F5 "Value" 0 0 60 H I C CNN "Vendor Part #"
-F6 "Value" 0 0 60 H I C CNN "Manufacturer"
-F7 "Value" 0 0 60 H I C CNN "Manufacturer Part #"
+F4 "Value" 0 0 60 H I C CNN "Manufacturer Part #"
+F5 "Value" 0 0 60 H I C CNN "Vendor"
+F6 "Value" 0 0 60 H I C CNN "Vendor Part #"
+F7 "Value" 0 0 60 H I C CNN "Manufacturer"
 F8 "Vf" 50 100 60 V V L CNN "Forward Voltage"
 F9 "I" 150 100 60 V V L CNN "Current"
 F10 "Vr" 0 -100 60 H I C CNN "Reverse Voltage"
@@ -341,6 +341,26 @@ P 4 0 1 0  25 25  75 0  25 -25  25 25 F
 X ~ D 100 -250 100 U 50 50 1 1 P
 X ~ G -200 150 100 R 50 50 1 1 I
 X ~ S 100 250 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# NCP1521
+#
+DEF NCP1521 U 0 40 Y Y 1 F N
+F0 "U" 0 450 60 H V C CNN
+F1 "NCP1521" 0 -450 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ SOT95P275-5L40*
+$ENDFPLIST
+DRAW
+S 200 400 -200 -400 0 1 0 N
+X VIN 1 -400 350 200 R 50 50 1 1 W
+X GND 2 -400 -350 200 R 50 50 1 1 W
+X EN 3 -400 250 200 R 50 50 1 1 I
+X FB 4 400 -350 200 L 50 50 1 1 I
+X LX 5 400 350 200 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #

@@ -7,6 +7,7 @@ LIBS:Passives
 LIBS:Actives
 LIBS:Connectors
 LIBS:Microchip
+LIBS:ONSemiconductor
 LIBS:Aether-cache
 EELAYER 25 0
 EELAYER END

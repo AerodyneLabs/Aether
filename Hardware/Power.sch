@@ -7,6 +7,7 @@ LIBS:Passives
 LIBS:Actives
 LIBS:Connectors
 LIBS:Microchip
+LIBS:ONSemiconductor
 LIBS:Aether-cache
 EELAYER 25 0
 EELAYER END
@@ -649,7 +650,7 @@ L Resistor R?
 U 1 1 549A33F6
 P 2100 2650
 F 0 "R?" V 1950 2750 60  0000 L CNN
-F 1 "Resistor" V 2050 2750 60  0000 L CNN
+F 1 "100k" V 2050 2750 60  0000 L CNN
 F 2 "" H 2000 2650 60  0001 C CNN
 F 3 "" H 2100 2750 60  0001 C CNN
 F 4 "Value" H 2100 2650 60  0001 C CNN "Manufacturer"
@@ -698,4 +699,222 @@ Wire Wire Line
 Wire Wire Line
 	2000 3000 2100 3000
 Connection ~ 2100 3000
+$Comp
+L NCP1521 U?
+U 1 1 549A4164
+P 3400 5550
+F 0 "U?" H 3400 6000 60  0000 C CNN
+F 1 "NCP1521" H 3400 5100 60  0000 C CNN
+F 2 "" H 3400 5550 60  0000 C CNN
+F 3 "" H 3400 5550 60  0000 C CNN
+F 4 "Value" H 3400 5550 60  0001 C CNN "ON Semi"
+F 5 "NCP1521BSNT1G" H 3400 5550 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 3400 5550 60  0001 C CNN "Vendor"
+F 7 "NCP1521BSNT1GOSCT-ND" H 3400 5550 60  0001 C CNN "Vendor Part #"
+	1    3400 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Inductor L?
+U 1 1 549A41CA
+P 4150 5200
+F 0 "L?" V 4000 5300 60  0000 L CNN
+F 1 "2.2uH" V 4100 5300 60  0000 L CNN
+F 2 "" H 4050 5200 60  0001 C CNN
+F 3 "" H 4150 5300 60  0001 C CNN
+F 4 "Value" H 4150 5200 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 4150 5200 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 4150 5200 60  0001 C CNN "Vendor"
+F 7 "Value" H 4150 5200 60  0001 C CNN "Vendor Part #"
+F 8 "0.25A" V 4200 5300 50  0000 L CNN "Current"
+F 9 "100mO" V 4300 5300 50  0000 L CNN "DCR"
+	1    4150 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Resistor R?
+U 1 1 549A422F
+P 4500 5550
+F 0 "R?" V 4350 5650 60  0000 L CNN
+F 1 "453k" V 4450 5650 60  0000 L CNN
+F 2 "" H 4400 5550 60  0001 C CNN
+F 3 "" H 4500 5650 60  0001 C CNN
+F 4 "Value" H 4500 5550 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 4500 5550 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 4500 5550 60  0001 C CNN "Vendor"
+F 7 "Value" H 4500 5550 60  0001 C CNN "Vendor Part #"
+F 8 "1/10W" V 4550 5650 50  0000 L CNN "Power"
+F 9 "5%" V 4650 5650 50  0000 L CNN "Tolerance"
+	1    4500 5550
+	0    -1   1    0   
+$EndComp
+$Comp
+L Resistor R?
+U 1 1 549A4298
+P 4500 6250
+F 0 "R?" V 4350 6350 60  0000 L CNN
+F 1 "100k" V 4450 6350 60  0000 L CNN
+F 2 "" H 4400 6250 60  0001 C CNN
+F 3 "" H 4500 6350 60  0001 C CNN
+F 4 "Value" H 4500 6250 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 4500 6250 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 4500 6250 60  0001 C CNN "Vendor"
+F 7 "Value" H 4500 6250 60  0001 C CNN "Vendor Part #"
+F 8 "1/10W" V 4550 6350 50  0000 L CNN "Power"
+F 9 "5%" V 4650 6350 50  0000 L CNN "Tolerance"
+	1    4500 6250
+	0    -1   1    0   
+$EndComp
+$Comp
+L Capacitor C?
+U 1 1 549A42EF
+P 4800 5550
+F 0 "C?" V 4650 5650 60  0000 L CNN
+F 1 "18pF" V 4750 5650 60  0000 L CNN
+F 2 "" H 4700 5550 60  0001 C CNN
+F 3 "" H 4800 5650 60  0001 C CNN
+F 4 "Value" H 4800 5550 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 4800 5550 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 4800 5550 60  0001 C CNN "Vendor"
+F 7 "Value" H 4800 5550 60  0001 C CNN "Vendor Part #"
+F 8 "10V" V 4850 5650 50  0000 L CNN "Voltage"
+F 9 "X5R" V 4950 5650 50  0000 L CNN "Dielectric"
+	1    4800 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C?
+U 1 1 549A4356
+P 5500 5550
+F 0 "C?" V 5350 5650 60  0000 L CNN
+F 1 "10uF" V 5450 5650 60  0000 L CNN
+F 2 "" H 5400 5550 60  0001 C CNN
+F 3 "" H 5500 5650 60  0001 C CNN
+F 4 "Value" H 5500 5550 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 5500 5550 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 5500 5550 60  0001 C CNN "Vendor"
+F 7 "Value" H 5500 5550 60  0001 C CNN "Vendor Part #"
+F 8 "10V" V 5550 5650 50  0000 L CNN "Voltage"
+F 9 "X5R" V 5650 5650 50  0000 L CNN "Dielectric"
+	1    5500 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 549A4420
+P 5500 5100
+F 0 "#PWR?" H 5500 4950 60  0001 C CNN
+F 1 "+3V3" H 5500 5240 60  0000 C CNN
+F 2 "" H 5500 5100 60  0000 C CNN
+F 3 "" H 5500 5100 60  0000 C CNN
+	1    5500 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5100 5500 5300
+$Comp
+L GND #PWR?
+U 1 1 549A44A6
+P 4500 6600
+F 0 "#PWR?" H 4500 6350 60  0001 C CNN
+F 1 "GND" H 4500 6450 60  0000 C CNN
+F 2 "" H 4500 6600 60  0000 C CNN
+F 3 "" H 4500 6600 60  0000 C CNN
+	1    4500 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 549A44BA
+P 5500 5900
+F 0 "#PWR?" H 5500 5650 60  0001 C CNN
+F 1 "GND" H 5500 5750 60  0000 C CNN
+F 2 "" H 5500 5900 60  0000 C CNN
+F 3 "" H 5500 5900 60  0000 C CNN
+	1    5500 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5900 5500 5800
+Wire Wire Line
+	3800 5200 3900 5200
+Wire Wire Line
+	4400 5200 5500 5200
+Connection ~ 5500 5200
+Wire Wire Line
+	4500 5300 4500 5200
+Connection ~ 4500 5200
+Wire Wire Line
+	4500 5800 4500 6000
+Wire Wire Line
+	4500 6500 4500 6600
+Wire Wire Line
+	4800 5900 4800 5800
+Wire Wire Line
+	3800 5900 4800 5900
+Connection ~ 4500 5900
+Wire Wire Line
+	4800 5300 4800 5200
+Connection ~ 4800 5200
+$Comp
+L Capacitor C?
+U 1 1 549A4AF8
+P 2400 5550
+F 0 "C?" V 2250 5650 60  0000 L CNN
+F 1 "4.7uF" V 2350 5650 60  0000 L CNN
+F 2 "" H 2300 5550 60  0001 C CNN
+F 3 "" H 2400 5650 60  0001 C CNN
+F 4 "Value" H 2400 5550 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 2400 5550 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 2400 5550 60  0001 C CNN "Vendor"
+F 7 "Value" H 2400 5550 60  0001 C CNN "Vendor Part #"
+F 8 "10V" V 2450 5650 50  0000 L CNN "Voltage"
+F 9 "X5R" V 2550 5650 50  0000 L CNN "Dielectric"
+	1    2400 5550
+	0    -1   1    0   
+$EndComp
+$Comp
+L +BATT #PWR?
+U 1 1 549A4C75
+P 2400 5100
+F 0 "#PWR?" H 2400 4950 60  0001 C CNN
+F 1 "+BATT" H 2400 5240 60  0000 C CNN
+F 2 "" H 2400 5100 60  0000 C CNN
+F 3 "" H 2400 5100 60  0000 C CNN
+	1    2400 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5100 2400 5300
+Wire Wire Line
+	3000 5200 2400 5200
+Connection ~ 2400 5200
+$Comp
+L GND #PWR?
+U 1 1 549A4D8D
+P 2400 5900
+F 0 "#PWR?" H 2400 5650 60  0001 C CNN
+F 1 "GND" H 2400 5750 60  0000 C CNN
+F 2 "" H 2400 5900 60  0000 C CNN
+F 3 "" H 2400 5900 60  0000 C CNN
+	1    2400 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 549A4DA1
+P 2900 6000
+F 0 "#PWR?" H 2900 5750 60  0001 C CNN
+F 1 "GND" H 2900 5850 60  0000 C CNN
+F 2 "" H 2900 6000 60  0000 C CNN
+F 3 "" H 2900 6000 60  0000 C CNN
+	1    2900 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 6000 2900 5900
+Wire Wire Line
+	2900 5900 3000 5900
+Wire Wire Line
+	2400 5800 2400 5900
 $EndSCHEMATC
