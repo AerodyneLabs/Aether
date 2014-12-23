@@ -215,25 +215,6 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# GNDPWR
-#
-DEF GNDPWR #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -200 40 H I C CNN
-F1 "GNDPWR" 0 -130 40 H V C CNN
-F2 "" 0 -50 60 H V C CNN
-F3 "" 0 -50 60 H V C CNN
-DRAW
-P 2 0 1 0  0 -50  0 0 N
-P 3 0 1 8  -40 -50  -50 -80  -50 -80 N
-P 3 0 1 8  -20 -50  -30 -80  -30 -80 N
-P 3 0 1 8  0 -50  -10 -80  -10 -80 N
-P 3 0 1 8  20 -50  10 -80  10 -80 N
-P 3 0 1 8  40 -50  -40 -50  -40 -50 N
-P 4 0 1 8  40 -50  30 -80  30 -80  30 -80 N
-X GNDPWR 1 0 0 0 U 40 40 1 1 W N
-ENDDRAW
-ENDDEF
-#
 # Inductor
 #
 DEF Inductor L 0 40 N N 1 F N
@@ -471,28 +452,6 @@ X GPIO2 19 -550 -250 200 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# TVS
-#
-DEF TVS D 0 40 N N 1 F N
-F0 "D" -150 100 60 V V L CNN
-F1 "TVS" -50 100 60 V V L CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
-F4 "Value" 0 0 60 H I C CNN "Manufacturer"
-F5 "Value" 0 0 60 H I C CNN "Manufacturer Part #"
-F6 "Value" 0 0 60 H I C CNN "Vendor"
-F7 "Value" 0 0 60 H I C CNN "Vendor Part #"
-F8 "VR" 50 100 50 V V L CNN "Voltage Reverse"
-F9 "VC" 150 100 50 V V L CNN "Voltage Clamping"
-DRAW
-P 2 0 1 0  0 50  0 -50 N
-P 4 0 1 0  0 0  -100 50  -100 -50  0 0 F
-P 4 0 1 0  0 0  100 50  100 -50  0 0 F
-X ~ 1 -250 0 150 R 50 50 1 1 P
-X ~ 2 250 0 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Thermistor
 #
 DEF Thermistor RT 0 40 N N 1 F N
@@ -504,31 +463,7 @@ F4 "Value" 0 0 60 H I C CNN "Manufacturer"
 F5 "Value" 0 0 60 H I C CNN "Manufacturer Part #"
 F6 "Value" 0 0 60 H I C CNN "Vendor"
 F7 "Value" 0 0 60 H I C CNN "Vendor Part #"
-$FPLIST
- RESC*
- RESAD*
-$ENDFPLIST
-DRAW
-S -150 50 150 -50 0 1 0 N
-P 3 0 1 0  -150 100  100 -100  150 -100 N
-X ~ 1 -250 0 100 R 50 50 1 1 P
-X ~ 2 250 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Varistor
-#
-DEF Varistor RV 0 40 N N 1 F N
-F0 "RV" -150 100 60 V V L CNN
-F1 "Varistor" -50 100 60 V V L CNN
-F2 "" -100 0 60 H I C CNN
-F3 "" 0 100 60 H I C CNN
-F4 "Value" 0 0 60 H I C CNN "Manufacturer"
-F5 "Value" 0 0 60 H I C CNN "Manufacturer Part #"
-F6 "Value" 0 0 60 H I C CNN "Vendor"
-F7 "Value" 0 0 60 H I C CNN "Vendor Part #"
-F8 "V" 50 100 50 V V L CNN "Varistor Voltage"
-F9 "I" 150 100 50 V V L CNN "Surge Current"
+F8 "Beta" 50 100 60 V V L CNN "Sensitivity"
 $FPLIST
  RESC*
  RESAD*

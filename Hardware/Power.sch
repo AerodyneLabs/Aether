@@ -53,7 +53,7 @@ L Capacitor C?
 U 1 1 54995A72
 P 8400 3050
 F 0 "C?" V 8250 3150 60  0000 L CNN
-F 1 "10uF" V 8350 3150 60  0000 L CNN
+F 1 "4.7uF" V 8350 3150 60  0000 L CNN
 F 2 "" H 8300 3050 60  0001 C CNN
 F 3 "" H 8400 3150 60  0001 C CNN
 F 4 "Value" H 8400 3050 60  0001 C CNN "Manufacturer"
@@ -66,13 +66,7 @@ F 9 "X5R" V 8550 3150 50  0000 L CNN "Dielectric"
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	5400 2700 5500 2700
-Wire Wire Line
-	5500 2700 8400 2700
-Wire Wire Line
-	8400 2700 8700 2700
-Wire Wire Line
-	8700 2700 9200 2700
+	5400 2700 9200 2700
 Wire Wire Line
 	8700 2700 8700 2800
 Wire Wire Line
@@ -81,9 +75,7 @@ Connection ~ 8400 2700
 Wire Wire Line
 	5400 2800 5500 2800
 Wire Wire Line
-	5500 2700 5500 2800
-Wire Wire Line
-	5500 2800 5500 2900
+	5500 2700 5500 2900
 Connection ~ 5500 2700
 Wire Wire Line
 	5500 2900 5400 2900
@@ -93,7 +85,7 @@ L Capacitor C?
 U 1 1 54995B5B
 P 9900 2850
 F 0 "C?" V 9750 2950 60  0000 L CNN
-F 1 "10uF" V 9850 2950 60  0000 L CNN
+F 1 "4.7uF" V 9850 2950 60  0000 L CNN
 F 2 "" H 9800 2850 60  0001 C CNN
 F 3 "" H 9900 2950 60  0001 C CNN
 F 4 "Value" H 9900 2850 60  0001 C CNN "Manufacturer"
@@ -106,13 +98,9 @@ F 9 "X5R" V 10050 2950 50  0000 L CNN "Dielectric"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5400 2500 5500 2500
+	5400 2500 9900 2500
 Wire Wire Line
-	5500 2500 9900 2500
-Wire Wire Line
-	9900 2400 9900 2500
-Wire Wire Line
-	9900 2500 9900 2600
+	9900 2400 9900 2600
 Wire Wire Line
 	5400 2600 5500 2600
 Wire Wire Line
@@ -169,11 +157,7 @@ F 3 "" H 5500 3700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 3400 5500 3500
-Wire Wire Line
-	5500 3500 5500 3600
-Wire Wire Line
-	5500 3600 5500 3700
+	5500 3400 5500 3700
 Wire Wire Line
 	5500 3400 5400 3400
 Wire Wire Line
@@ -187,7 +171,7 @@ L Resistor R?
 U 1 1 54995CCE
 P 6000 3550
 F 0 "R?" V 5850 3650 60  0000 L CNN
-F 1 "Resistor" V 5950 3650 60  0000 L CNN
+F 1 "100k" V 5950 3650 60  0000 L CNN
 F 2 "" H 5900 3550 60  0001 C CNN
 F 3 "" H 6000 3650 60  0001 C CNN
 F 4 "Value" H 6000 3550 60  0001 C CNN "Manufacturer"
@@ -204,7 +188,7 @@ L Resistor R?
 U 1 1 54995E00
 P 6300 3550
 F 0 "R?" V 6150 3650 60  0000 L CNN
-F 1 "Resistor" V 6250 3650 60  0000 L CNN
+F 1 "2k" V 6250 3650 60  0000 L CNN
 F 2 "" H 6200 3550 60  0001 C CNN
 F 3 "" H 6300 3650 60  0001 C CNN
 F 4 "Value" H 6300 3550 60  0001 C CNN "Manufacturer"
@@ -284,27 +268,10 @@ F 9 "5%" V 7450 3450 50  0000 L CNN "Tolerance"
 	1    7300 3350
 	0    1    1    0   
 $EndComp
-$Comp
-L Thermistor RT?
-U 1 1 54996324
-P 7800 3350
-F 0 "RT?" V 7650 3450 60  0000 L CNN
-F 1 "10k" V 7750 3450 60  0000 L CNN
-F 2 "" H 7700 3350 60  0001 C CNN
-F 3 "" H 7800 3450 60  0001 C CNN
-F 4 "Value" H 7800 3350 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 7800 3350 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 7800 3350 60  0001 C CNN "Vendor"
-F 7 "Value" H 7800 3350 60  0001 C CNN "Vendor Part #"
-	1    7800 3350
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5400 3000 6700 3000
 Wire Wire Line
-	7200 3000 7300 3000
-Wire Wire Line
-	7300 3000 7800 3000
+	7200 3000 7800 3000
 Wire Wire Line
 	7800 3000 7800 3100
 Wire Wire Line
@@ -341,7 +308,7 @@ L Capacitor C?
 U 1 1 54996653
 P 3850 1600
 F 0 "C?" V 3700 1700 60  0000 L CNN
-F 1 "10uF" V 3800 1700 60  0000 L CNN
+F 1 "4.7uF" V 3800 1700 60  0000 L CNN
 F 2 "" H 3750 1600 60  0001 C CNN
 F 3 "" H 3850 1700 60  0001 C CNN
 F 4 "Value" H 3850 1600 60  0001 C CNN "Manufacturer"
@@ -399,9 +366,7 @@ F 3 "" H 4900 2100 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4100 2100 4200 2100
-Wire Wire Line
-	4200 2100 4300 2100
+	4100 2100 4300 2100
 Wire Wire Line
 	4200 2100 4200 2800
 Wire Wire Line
@@ -412,20 +377,16 @@ Wire Wire Line
 Wire Wire Line
 	3600 1600 3500 1600
 Wire Wire Line
-	3500 1600 3500 2100
-Wire Wire Line
-	3500 2100 3500 2500
+	3500 1600 3500 2500
 Wire Wire Line
 	3500 2100 3600 2100
 Wire Wire Line
-	3500 2500 4100 2500
-Wire Wire Line
-	4100 2500 4300 2500
+	3500 2500 4300 2500
 Connection ~ 3500 2100
 Wire Wire Line
 	4300 2600 4100 2600
 Wire Wire Line
-	4100 2600 4100 2500
+	4100 2500 4100 3200
 Connection ~ 4100 2500
 $Comp
 L GND #PWR?
@@ -457,7 +418,7 @@ L Resistor R?
 U 1 1 54997437
 P 9200 3050
 F 0 "R?" V 9050 3150 60  0000 L CNN
-F 1 "Resistor" V 9150 3150 60  0000 L CNN
+F 1 "36k" V 9150 3150 60  0000 L CNN
 F 2 "" H 9100 3050 60  0001 C CNN
 F 3 "" H 9200 3150 60  0001 C CNN
 F 4 "Value" H 9200 3050 60  0001 C CNN "Manufacturer"
@@ -474,7 +435,7 @@ L Resistor R?
 U 1 1 54997516
 P 9200 3750
 F 0 "R?" V 9050 3850 60  0000 L CNN
-F 1 "Resistor" V 9150 3850 60  0000 L CNN
+F 1 "100k" V 9150 3850 60  0000 L CNN
 F 2 "" H 9100 3750 60  0001 C CNN
 F 3 "" H 9200 3850 60  0001 C CNN
 F 4 "Value" H 9200 3750 60  0001 C CNN "Manufacturer"
@@ -500,15 +461,54 @@ $EndComp
 Wire Wire Line
 	9200 4100 9200 4000
 Text HLabel 9300 3400 2    60   Output ~ 0
-Sense
+BSense
 Wire Wire Line
-	9200 3300 9200 3400
-Wire Wire Line
-	9200 3400 9200 3500
+	9200 3300 9200 3500
 Wire Wire Line
 	9300 3400 9200 3400
 Connection ~ 9200 3400
 Wire Wire Line
 	9200 2700 9200 2800
 Connection ~ 8700 2700
+Wire Wire Line
+	4100 3100 4300 3100
+Connection ~ 4100 2600
+Wire Wire Line
+	4100 3200 4300 3200
+Connection ~ 4100 3100
+Text HLabel 4000 3400 0    60   Output ~ 0
+~CHG_PG
+Text HLabel 4000 3600 0    60   Output ~ 0
+CHG_STAT1
+Text HLabel 4000 3500 0    60   Output ~ 0
+CHG_STAT2
+Wire Wire Line
+	4000 3400 4300 3400
+Wire Wire Line
+	4300 3500 4000 3500
+Wire Wire Line
+	4000 3600 4300 3600
+$Comp
+L Thermistor RT?
+U 1 1 5499EE33
+P 7800 3350
+F 0 "RT?" V 7650 3450 60  0000 L CNN
+F 1 "10k" V 7750 3450 60  0000 L CNN
+F 2 "" H 7700 3350 60  0001 C CNN
+F 3 "" H 7800 3450 60  0001 C CNN
+F 4 "Murata" H 7800 3350 60  0001 C CNN "Manufacturer"
+F 5 "NCP18XH103J03RB" H 7800 3350 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 7800 3350 60  0001 C CNN "Vendor"
+F 7 "490-2436-1-ND" H 7800 3350 60  0001 C CNN "Vendor Part #"
+F 8 "3380k" V 7850 3450 60  0000 L CNN "Sensitivity"
+	1    7800 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 3000 4100 3000
+Connection ~ 4100 3000
+Text HLabel 4000 2900 0    60   Input ~ 0
+CHG_EN
+Wire Wire Line
+	4000 2900 4300 2900
 $EndSCHEMATC
