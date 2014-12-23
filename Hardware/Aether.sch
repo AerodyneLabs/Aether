@@ -11,7 +11,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title "Aether - Pico Tracker"
 Date "30 aug 2014"
 Rev "1"
@@ -36,10 +36,16 @@ S 6600 3100 1000 1000
 U 54979260
 F0 "Microcontroller" 60
 F1 "Microcontroller.sch" 60
-F2 "VCO_MOD" O R 7600 3200 60 
+F2 "XCVR_MOD" O R 7600 3200 60 
 F3 "GPS_RX" O L 6600 3400 60 
 F4 "GPS_TX" I L 6600 3300 60 
 F5 "GPS_EN" O L 6600 3200 60 
 F6 "GPS_PPS" I L 6600 3500 60 
+$EndSheet
+$Sheet
+S 8600 3100 1000 1000
+U 5498E0F8
+F0 "Radio" 60
+F1 "Radio.sch" 60
 $EndSheet
 $EndSCHEMATC

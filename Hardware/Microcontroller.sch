@@ -11,7 +11,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -79,7 +79,7 @@ Wire Wire Line
 Wire Wire Line
 	1500 1100 1700 1100
 Text HLabel 9400 1400 2    60   Output ~ 0
-VCO_MOD
+XCVR_MOD
 Wire Wire Line
 	9400 1400 9000 1400
 Wire Wire Line
