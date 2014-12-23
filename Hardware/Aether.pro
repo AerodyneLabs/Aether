@@ -1,4 +1,4 @@
-update=12/21/2014 10:59:09 PM
+update=12/23/2014 5:36:53 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -41,3 +41,4 @@ LibName4=Symbols/Sensors
 LibName5=Symbols/Passives
 LibName6=Symbols/Actives
 LibName7=Symbols/Connectors
+LibName8=Symbols/Microchip
