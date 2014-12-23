@@ -782,4 +782,28 @@ Wire Wire Line
 	4400 1200 4400 1400
 Wire Wire Line
 	4400 1400 4300 1400
+Text HLabel 8500 5500 0    60   Input ~ 0
+BSense
+Text HLabel 8500 5600 0    60   Output ~ 0
+CHG_EN
+Text HLabel 8500 5700 0    60   Input ~ 0
+~CHG_PG
+Text HLabel 8500 5800 0    60   Input ~ 0
+CHG_STAT1
+Text HLabel 8500 5900 0    60   Input ~ 0
+CHG_STAT2
+Text HLabel 9500 5000 0    60   Output ~ 0
+XCVR_EN
+Text HLabel 9500 5100 0    60   Output ~ 0
+XCVR_SCLK
+Text HLabel 9500 5200 0    60   Output ~ 0
+XCVR_SDI
+Text HLabel 9500 5300 0    60   Input ~ 0
+XCVR_SDO
+Text HLabel 9500 5400 0    60   Output ~ 0
+~XCVR_CS
+Text HLabel 9500 5500 0    60   Input ~ 0
+~XCVR_INT
+Text HLabel 8500 6000 0    60   Input ~ 0
+SSense
 $EndSCHEMATC

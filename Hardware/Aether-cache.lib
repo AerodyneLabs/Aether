@@ -113,6 +113,22 @@ X ~ 2 250 0 225 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Conn-1
+#
+DEF Conn-1 J 0 40 Y Y 1 F N
+F0 "J" 0 100 60 H V C CNN
+F1 "Conn-1" 0 -100 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ HDR*
+$ENDFPLIST
+DRAW
+S 100 50 -100 -50 0 1 0 N
+X ~ 1 300 0 200 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Conn_Cortex-JTAG-10
 #
 DEF Conn_Cortex-JTAG-10 J 0 40 Y Y 1 F N
@@ -173,6 +189,33 @@ P 2 0 1 0  -100 100  -100 -100 N
 P 2 0 1 0  100 100  100 -100 N
 X ~ 1 -250 0 150 R 50 50 1 1 P
 X ~ 2 250 0 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Diode-Schottky
+#
+DEF Diode-Schottky D 0 40 N N 1 F N
+F0 "D" -150 100 60 V V L CNN
+F1 "Diode-Schottky" -50 100 60 V V L CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+F4 "Value" 0 0 60 H I C CNN "Vendor"
+F5 "Value" 0 0 60 H I C CNN "Vendor Part #"
+F6 "Value" 0 0 60 H I C CNN "Manufacturer"
+F7 "Value" 0 0 60 H I C CNN "Manufacturer Part #"
+F8 "Vf" 50 100 60 V V L CNN "Forward Voltage"
+F9 "I" 150 100 60 V V L CNN "Current"
+F10 "Vr" 0 -100 60 H I C CNN "Reverse Voltage"
+$FPLIST
+ DIO*
+$ENDFPLIST
+DRAW
+P 2 0 1 0  50 50  50 -50 N
+P 3 0 1 0  50 -50  25 -50  25 -25 N
+P 3 0 1 0  50 50  75 50  75 25 N
+P 4 0 1 0  -50 50  -50 -50  50 0  -50 50 N
+X ~ A -250 0 200 R 50 50 1 1 P
+X ~ C 250 0 200 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
