@@ -224,8 +224,8 @@ Text Label 1600 2100 2    60   ~ 0
 LO
 Wire Wire Line
 	1600 2100 1700 2100
-Text HLabel 7000 1150 0    60   Input ~ 0
-XCVR_MOD
+Text HLabel 6600 1400 0    60   Input ~ 0
+VCO_MOD
 Text Label 2900 1400 0    60   ~ 0
 TXI
 Wire Wire Line
@@ -510,4 +510,207 @@ Wire Wire Line
 	2200 3000 2200 3700
 Wire Wire Line
 	2200 3700 2100 3700
+$Comp
+L VCXO X?
+U 1 1 549DAB2F
+P 7900 1300
+F 0 "X?" H 7900 1500 60  0000 C CNN
+F 1 "27MHz" H 7900 1100 60  0000 C CNN
+F 2 "" H 7900 1300 60  0000 C CNN
+F 3 "" H 7900 1300 60  0000 C CNN
+F 4 "CTS" H 7900 1300 60  0001 C CNN "Manufacturer"
+F 5 "357LB3I027M0000" H 7900 1300 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 7900 1300 60  0001 C CNN "Vendor"
+F 7 "CTX634CT-ND" H 7900 1300 60  0001 C CNN "Vendor Part #"
+	1    7900 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Capacitor C?
+U 1 1 549DC500
+P 8700 1750
+F 0 "C?" V 8550 1850 60  0000 L CNN
+F 1 "0.1uF" V 8650 1850 60  0000 L CNN
+F 2 "" H 8600 1750 60  0001 C CNN
+F 3 "" H 8700 1850 60  0001 C CNN
+F 4 "Value" H 8700 1750 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 8700 1750 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 8700 1750 60  0001 C CNN "Vendor"
+F 7 "Value" H 8700 1750 60  0001 C CNN "Vendor Part #"
+F 8 "10V" V 8750 1850 50  0000 L CNN "Voltage"
+F 9 "X5R" V 8850 1850 50  0000 L CNN "Dielectric"
+	1    8700 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 549DC55A
+P 8500 2200
+F 0 "#PWR?" H 8500 1950 60  0001 C CNN
+F 1 "GND" H 8500 2050 60  0000 C CNN
+F 2 "" H 8500 2200 60  0000 C CNN
+F 3 "" H 8500 2200 60  0000 C CNN
+	1    8500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1400 8500 2200
+Wire Wire Line
+	8500 1400 8400 1400
+Wire Wire Line
+	8700 2000 8700 2100
+Wire Wire Line
+	8700 2100 8500 2100
+Connection ~ 8500 2100
+$Comp
+L +3V3 #PWR?
+U 1 1 549DC644
+P 8500 1100
+F 0 "#PWR?" H 8500 950 60  0001 C CNN
+F 1 "+3V3" H 8500 1240 60  0000 C CNN
+F 2 "" H 8500 1100 60  0000 C CNN
+F 3 "" H 8500 1100 60  0000 C CNN
+	1    8500 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1100 8500 1300
+Wire Wire Line
+	8400 1300 8700 1300
+Wire Wire Line
+	8700 1300 8700 1500
+Connection ~ 8500 1300
+$Comp
+L Resistor R?
+U 1 1 549DC7C7
+P 9050 1200
+F 0 "R?" V 8900 1300 60  0000 L CNN
+F 1 "10k" V 9000 1300 60  0000 L CNN
+F 2 "" H 8950 1200 60  0001 C CNN
+F 3 "" H 9050 1300 60  0001 C CNN
+F 4 "Value" H 9050 1200 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 9050 1200 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 9050 1200 60  0001 C CNN "Vendor"
+F 7 "Value" H 9050 1200 60  0001 C CNN "Vendor Part #"
+F 8 "1/10W" V 9100 1300 50  0000 L CNN "Power"
+F 9 "5%" V 9200 1300 50  0000 L CNN "Tolerance"
+	1    9050 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Resistor R?
+U 1 1 549DC844
+P 9400 1550
+F 0 "R?" V 9250 1650 60  0000 L CNN
+F 1 "10k" V 9350 1650 60  0000 L CNN
+F 2 "" H 9300 1550 60  0001 C CNN
+F 3 "" H 9400 1650 60  0001 C CNN
+F 4 "Value" H 9400 1550 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 9400 1550 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 9400 1550 60  0001 C CNN "Vendor"
+F 7 "Value" H 9400 1550 60  0001 C CNN "Vendor Part #"
+F 8 "1/10W" V 9450 1650 50  0000 L CNN "Power"
+F 9 "5%" V 9550 1650 50  0000 L CNN "Tolerance"
+	1    9400 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C?
+U 1 1 549DC89B
+P 9750 1200
+F 0 "C?" V 9600 1300 60  0000 L CNN
+F 1 "0.01uF" V 9700 1300 60  0000 L CNN
+F 2 "" H 9650 1200 60  0001 C CNN
+F 3 "" H 9750 1300 60  0001 C CNN
+F 4 "Value" H 9750 1200 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 9750 1200 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 9750 1200 60  0001 C CNN "Vendor"
+F 7 "Value" H 9750 1200 60  0001 C CNN "Vendor Part #"
+F 8 "10V" V 9800 1300 50  0000 L CNN "Voltage"
+F 9 "X5R" V 9900 1300 50  0000 L CNN "Dielectric"
+	1    9750 1200
+	1    0    0    -1  
+$EndComp
+Text Label 10100 1200 0    60   ~ 0
+LO
+Wire Wire Line
+	10100 1200 10000 1200
+Wire Wire Line
+	8400 1200 8800 1200
+Wire Wire Line
+	9300 1200 9500 1200
+Wire Wire Line
+	9400 1300 9400 1200
+Connection ~ 9400 1200
+$Comp
+L GND #PWR?
+U 1 1 549DCA64
+P 9400 1900
+F 0 "#PWR?" H 9400 1650 60  0001 C CNN
+F 1 "GND" H 9400 1750 60  0000 C CNN
+F 2 "" H 9400 1900 60  0000 C CNN
+F 3 "" H 9400 1900 60  0000 C CNN
+	1    9400 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 1900 9400 1800
+Text HLabel 7300 1200 0    60   Input ~ 0
+VCO_EN
+Wire Wire Line
+	7300 1200 7400 1200
+$Comp
+L Capacitor C?
+U 1 1 549DD1F3
+P 7300 1750
+F 0 "C?" V 7150 1850 60  0000 L CNN
+F 1 "0.01uF" V 7250 1850 60  0000 L CNN
+F 2 "" H 7200 1750 60  0001 C CNN
+F 3 "" H 7300 1850 60  0001 C CNN
+F 4 "Value" H 7300 1750 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 7300 1750 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 7300 1750 60  0001 C CNN "Vendor"
+F 7 "Value" H 7300 1750 60  0001 C CNN "Vendor Part #"
+F 8 "10V" V 7350 1850 50  0000 L CNN "Voltage"
+F 9 "X5R" V 7450 1850 50  0000 L CNN "Dielectric"
+	1    7300 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Resistor R?
+U 1 1 549DD250
+P 6950 1400
+F 0 "R?" V 6800 1500 60  0000 L CNN
+F 1 "160" V 6900 1500 60  0000 L CNN
+F 2 "" H 6850 1400 60  0001 C CNN
+F 3 "" H 6950 1500 60  0001 C CNN
+F 4 "Value" H 6950 1400 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 6950 1400 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 6950 1400 60  0001 C CNN "Vendor"
+F 7 "Value" H 6950 1400 60  0001 C CNN "Vendor Part #"
+F 8 "1/10W" V 7000 1500 50  0000 L CNN "Power"
+F 9 "5%" V 7100 1500 50  0000 L CNN "Tolerance"
+	1    6950 1400
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6600 1400 6700 1400
+Wire Wire Line
+	7200 1400 7400 1400
+Wire Wire Line
+	7300 1500 7300 1400
+Connection ~ 7300 1400
+$Comp
+L GND #PWR?
+U 1 1 549DD4D8
+P 7300 2100
+F 0 "#PWR?" H 7300 1850 60  0001 C CNN
+F 1 "GND" H 7300 1950 60  0000 C CNN
+F 2 "" H 7300 2100 60  0000 C CNN
+F 3 "" H 7300 2100 60  0000 C CNN
+	1    7300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 2100 7300 2000
 $EndSCHEMATC

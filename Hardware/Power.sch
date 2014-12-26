@@ -985,6 +985,10 @@ F 0 "SW?" H 1550 5500 60  0000 C CNN
 F 1 "DPDT" H 1550 5100 60  0000 C CNN
 F 2 "" H 1550 5300 60  0000 C CNN
 F 3 "" H 1550 5300 60  0000 C CNN
+F 4 "C&K Components" H 1550 5300 60  0001 C CNN "Manufacturer"
+F 5 "JS202011SCQN" H 1550 5300 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1550 5300 60  0001 C CNN "Vendor"
+F 7 "401-2002-1-ND" H 1550 5300 60  0001 C CNN "Vendor Part #"
 	1    1550 5300
 	1    0    0    1   
 $EndComp
