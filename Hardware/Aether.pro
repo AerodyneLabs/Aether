@@ -1,4 +1,4 @@
-update=12/23/2014 4:43:17 PM
+update=12/26/2014 2:58:23 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -43,3 +43,4 @@ LibName6=Symbols/Actives
 LibName7=Symbols/Connectors
 LibName8=Symbols/Microchip
 LibName9=Symbols/ONSemiconductor
+LibName10=Symbols/Skyworks
