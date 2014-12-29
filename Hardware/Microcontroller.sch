@@ -820,4 +820,102 @@ Text Notes 9100 1400 0    60   ~ 0
 DAC1
 Text Notes 9100 1500 0    60   ~ 0
 DAC2
+$Comp
+L LED D?
+U 1 1 54A1A4D6
+P 5150 3300
+F 0 "D?" V 5000 3400 60  0000 L CNN
+F 1 "LED" V 5100 3400 60  0000 L CNN
+F 2 "" H 5150 3300 60  0000 C CNN
+F 3 "" H 5150 3300 60  0000 C CNN
+F 4 "Value" H 5150 3300 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 5150 3300 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 5150 3300 60  0001 C CNN "Vendor"
+F 7 "Value" H 5150 3300 60  0001 C CNN "Vendor Part #"
+F 8 "Vf" V 5200 3400 60  0000 L CNN "Forward Voltage"
+F 9 "I" V 5300 3400 60  0000 L CNN "Current"
+	1    5150 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 54A1A544
+P 5150 3700
+F 0 "D?" V 5000 3800 60  0000 L CNN
+F 1 "LED" V 5100 3800 60  0000 L CNN
+F 2 "" H 5150 3700 60  0000 C CNN
+F 3 "" H 5150 3700 60  0000 C CNN
+F 4 "Value" H 5150 3700 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 5150 3700 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 5150 3700 60  0001 C CNN "Vendor"
+F 7 "Value" H 5150 3700 60  0001 C CNN "Vendor Part #"
+F 8 "Vf" V 5200 3800 60  0000 L CNN "Forward Voltage"
+F 9 "I" V 5300 3800 60  0000 L CNN "Current"
+	1    5150 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Resistor R?
+U 1 1 54A1A58D
+P 4550 3300
+F 0 "R?" V 4400 3400 60  0000 L CNN
+F 1 "Resistor" V 4500 3400 60  0000 L CNN
+F 2 "" H 4450 3300 60  0001 C CNN
+F 3 "" H 4550 3400 60  0001 C CNN
+F 4 "Value" H 4550 3300 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 4550 3300 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 4550 3300 60  0001 C CNN "Vendor"
+F 7 "Value" H 4550 3300 60  0001 C CNN "Vendor Part #"
+F 8 "1/10W" V 4600 3400 50  0000 L CNN "Power"
+F 9 "5%" V 4700 3400 50  0000 L CNN "Tolerance"
+	1    4550 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Resistor R?
+U 1 1 54A1A5F4
+P 4550 3700
+F 0 "R?" V 4400 3800 60  0000 L CNN
+F 1 "Resistor" V 4500 3800 60  0000 L CNN
+F 2 "" H 4450 3700 60  0001 C CNN
+F 3 "" H 4550 3800 60  0001 C CNN
+F 4 "Value" H 4550 3700 60  0001 C CNN "Manufacturer"
+F 5 "Value" H 4550 3700 60  0001 C CNN "Manufacturer Part #"
+F 6 "Value" H 4550 3700 60  0001 C CNN "Vendor"
+F 7 "Value" H 4550 3700 60  0001 C CNN "Vendor Part #"
+F 8 "1/10W" V 4600 3800 50  0000 L CNN "Power"
+F 9 "5%" V 4700 3800 50  0000 L CNN "Tolerance"
+	1    4550 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 54A1A643
+P 4200 3200
+F 0 "#PWR?" H 4200 3050 60  0001 C CNN
+F 1 "+3V3" H 4200 3340 60  0000 C CNN
+F 2 "" H 4200 3200 60  0000 C CNN
+F 3 "" H 4200 3200 60  0000 C CNN
+	1    4200 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3200 4200 3700
+Wire Wire Line
+	4200 3700 4300 3700
+Wire Wire Line
+	4300 3300 4200 3300
+Connection ~ 4200 3300
+Text Label 5500 3300 0    60   ~ 0
+LED0
+Text Label 5500 3700 0    60   ~ 0
+LED1
+Wire Wire Line
+	4800 3300 4900 3300
+Wire Wire Line
+	4800 3700 4900 3700
+Wire Wire Line
+	5400 3300 5500 3300
+Wire Wire Line
+	5400 3700 5500 3700
 $EndSCHEMATC
