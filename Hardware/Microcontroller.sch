@@ -101,47 +101,13 @@ F 0 "C5" V 850 7050 60  0000 L CNN
 F 1 "0.1uF" V 950 7050 60  0000 L CNN
 F 2 "" H 900 6950 60  0001 C CNN
 F 3 "" H 1000 7050 60  0001 C CNN
-F 4 "Value" H 1000 6950 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 1000 6950 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 1000 6950 60  0001 C CNN "Vendor"
-F 7 "Value" H 1000 6950 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 1050 7050 50  0000 L CNN "Voltage"
-F 9 "X5R" V 1150 7050 50  0000 L CNN "Dielectric"
+F 4 "Samsung" H 1000 6950 60  0001 C CNN "Manufacturer"
+F 5 "CL10B104KO8NNNC" H 1000 6950 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1000 6950 60  0001 C CNN "Vendor"
+F 7 "1276-1005-1-ND" H 1000 6950 60  0001 C CNN "Vendor Part #"
+F 8 "16V" V 1050 7050 50  0000 L CNN "Voltage"
+F 9 "X7R" V 1150 7050 50  0000 L CNN "Dielectric"
 	1    1000 6950
-	0    1    1    0   
-$EndComp
-$Comp
-L Capacitor C7
-U 1 1 549799C4
-P 1500 6950
-F 0 "C7" V 1350 7050 60  0000 L CNN
-F 1 "0.1uF" V 1450 7050 60  0000 L CNN
-F 2 "" H 1400 6950 60  0001 C CNN
-F 3 "" H 1500 7050 60  0001 C CNN
-F 4 "Value" H 1500 6950 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 1500 6950 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 1500 6950 60  0001 C CNN "Vendor"
-F 7 "Value" H 1500 6950 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 1550 7050 50  0000 L CNN "Voltage"
-F 9 "X5R" V 1650 7050 50  0000 L CNN "Dielectric"
-	1    1500 6950
-	0    1    1    0   
-$EndComp
-$Comp
-L Capacitor C9
-U 1 1 549799F9
-P 2000 6950
-F 0 "C9" V 1850 7050 60  0000 L CNN
-F 1 "0.1uF" V 1950 7050 60  0000 L CNN
-F 2 "" H 1900 6950 60  0001 C CNN
-F 3 "" H 2000 7050 60  0001 C CNN
-F 4 "Value" H 2000 6950 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 2000 6950 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 2000 6950 60  0001 C CNN "Vendor"
-F 7 "Value" H 2000 6950 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 2050 7050 50  0000 L CNN "Voltage"
-F 9 "X5R" V 2150 7050 50  0000 L CNN "Dielectric"
-	1    2000 6950
 	0    1    1    0   
 $EndComp
 $Comp
@@ -159,57 +125,6 @@ F 7 "Value" H 2500 6950 60  0001 C CNN "Vendor Part #"
 F 8 "10V" V 2550 7050 50  0000 L CNN "Voltage"
 F 9 "X5R" V 2650 7050 50  0000 L CNN "Dielectric"
 	1    2500 6950
-	0    1    1    0   
-$EndComp
-$Comp
-L Capacitor C13
-U 1 1 54979AAD
-P 3700 6950
-F 0 "C13" V 3550 7050 60  0000 L CNN
-F 1 "0.1uF" V 3650 7050 60  0000 L CNN
-F 2 "" H 3600 6950 60  0001 C CNN
-F 3 "" H 3700 7050 60  0001 C CNN
-F 4 "Value" H 3700 6950 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 3700 6950 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 3700 6950 60  0001 C CNN "Vendor"
-F 7 "Value" H 3700 6950 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 3750 7050 50  0000 L CNN "Voltage"
-F 9 "X5R" V 3850 7050 50  0000 L CNN "Dielectric"
-	1    3700 6950
-	0    1    1    0   
-$EndComp
-$Comp
-L Capacitor C12
-U 1 1 54979AE5
-P 3200 6950
-F 0 "C12" V 3050 7050 60  0000 L CNN
-F 1 "1uF" V 3150 7050 60  0000 L CNN
-F 2 "" H 3100 6950 60  0001 C CNN
-F 3 "" H 3200 7050 60  0001 C CNN
-F 4 "Value" H 3200 6950 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 3200 6950 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 3200 6950 60  0001 C CNN "Vendor"
-F 7 "Value" H 3200 6950 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 3250 7050 50  0000 L CNN "Voltage"
-F 9 "X5R" V 3350 7050 50  0000 L CNN "Dielectric"
-	1    3200 6950
-	0    1    1    0   
-$EndComp
-$Comp
-L Capacitor C15
-U 1 1 54979B61
-P 4400 6950
-F 0 "C15" V 4250 7050 60  0000 L CNN
-F 1 "1uF" V 4350 7050 60  0000 L CNN
-F 2 "" H 4300 6950 60  0001 C CNN
-F 3 "" H 4400 7050 60  0001 C CNN
-F 4 "Value" H 4400 6950 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 4400 6950 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 4400 6950 60  0001 C CNN "Vendor"
-F 7 "Value" H 4400 6950 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 4450 7050 50  0000 L CNN "Voltage"
-F 9 "X5R" V 4550 7050 50  0000 L CNN "Dielectric"
-	1    4400 6950
 	0    1    1    0   
 $EndComp
 $Comp
@@ -296,64 +211,13 @@ F 0 "C8" V 1750 5250 60  0000 L CNN
 F 1 "30pF" V 1850 5250 60  0000 L CNN
 F 2 "" H 1800 5150 60  0001 C CNN
 F 3 "" H 1900 5250 60  0001 C CNN
-F 4 "Value" H 1900 5150 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 1900 5150 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 1900 5150 60  0001 C CNN "Vendor"
-F 7 "Value" H 1900 5150 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 1950 5250 50  0000 L CNN "Voltage"
-F 9 "X5R" V 2050 5250 50  0000 L CNN "Dielectric"
+F 4 "Samsung" H 1900 5150 60  0001 C CNN "Manufacturer"
+F 5 "CL10C300JB8NNNC" H 1900 5150 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1900 5150 60  0001 C CNN "Vendor"
+F 7 "1276-1021-1-ND" H 1900 5150 60  0001 C CNN "Vendor Part #"
+F 8 "50V" V 1950 5250 50  0000 L CNN "Voltage"
+F 9 "NP0" V 2050 5250 50  0000 L CNN "Dielectric"
 	1    1900 5150
-	0    1    1    0   
-$EndComp
-$Comp
-L Capacitor C6
-U 1 1 5497A47F
-P 1200 5150
-F 0 "C6" V 1050 5250 60  0000 L CNN
-F 1 "30pF" V 1150 5250 60  0000 L CNN
-F 2 "" H 1100 5150 60  0001 C CNN
-F 3 "" H 1200 5250 60  0001 C CNN
-F 4 "Value" H 1200 5150 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 1200 5150 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 1200 5150 60  0001 C CNN "Vendor"
-F 7 "Value" H 1200 5150 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 1250 5250 50  0000 L CNN "Voltage"
-F 9 "X5R" V 1350 5250 50  0000 L CNN "Dielectric"
-	1    1200 5150
-	0    -1   1    0   
-$EndComp
-$Comp
-L Capacitor C11
-U 1 1 5497A4CB
-P 3100 5150
-F 0 "C11" V 2950 5250 60  0000 L CNN
-F 1 "19pF" V 3050 5250 60  0000 L CNN
-F 2 "" H 3000 5150 60  0001 C CNN
-F 3 "" H 3100 5250 60  0001 C CNN
-F 4 "Value" H 3100 5150 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 3100 5150 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 3100 5150 60  0001 C CNN "Vendor"
-F 7 "Value" H 3100 5150 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 3150 5250 50  0000 L CNN "Voltage"
-F 9 "X5R" V 3250 5250 50  0000 L CNN "Dielectric"
-	1    3100 5150
-	0    -1   1    0   
-$EndComp
-$Comp
-L Capacitor C14
-U 1 1 5497A520
-P 3800 5150
-F 0 "C14" V 3650 5250 60  0000 L CNN
-F 1 "19pF" V 3750 5250 60  0000 L CNN
-F 2 "" H 3700 5150 60  0001 C CNN
-F 3 "" H 3800 5250 60  0001 C CNN
-F 4 "Value" H 3800 5150 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 3800 5150 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 3800 5150 60  0001 C CNN "Vendor"
-F 7 "Value" H 3800 5150 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 3850 5250 50  0000 L CNN "Voltage"
-F 9 "X5R" V 3950 5250 50  0000 L CNN "Dielectric"
-	1    3800 5150
 	0    1    1    0   
 $EndComp
 Text Label 1100 4800 2    60   ~ 0
@@ -484,23 +348,6 @@ F 3 "" H 4400 7300 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	4400 7300 4400 7200
-$Comp
-L Capacitor C16
-U 1 1 5497E4E3
-P 5000 6950
-F 0 "C16" V 4850 7050 60  0000 L CNN
-F 1 "0.1uF" V 4950 7050 60  0000 L CNN
-F 2 "" H 4900 6950 60  0001 C CNN
-F 3 "" H 5000 7050 60  0001 C CNN
-F 4 "Value" H 5000 6950 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 5000 6950 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 5000 6950 60  0001 C CNN "Vendor"
-F 7 "Value" H 5000 6950 60  0001 C CNN "Vendor Part #"
-F 8 "10V" V 5050 7050 50  0000 L CNN "Voltage"
-F 9 "X5R" V 5150 7050 50  0000 L CNN "Dielectric"
-	1    5000 6950
-	0    1    1    0   
-$EndComp
 $Comp
 L GND #PWR21
 U 1 1 5497E541
@@ -678,23 +525,6 @@ NoConn ~ 1700 3500
 NoConn ~ 1700 3600
 Wire Wire Line
 	1800 3700 1700 3700
-$Comp
-L Resistor R5
-U 1 1 54980C1B
-P 5600 6950
-F 0 "R5" V 5450 7050 60  0000 L CNN
-F 1 "10k" V 5550 7050 60  0000 L CNN
-F 2 "" H 5500 6950 60  0001 C CNN
-F 3 "" H 5600 7050 60  0001 C CNN
-F 4 "Value" H 5600 6950 60  0001 C CNN "Manufacturer"
-F 5 "Value" H 5600 6950 60  0001 C CNN "Manufacturer Part #"
-F 6 "Value" H 5600 6950 60  0001 C CNN "Vendor"
-F 7 "Value" H 5600 6950 60  0001 C CNN "Vendor Part #"
-F 8 "1/10W" V 5650 7050 50  0000 L CNN "Power"
-F 9 "5%" V 5750 7050 50  0000 L CNN "Tolerance"
-	1    5600 6950
-	0    1    1    0   
-$EndComp
 $Comp
 L GND #PWR23
 U 1 1 54980CDC
@@ -918,4 +748,174 @@ Wire Wire Line
 	5400 3300 5500 3300
 Wire Wire Line
 	5400 3700 5500 3700
+$Comp
+L Resistor R5
+U 1 1 54A257E7
+P 5600 6950
+F 0 "R5" V 5450 7050 60  0000 L CNN
+F 1 "100k" V 5550 7050 60  0000 L CNN
+F 2 "" H 5500 6950 60  0001 C CNN
+F 3 "" H 5600 7050 60  0001 C CNN
+F 4 "Yageo" H 5600 6950 60  0001 C CNN "Manufacturer"
+F 5 "RC0603JR-07100KL" H 5600 6950 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 5600 6950 60  0001 C CNN "Vendor"
+F 7 "311-100KGRCT-ND" H 5600 6950 60  0001 C CNN "Vendor Part #"
+F 8 "1/10W" V 5650 7050 50  0000 L CNN "Power"
+F 9 "5%" V 5750 7050 50  0000 L CNN "Tolerance"
+	1    5600 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C12
+U 1 1 54A26E3E
+P 3200 6950
+F 0 "C12" V 3050 7050 60  0000 L CNN
+F 1 "1uF" V 3150 7050 60  0000 L CNN
+F 2 "" H 3100 6950 60  0001 C CNN
+F 3 "" H 3200 7050 60  0001 C CNN
+F 4 "Samsung" H 3200 6950 60  0001 C CNN "Manufacturer"
+F 5 "CL10B105KP8NNNC" H 3200 6950 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 3200 6950 60  0001 C CNN "Vendor"
+F 7 "1276-1946-1-ND" H 3200 6950 60  0001 C CNN "Vendor Part #"
+F 8 "10V" V 3250 7050 50  0000 L CNN "Voltage"
+F 9 "X7R" V 3350 7050 50  0000 L CNN "Dielectric"
+	1    3200 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C15
+U 1 1 54A26F2A
+P 4400 6950
+F 0 "C15" V 4250 7050 60  0000 L CNN
+F 1 "1uF" V 4350 7050 60  0000 L CNN
+F 2 "" H 4300 6950 60  0001 C CNN
+F 3 "" H 4400 7050 60  0001 C CNN
+F 4 "Samsung" H 4400 6950 60  0001 C CNN "Manufacturer"
+F 5 "CL10B105KP8NNNC" H 4400 6950 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 4400 6950 60  0001 C CNN "Vendor"
+F 7 "1276-1946-1-ND" H 4400 6950 60  0001 C CNN "Vendor Part #"
+F 8 "10V" V 4450 7050 50  0000 L CNN "Voltage"
+F 9 "X7R" V 4550 7050 50  0000 L CNN "Dielectric"
+	1    4400 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C7
+U 1 1 54A29763
+P 1500 6950
+F 0 "C7" V 1350 7050 60  0000 L CNN
+F 1 "0.1uF" V 1450 7050 60  0000 L CNN
+F 2 "" H 1400 6950 60  0001 C CNN
+F 3 "" H 1500 7050 60  0001 C CNN
+F 4 "Samsung" H 1500 6950 60  0001 C CNN "Manufacturer"
+F 5 "CL10B104KO8NNNC" H 1500 6950 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1500 6950 60  0001 C CNN "Vendor"
+F 7 "1276-1005-1-ND" H 1500 6950 60  0001 C CNN "Vendor Part #"
+F 8 "16V" V 1550 7050 50  0000 L CNN "Voltage"
+F 9 "X7R" V 1650 7050 50  0000 L CNN "Dielectric"
+	1    1500 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C9
+U 1 1 54A297A8
+P 2000 6950
+F 0 "C9" V 1850 7050 60  0000 L CNN
+F 1 "0.1uF" V 1950 7050 60  0000 L CNN
+F 2 "" H 1900 6950 60  0001 C CNN
+F 3 "" H 2000 7050 60  0001 C CNN
+F 4 "Samsung" H 2000 6950 60  0001 C CNN "Manufacturer"
+F 5 "CL10B104KO8NNNC" H 2000 6950 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 2000 6950 60  0001 C CNN "Vendor"
+F 7 "1276-1005-1-ND" H 2000 6950 60  0001 C CNN "Vendor Part #"
+F 8 "16V" V 2050 7050 50  0000 L CNN "Voltage"
+F 9 "X7R" V 2150 7050 50  0000 L CNN "Dielectric"
+	1    2000 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C13
+U 1 1 54A297EC
+P 3700 6950
+F 0 "C13" V 3550 7050 60  0000 L CNN
+F 1 "0.1uF" V 3650 7050 60  0000 L CNN
+F 2 "" H 3600 6950 60  0001 C CNN
+F 3 "" H 3700 7050 60  0001 C CNN
+F 4 "Samsung" H 3700 6950 60  0001 C CNN "Manufacturer"
+F 5 "CL10B104KO8NNNC" H 3700 6950 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 3700 6950 60  0001 C CNN "Vendor"
+F 7 "1276-1005-1-ND" H 3700 6950 60  0001 C CNN "Vendor Part #"
+F 8 "16V" V 3750 7050 50  0000 L CNN "Voltage"
+F 9 "X7R" V 3850 7050 50  0000 L CNN "Dielectric"
+	1    3700 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C16
+U 1 1 54A2984D
+P 5000 6950
+F 0 "C16" V 4850 7050 60  0000 L CNN
+F 1 "0.1uF" V 4950 7050 60  0000 L CNN
+F 2 "" H 4900 6950 60  0001 C CNN
+F 3 "" H 5000 7050 60  0001 C CNN
+F 4 "Samsung" H 5000 6950 60  0001 C CNN "Manufacturer"
+F 5 "CL10B104KO8NNNC" H 5000 6950 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 5000 6950 60  0001 C CNN "Vendor"
+F 7 "1276-1005-1-ND" H 5000 6950 60  0001 C CNN "Vendor Part #"
+F 8 "16V" V 5050 7050 50  0000 L CNN "Voltage"
+F 9 "X7R" V 5150 7050 50  0000 L CNN "Dielectric"
+	1    5000 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C14
+U 1 1 54A2B687
+P 3800 5150
+F 0 "C14" V 3650 5250 60  0000 L CNN
+F 1 "18pF" V 3750 5250 60  0000 L CNN
+F 2 "" H 3700 5150 60  0001 C CNN
+F 3 "" H 3800 5250 60  0001 C CNN
+F 4 "Samsung" H 3800 5150 60  0001 C CNN "Manufacturer"
+F 5 "CL10C180JB8NNNC" H 3800 5150 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 3800 5150 60  0001 C CNN "Vendor"
+F 7 "1276-1089-1-ND" H 3800 5150 60  0001 C CNN "Vendor Part #"
+F 8 "50V" V 3850 5250 50  0000 L CNN "Voltage"
+F 9 "NP0" V 3950 5250 50  0000 L CNN "Dielectric"
+	1    3800 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Capacitor C11
+U 1 1 54A2B711
+P 3100 5150
+F 0 "C11" V 2950 5250 60  0000 L CNN
+F 1 "18pF" V 3050 5250 60  0000 L CNN
+F 2 "" H 3000 5150 60  0001 C CNN
+F 3 "" H 3100 5250 60  0001 C CNN
+F 4 "Samsung" H 3100 5150 60  0001 C CNN "Manufacturer"
+F 5 "CL10C180JB8NNNC" H 3100 5150 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 3100 5150 60  0001 C CNN "Vendor"
+F 7 "1276-1089-1-ND" H 3100 5150 60  0001 C CNN "Vendor Part #"
+F 8 "50V" V 3150 5250 50  0000 L CNN "Voltage"
+F 9 "NP0" V 3250 5250 50  0000 L CNN "Dielectric"
+	1    3100 5150
+	0    -1   1    0   
+$EndComp
+$Comp
+L Capacitor C6
+U 1 1 54A2BA1C
+P 1200 5150
+F 0 "C6" V 1050 5250 60  0000 L CNN
+F 1 "30pF" V 1150 5250 60  0000 L CNN
+F 2 "" H 1100 5150 60  0001 C CNN
+F 3 "" H 1200 5250 60  0001 C CNN
+F 4 "Samsung" H 1200 5150 60  0001 C CNN "Manufacturer"
+F 5 "CL10C300JB8NNNC" H 1200 5150 60  0001 C CNN "Manufacturer Part #"
+F 6 "Digikey" H 1200 5150 60  0001 C CNN "Vendor"
+F 7 "1276-1021-1-ND" H 1200 5150 60  0001 C CNN "Vendor Part #"
+F 8 "50V" V 1250 5250 50  0000 L CNN "Voltage"
+F 9 "NP0" V 1350 5250 50  0000 L CNN "Dielectric"
+	1    1200 5150
+	0    -1   1    0   
+$EndComp
 $EndSCHEMATC
