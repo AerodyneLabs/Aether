@@ -2,11 +2,11 @@
 
   (general
     (links 205)
-    (no_connects 205)
-    (area 106.063858 61.821 216.129001 126.029001)
+    (no_connects 191)
+    (area 109.949999 62.949999 195.050001 117.050001)
     (thickness 1.6)
     (drawings 4)
-    (tracks 0)
+    (tracks 41)
     (zones 0)
     (modules 85)
     (nets 110)
@@ -20,8 +20,8 @@
     (33 F.Adhes user)
     (34 B.Paste user)
     (35 F.Paste user)
-    (36 B.SilkS user)
-    (37 F.SilkS user)
+    (36 B.SilkS user hide)
+    (37 F.SilkS user hide)
     (38 B.Mask user)
     (39 F.Mask user)
     (40 Dwgs.User user)
@@ -37,11 +37,11 @@
   )
 
   (setup
-    (last_trace_width 0.254)
-    (trace_clearance 0.254)
+    (last_trace_width 0.2032)
+    (trace_clearance 0.1524)
     (zone_clearance 0.508)
     (zone_45_only no)
-    (trace_min 0.254)
+    (trace_min 0.1524)
     (segment_width 0.2)
     (edge_width 0.1)
     (via_size 0.889)
@@ -202,8 +202,8 @@
   (net 109 /Radio/VCO_EN)
 
   (net_class Default "This is the default net class."
-    (clearance 0.254)
-    (trace_width 0.254)
+    (clearance 0.1524)
+    (trace_width 0.2032)
     (via_dia 0.889)
     (via_drill 0.635)
     (uvia_dia 0.508)
@@ -718,7 +718,7 @@
     )
   )
 
-  (module Batteries:Batt_PL-703562-2C-Folded (layer F.Cu) (tedit 54A19C5C) (tstamp 54A1D544)
+  (module Batteries:Batt_PL-703562-2C-Folded locked (layer F.Cu) (tedit 54A19C5C) (tstamp 54A1D544)
     (at 125 90 90)
     (path /5499599B/549959FE)
     (fp_text reference B1 (at 0 -2.5 90) (layer F.SilkS) hide
@@ -767,12 +767,12 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D54A)
-    (at 120.5 124 270)
+    (at 136 122)
     (path /54979260/54979494)
-    (fp_text reference C5 (at 0 -1.5 270) (layer F.SilkS) hide
+    (fp_text reference C5 (at 0 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5 270) (layer F.SilkS) hide
+    (fp_text value 0.1uF (at 0 1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -787,9 +787,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 8 +3V3))
-    (pad 2 smd rect (at 0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC1608X90.wrl
       (at (xyz 0 0 0))
@@ -799,7 +799,7 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D550)
-    (at 139.5 112.5 270)
+    (at 149 131 270)
     (path /54979260/54A2BA1C)
     (fp_text reference C6 (at 0 -1.5 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -831,12 +831,12 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D556)
-    (at 122.5 124 270)
+    (at 132 131 90)
     (path /54979260/54A29763)
-    (fp_text reference C7 (at 0 -1.5 270) (layer F.SilkS) hide
+    (fp_text reference C7 (at 0 -1.5 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5 270) (layer F.SilkS) hide
+    (fp_text value 0.1uF (at 0 1.5 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -851,9 +851,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0 90) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 8 +3V3))
-    (pad 2 smd rect (at 0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0 90) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC1608X90.wrl
       (at (xyz 0 0 0))
@@ -863,7 +863,7 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D55C)
-    (at 139.5 108.5 90)
+    (at 149 126.5 90)
     (path /54979260/5497A3FB)
     (fp_text reference C8 (at 0 -1.5 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -895,12 +895,12 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D562)
-    (at 124.5 124 270)
+    (at 141 135 180)
     (path /54979260/54A297A8)
-    (fp_text reference C9 (at 0 -1.5 270) (layer F.SilkS) hide
+    (fp_text reference C9 (at 0 -1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1uF (at 0 1.5 270) (layer F.SilkS) hide
+    (fp_text value 0.1uF (at 0 1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -915,9 +915,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 8 +3V3))
-    (pad 2 smd rect (at 0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC1608X90.wrl
       (at (xyz 0 0 0))
@@ -927,12 +927,12 @@
   )
 
   (module Capacitors:CAPC2012N (layer F.Cu) (tedit 548F679E) (tstamp 54A1D568)
-    (at 127 124 270)
+    (at 152 124.5)
     (path /54979260/54A2C394)
-    (fp_text reference C10 (at 0 -1.75 270) (layer F.SilkS) hide
+    (fp_text reference C10 (at 0 -1.75) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10uF (at 0 1.75 270) (layer F.SilkS) hide
+    (fp_text value 10uF (at 0 1.75) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.1 0.8) (end -1.1 0.8) (layer F.SilkS) (width 0.15))
@@ -947,9 +947,9 @@
     (fp_line (start 1.7 -1) (end 1.7 1) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.7 1) (end -1.7 1) (layer F.CrtYd) (width 0.15))
     (fp_line (start -1.7 1) (end -1.7 -1) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.865 0 270) (size 1.1 1.38) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.865 0) (size 1.1 1.38) (layers F.Cu F.Paste F.Mask)
       (net 8 +3V3))
-    (pad 2 smd rect (at 0.865 0 270) (size 1.1 1.38) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.865 0) (size 1.1 1.38) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC2012X135.wrl
       (at (xyz 0 0 0))
@@ -959,12 +959,12 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D56E)
-    (at 149.5 114.5 270)
+    (at 145.5 133.5 180)
     (path /54979260/54A2B711)
-    (fp_text reference C11 (at 0 -1.5 270) (layer F.SilkS) hide
+    (fp_text reference C11 (at 0 -1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 18pF (at 0 1.5 270) (layer F.SilkS) hide
+    (fp_text value 18pF (at 0 1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -979,9 +979,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 11 /Microcontroller/SOSC_I))
-    (pad 2 smd rect (at 0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC1608X90.wrl
       (at (xyz 0 0 0))
@@ -990,8 +990,8 @@
     )
   )
 
-  (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D574)
-    (at 130 124 270)
+  (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1DE0D)
+    (at 147 126.5 270)
     (path /54979260/54A26E3E)
     (fp_text reference C12 (at 0 -1.5 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1022,8 +1022,8 @@
     )
   )
 
-  (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D57A)
-    (at 132 124 270)
+  (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1DE14)
+    (at 145 126.5 270)
     (path /54979260/54A297EC)
     (fp_text reference C13 (at 0 -1.5 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1055,12 +1055,12 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D580)
-    (at 149.5 110.5 90)
+    (at 149 133.5)
     (path /54979260/54A2B687)
-    (fp_text reference C14 (at 0 -1.5 90) (layer F.SilkS) hide
+    (fp_text reference C14 (at 0 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 18pF (at 0 1.5 90) (layer F.SilkS) hide
+    (fp_text value 18pF (at 0 1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -1075,9 +1075,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 90) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 13 /Microcontroller/SOSC_O))
-    (pad 2 smd rect (at 0.74 0 90) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC1608X90.wrl
       (at (xyz 0 0 0))
@@ -1087,12 +1087,12 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D586)
-    (at 136 124 90)
+    (at 141 137 180)
     (path /54979260/54A26F2A)
-    (fp_text reference C15 (at 0 -1.5 90) (layer F.SilkS) hide
+    (fp_text reference C15 (at 0 -1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1uF (at 0 1.5 90) (layer F.SilkS) hide
+    (fp_text value 1uF (at 0 1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -1107,9 +1107,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 90) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 14 /Microcontroller/VLCD))
-    (pad 2 smd rect (at 0.74 0 90) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC1608X90.wrl
       (at (xyz 0 0 0))
@@ -1119,7 +1119,7 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D58C)
-    (at 141 124 90)
+    (at 147 123 90)
     (path /54979260/54A2984D)
     (fp_text reference C16 (at 0 -1.5 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1343,7 +1343,7 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D5B6)
-    (at 172.5 88)
+    (at 184 82)
     (path /5498E0F8/549E0772)
     (fp_text reference C23 (at 0 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1407,12 +1407,12 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D5C2)
-    (at 178.5 89 270)
+    (at 187.5 84 180)
     (path /5498E0F8/549E0BD4)
-    (fp_text reference C25 (at 0 -1.5 270) (layer F.SilkS) hide
+    (fp_text reference C25 (at 0 -1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Capacitor (at 0 1.5 270) (layer F.SilkS) hide
+    (fp_text value Capacitor (at 0 1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -1427,9 +1427,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 24 "Net-(C25-Pad1)"))
-    (pad 2 smd rect (at 0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC1608X90.wrl
       (at (xyz 0 0 0))
@@ -1471,12 +1471,12 @@
   )
 
   (module Capacitors:CAPC1608N (layer F.Cu) (tedit 548F655D) (tstamp 54A1D5CE)
-    (at 183.5 89 270)
+    (at 187.5 88)
     (path /5498E0F8/549E0C41)
-    (fp_text reference C27 (at 0 -1.5 270) (layer F.SilkS) hide
+    (fp_text reference C27 (at 0 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Capacitor (at 0 1.5 270) (layer F.SilkS) hide
+    (fp_text value Capacitor (at 0 1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -1491,9 +1491,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 25 "Net-(C27-Pad1)"))
-    (pad 2 smd rect (at 0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Capacitors/CAPC1608X90.wrl
       (at (xyz 0 0 0))
@@ -1888,12 +1888,12 @@
   )
 
   (module Inductors:INDC1608N (layer F.Cu) (tedit 54949F5B) (tstamp 54A1D616)
-    (at 128.5 121)
+    (at 145 123 270)
     (path /54979260/5497E0C4)
-    (fp_text reference FB1 (at 0 -1.5) (layer F.SilkS) hide
+    (fp_text reference FB1 (at 0 -1.5 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Ferrite (at 0 1.5) (layer F.SilkS) hide
+    (fp_text value Ferrite (at 0 1.5 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -1908,9 +1908,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 8 +3V3))
-    (pad 2 smd rect (at 0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 12 /Microcontroller/VDDA))
     (model Inductors/INDC1608X90.wrl
       (at (xyz 0 0 0))
@@ -1951,14 +1951,14 @@
     )
   )
 
-  (module Connectors:Conn_Samtec-FTSH-105-D-K (layer F.Cu) (tedit 5498907F) (tstamp 54A1D62A)
-    (at 156 112.5)
+  (module Connectors:Conn_Samtec-FTSH-105-D-K (layer F.Cu) (tedit 54A1D27F) (tstamp 54A1D62A)
+    (at 157.5 126.5 270)
     (descr "0.05\" Header Vertical 2x5")
     (path /54979260/5497FD02)
-    (fp_text reference J1 (at 2.54 3.175) (layer F.SilkS)
+    (fp_text reference J1 (at 2.54 3.175 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Conn_Cortex-JTAG-10 (at 2.54 -4.445) (layer F.SilkS) hide
+    (fp_text value Conn_Cortex-JTAG-10 (at 2.54 -4.445 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.3 2) (end -0.75 2) (layer F.SilkS) (width 0.15))
@@ -1986,24 +1986,24 @@
     (fp_line (start -0.9 2.15) (end -0.9 -3.5) (layer F.CrtYd) (width 0.15))
     (fp_line (start -0.635 -2.355) (end -0.635 1.085) (layer F.Fab) (width 0.15))
     (fp_line (start 5.715 1.085) (end 5.715 -2.355) (layer F.Fab) (width 0.15))
-    (pad 1 thru_hole circle (at 0 0) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 1 thru_hole circle (at 0 0 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 8 +3V3))
-    (pad 2 thru_hole circle (at 0 -1.27) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 2 thru_hole circle (at 0 -1.27 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 36 /Microcontroller/SWDIO))
-    (pad 3 thru_hole circle (at 1.27 0) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 3 thru_hole circle (at 1.27 0 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 4 GND))
-    (pad 4 thru_hole circle (at 1.27 -1.27) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 4 thru_hole circle (at 1.27 -1.27 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 37 /Microcontroller/SWCLK))
-    (pad 5 thru_hole circle (at 2.54 0) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 5 thru_hole circle (at 2.54 0 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 4 GND))
-    (pad 6 thru_hole circle (at 2.54 -1.27) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 6 thru_hole circle (at 2.54 -1.27 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 38 "Net-(J1-Pad6)"))
-    (pad 7 thru_hole circle (at 3.81 0) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask))
-    (pad 8 thru_hole circle (at 3.81 -1.27) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 7 thru_hole circle (at 3.81 0 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask))
+    (pad 8 thru_hole circle (at 3.81 -1.27 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 39 "Net-(J1-Pad8)"))
-    (pad 9 thru_hole circle (at 5.08 0) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 9 thru_hole circle (at 5.08 0 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 4 GND))
-    (pad 10 thru_hole circle (at 5.08 -1.27) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
+    (pad 10 thru_hole circle (at 5.08 -1.27 270) (size 1.1 1.1) (drill 0.71) (layers *.Cu *.Mask)
       (net 15 /Microcontroller/~RST))
     (model Connectors/Conn_Samtec-FTSH-105-D-K.wrl
       (at (xyz 0 0 0))
@@ -2053,13 +2053,13 @@
       (net 43 "Net-(J2-Pad1)"))
   )
 
-  (module Connectors:Conn_RF_Linx-CONSMA003.031-L (layer F.Cu) (tedit 54A125C1) (tstamp 54A1D640)
+  (module Connectors:Conn_RF_Linx-CONSMA003.031-L (layer F.Cu) (tedit 54A1D5A8) (tstamp 54A1D640)
     (at 195 90)
     (path /5498E0F8/549E0CA0)
-    (fp_text reference J3 (at -6.25 0 90) (layer F.SilkS)
+    (fp_text reference J3 (at -6.25 0 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Conn_Coax (at -7.75 0 90) (layer F.SilkS)
+    (fp_text value Conn_Coax (at -7.75 0 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0 -0.375) (end -4.8 -0.375) (layer F.Fab) (width 0.15))
@@ -2154,7 +2154,7 @@
   )
 
   (module Inductors:INDC1608N (layer F.Cu) (tedit 54949F5B) (tstamp 54A1D652)
-    (at 176 88)
+    (at 187.5 82)
     (path /5498E0F8/549E0A43)
     (fp_text reference L4 (at 0 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -2186,12 +2186,12 @@
   )
 
   (module Inductors:INDC1608N (layer F.Cu) (tedit 54949F5B) (tstamp 54A1D658)
-    (at 181 88)
+    (at 187.5 86 180)
     (path /5498E0F8/549E0ABA)
-    (fp_text reference L5 (at 0 -1.5) (layer F.SilkS) hide
+    (fp_text reference L5 (at 0 -1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Inductor (at 0 1.5) (layer F.SilkS) hide
+    (fp_text value Inductor (at 0 1.5 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -2206,9 +2206,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 24 "Net-(C25-Pad1)"))
-    (pad 2 smd rect (at 0.74 0) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0 180) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 25 "Net-(C27-Pad1)"))
     (model Inductors/INDC1608X90.wrl
       (at (xyz 0 0 0))
@@ -2218,7 +2218,7 @@
   )
 
   (module Inductors:INDC1608N (layer F.Cu) (tedit 54949F5B) (tstamp 54A1D65E)
-    (at 186 88)
+    (at 187.5 90)
     (path /5498E0F8/549E0B6B)
     (fp_text reference L6 (at 0 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -2412,13 +2412,13 @@
     )
   )
 
-  (module Resistors:RESC1608N (layer F.Cu) (tedit 54949E62) (tstamp 54A1D683)
-    (at 138.5 124 90)
+  (module Resistors:RESC1608N (layer F.Cu) (tedit 54949E62) (tstamp 54A1E019)
+    (at 138.5 136 270)
     (path /54979260/54A257E7)
-    (fp_text reference R5 (at 0 -1.5 90) (layer F.SilkS) hide
+    (fp_text reference R5 (at 0 -1.5 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100k (at 0 1.5 90) (layer F.SilkS) hide
+    (fp_text value 100k (at 0 1.5 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 0.6) (end -0.9 0.6) (layer F.SilkS) (width 0.15))
@@ -2433,9 +2433,9 @@
     (fp_line (start -1.5 0.8) (end 1.5 0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 0.8) (end 1.5 -0.8) (layer F.CrtYd) (width 0.15))
     (fp_line (start 1.5 -0.8) (end -1.5 -0.8) (layer F.CrtYd) (width 0.15))
-    (pad 1 smd rect (at -0.74 0 90) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 47 /Microcontroller/BOOT))
-    (pad 2 smd rect (at 0.74 0 90) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.74 0 270) (size 0.95 0.93) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
     (model Resistors/RESC1608X55N.wrl
       (at (xyz 0 0 0))
@@ -2996,7 +2996,7 @@
   )
 
   (module QFP:QFP50P900X900-48N (layer F.Cu) (tedit 5490F4EB) (tstamp 54A1D723)
-    (at 130 110 90)
+    (at 138.5 128.5 90)
     (path /54979260/54979299)
     (fp_text reference U2 (at 0 -0.75 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -3207,7 +3207,7 @@
   )
 
   (module SOT:SOT65P220-6N (layer F.Cu) (tedit 54A0D0E2) (tstamp 54A1D74A)
-    (at 181.5 95)
+    (at 184 85)
     (path /5498E0F8/549DFC5F)
     (fp_text reference U4 (at 0 -2.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -3360,10 +3360,10 @@
     )
   )
 
-  (module Clocks:Crystal_Abracon-ABM3 (layer F.Cu) (tedit 549DA25D) (tstamp 54A1D776)
-    (at 142.5 110.5 90)
+  (module Clocks:Crystal_Abracon-ABM3 (layer F.Cu) (tedit 54A1D214) (tstamp 54A1DF8B)
+    (at 152 129 90)
     (path /54979260/5497A2E3)
-    (fp_text reference X1 (at 0 -3 90) (layer F.SilkS)
+    (fp_text reference X1 (at 0 -3 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 8MHz (at 0 3 90) (layer F.SilkS) hide
@@ -3394,13 +3394,13 @@
     )
   )
 
-  (module Clocks:Crystal_Abracon-ABS07 (layer F.Cu) (tedit 549DA81B) (tstamp 54A1D77C)
-    (at 152 112.5 90)
+  (module Clocks:Crystal_Abracon-ABS07 (layer F.Cu) (tedit 54A1D21A) (tstamp 54A1D77C)
+    (at 147.25 136)
     (path /54979260/5497A3B5)
-    (fp_text reference X2 (at 0 -2 90) (layer F.SilkS)
+    (fp_text reference X2 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 32.768kHz (at 0 2 90) (layer F.SilkS) hide
+    (fp_text value 32.768kHz (at 0 2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.6 1.05) (end -1.6 1.05) (layer F.SilkS) (width 0.15))
@@ -3413,9 +3413,9 @@
     (fp_line (start 1.6 -0.75) (end 1.6 0.75) (layer F.Fab) (width 0.15))
     (fp_line (start 1.6 0.75) (end -1.6 0.75) (layer F.Fab) (width 0.15))
     (fp_line (start -1.6 0.75) (end -1.6 -0.75) (layer F.Fab) (width 0.15))
-    (pad 1 smd rect (at -1.25 0 90) (size 1.1 1.9) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -1.25 0) (size 1.1 1.9) (layers F.Cu F.Paste F.Mask)
       (net 11 /Microcontroller/SOSC_I))
-    (pad 2 smd rect (at 1.25 0 90) (size 1.1 1.9) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 1.25 0) (size 1.1 1.9) (layers F.Cu F.Paste F.Mask)
       (net 13 /Microcontroller/SOSC_O))
     (model Clocks/Crystal_Abracon-ABS07.wrl
       (at (xyz 0 0 0))
@@ -3466,5 +3466,47 @@
   (gr_line (start 110 63) (end 195 63) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 195 117) (end 195 63) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 110 63) (end 110 117) (angle 90) (layer Edge.Cuts) (width 0.1))
+
+  (segment (start 145 127.24) (end 147 127.24) (width 0.2032) (layer F.Cu) (net 4))
+  (segment (start 142.68 127.75) (end 144 127.75) (width 0.2032) (layer F.Cu) (net 4))
+  (segment (start 144.51 127.24) (end 145 127.24) (width 0.2032) (layer F.Cu) (net 4) (tstamp 54A1DE5B))
+  (segment (start 144 127.75) (end 144.51 127.24) (width 0.2032) (layer F.Cu) (net 4) (tstamp 54A1DE5A))
+  (segment (start 149 129.25) (end 151.25 129.25) (width 0.2032) (layer F.Cu) (net 9) (tstamp 54A1DE6C))
+  (segment (start 152 130) (end 152 131.05) (width 0.2032) (layer F.Cu) (net 9) (tstamp 54A1DDEF))
+  (segment (start 151.25 129.25) (end 152 130) (width 0.2032) (layer F.Cu) (net 9) (tstamp 54A1DDEE))
+  (segment (start 149 129.25) (end 149 130.26) (width 0.2032) (layer F.Cu) (net 9))
+  (segment (start 142.68 129.25) (end 149 129.25) (width 0.2032) (layer F.Cu) (net 9))
+  (segment (start 149 128.75) (end 151.25 128.75) (width 0.2032) (layer F.Cu) (net 10) (tstamp 54A1DE68))
+  (segment (start 152 128) (end 152 126.95) (width 0.2032) (layer F.Cu) (net 10) (tstamp 54A1DDEB))
+  (segment (start 151.25 128.75) (end 152 128) (width 0.2032) (layer F.Cu) (net 10) (tstamp 54A1DDEA))
+  (segment (start 149 128.75) (end 149 127.24) (width 0.2032) (layer F.Cu) (net 10))
+  (segment (start 142.68 128.75) (end 149 128.75) (width 0.2032) (layer F.Cu) (net 10))
+  (segment (start 146.24 134.26) (end 146 134.5) (width 0.2032) (layer F.Cu) (net 11))
+  (segment (start 146 134.5) (end 146 136) (width 0.2032) (layer F.Cu) (net 11))
+  (segment (start 146.24 133.5) (end 146.24 134.26) (width 0.2032) (layer F.Cu) (net 11))
+  (segment (start 144.75 130.25) (end 146.24 131.74) (width 0.2032) (layer F.Cu) (net 11))
+  (segment (start 146.24 131.74) (end 146.24 133.5) (width 0.2032) (layer F.Cu) (net 11))
+  (segment (start 142.68 130.25) (end 144.75 130.25) (width 0.2032) (layer F.Cu) (net 11))
+  (segment (start 145 123.74) (end 145 125.76) (width 0.2032) (layer F.Cu) (net 12))
+  (segment (start 145 125.76) (end 147 125.76) (width 0.2032) (layer F.Cu) (net 12))
+  (segment (start 145 125.76) (end 144.24 125.76) (width 0.2032) (layer F.Cu) (net 12))
+  (segment (start 143.75 127.25) (end 144 127) (width 0.2032) (layer F.Cu) (net 12) (tstamp 54A1DE57))
+  (segment (start 143.75 127.25) (end 142.68 127.25) (width 0.2032) (layer F.Cu) (net 12))
+  (segment (start 144 126) (end 144 127) (width 0.2032) (layer F.Cu) (net 12) (tstamp 54A1DE61))
+  (segment (start 144.24 125.76) (end 144 126) (width 0.2032) (layer F.Cu) (net 12) (tstamp 54A1DE60))
+  (segment (start 148.26 134.26) (end 148.5 134.5) (width 0.2032) (layer F.Cu) (net 13))
+  (segment (start 148.5 134.5) (end 148.5 136) (width 0.2032) (layer F.Cu) (net 13))
+  (segment (start 148.26 133.5) (end 148.26 134.26) (width 0.2032) (layer F.Cu) (net 13))
+  (segment (start 142.68 129.75) (end 145.1782 129.75) (width 0.2032) (layer F.Cu) (net 13))
+  (segment (start 145.1782 129.75) (end 148.26 132.8318) (width 0.2032) (layer F.Cu) (net 13))
+  (segment (start 148.26 132.8318) (end 148.26 133.5) (width 0.2032) (layer F.Cu) (net 13))
+  (segment (start 142.68 131.25) (end 143.75 131.25) (width 0.2032) (layer F.Cu) (net 14))
+  (segment (start 144 131.5) (end 144 132) (width 0.2032) (layer F.Cu) (net 14) (tstamp 54A1DFC6))
+  (segment (start 143.75 131.25) (end 144 131.5) (width 0.2032) (layer F.Cu) (net 14) (tstamp 54A1DFC5))
+  (segment (start 142.68 128.25) (end 147.75 128.25) (width 0.2032) (layer F.Cu) (net 15))
+  (segment (start 147.74 123.74) (end 147 123.74) (width 0.2032) (layer F.Cu) (net 15) (tstamp 54A1DE4E))
+  (segment (start 148 124) (end 147.74 123.74) (width 0.2032) (layer F.Cu) (net 15) (tstamp 54A1DE4D))
+  (segment (start 148 128) (end 148 124) (width 0.2032) (layer F.Cu) (net 15) (tstamp 54A1DE4C))
+  (segment (start 147.75 128.25) (end 148 128) (width 0.2032) (layer F.Cu) (net 15) (tstamp 54A1DE4B))
 
 )
