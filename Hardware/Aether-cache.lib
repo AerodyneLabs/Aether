@@ -272,6 +272,7 @@ F9 "I" 150 100 60 V V L CNN "Current"
 F10 "Vr" 0 -100 60 H I C CNN "Reverse Voltage"
 $FPLIST
  DIO*
+ SOD*
 $ENDFPLIST
 DRAW
 P 2 0 1 0  50 50  50 -50 N
