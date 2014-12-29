@@ -1,0 +1,626 @@
+Cmp-Mod V01 Created by Cvpcb (2014-12-20 BZR 5331)-product   date = 12/29/2014 3:12:37 PM
+
+BeginCmp
+TimeStamp = /54974AC7/54975AB2;
+Reference = AE1;
+ValeurCmp = Antenna-Balanced;
+IdModule  = Custom:Antenna_Proant-AB-430;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549959FE;
+Reference = B1;
+ValeurCmp = 3.7V;
+IdModule  = Batteries:Batt_PL-703562-2C-Folded;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/54974DDA;
+Reference = C1;
+ValeurCmp = 1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/549DF66D;
+Reference = C2;
+ValeurCmp = 1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/54975D11;
+Reference = C3;
+ValeurCmp = DNP;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/54975B4B;
+Reference = C4;
+ValeurCmp = 1.8pF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54979494;
+Reference = C5;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A2BA1C;
+Reference = C6;
+ValeurCmp = 30pF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A29763;
+Reference = C7;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/5497A3FB;
+Reference = C8;
+ValeurCmp = 30pF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A297A8;
+Reference = C9;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A2C394;
+Reference = C10;
+ValeurCmp = 10uF;
+IdModule  = Capacitors:CAPC2012N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A2B711;
+Reference = C11;
+ValeurCmp = 18pF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A26E3E;
+Reference = C12;
+ValeurCmp = 1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A297EC;
+Reference = C13;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A2B687;
+Reference = C14;
+ValeurCmp = 18pF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A26F2A;
+Reference = C15;
+ValeurCmp = 1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A2984D;
+Reference = C16;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/5498F686;
+Reference = C17;
+ValeurCmp = Capacitor;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/5498F6F3;
+Reference = C18;
+ValeurCmp = Capacitor;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549E013B;
+Reference = C19;
+ValeurCmp = 470pF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/54A29CEB;
+Reference = C20;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/54A2A9C3;
+Reference = C21;
+ValeurCmp = 1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/54A29C62;
+Reference = C22;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549E0772;
+Reference = C23;
+ValeurCmp = 470pF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549DD1F3;
+Reference = C24;
+ValeurCmp = 0.01uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549E0BD4;
+Reference = C25;
+ValeurCmp = Capacitor;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/54A29D58;
+Reference = C26;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549E0C41;
+Reference = C27;
+ValeurCmp = Capacitor;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549DC89B;
+Reference = C28;
+ValeurCmp = 0.01uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A22F1D;
+Reference = C29;
+ValeurCmp = 4.7uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A2A2B;
+Reference = C30;
+ValeurCmp = Capacitor;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54996653;
+Reference = C31;
+ValeurCmp = 4.7uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A42EF;
+Reference = C32;
+ValeurCmp = 18pF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A4356;
+Reference = C33;
+ValeurCmp = 10uF;
+IdModule  = Capacitors:CAPC2012N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A22002;
+Reference = C34;
+ValeurCmp = 4.7uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A22D2F;
+Reference = C35;
+ValeurCmp = 4.7uF;
+IdModule  = Capacitors:CAPC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A1A4D6;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LEDs:LEDC2012N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A1A544;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LEDs:LEDC2012N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A273F;
+Reference = D3;
+ValeurCmp = MBR120ESFT1G;
+IdModule  = Diodes:SODFL3616N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/5497E0C4;
+Reference = FB1;
+ValeurCmp = Ferrite;
+IdModule  = Inductors:INDC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/5498E323;
+Reference = FB2;
+ValeurCmp = Ferrite;
+IdModule  = Inductors:INDC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/5497FD02;
+Reference = J1;
+ValeurCmp = Conn_Cortex-JTAG-10;
+IdModule  = Connectors:Conn_Samtec-FTSH-105-D-K;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/5499156A;
+Reference = J2;
+ValeurCmp = Conn_USB-Mini;
+IdModule  = Connectors:Conn_USB-Mini-690-005-299-043;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549E0CA0;
+Reference = J3;
+ValeurCmp = Conn_Coax;
+IdModule  = Connectors:Conn_RF_Linx-CONSMA003.031-L;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A24AE;
+Reference = J4;
+ValeurCmp = Solar-;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A2958;
+Reference = J5;
+ValeurCmp = Conn-1;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A2896;
+Reference = J6;
+ValeurCmp = Conn-1;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A2427;
+Reference = J7;
+ValeurCmp = Solar+;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/549DEA5D;
+Reference = L1;
+ValeurCmp = 3.3nH;
+IdModule  = Inductors:INDC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/5498F57C;
+Reference = L2;
+ValeurCmp = Inductor;
+IdModule  = Inductors:INDC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/5498F615;
+Reference = L3;
+ValeurCmp = Inductor;
+IdModule  = Inductors:INDC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549E0A43;
+Reference = L4;
+ValeurCmp = Inductor;
+IdModule  = Inductors:INDC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549E0ABA;
+Reference = L5;
+ValeurCmp = Inductor;
+IdModule  = Inductors:INDC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549E0B6B;
+Reference = L6;
+ValeurCmp = Inductor;
+IdModule  = Inductors:INDC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A41CA;
+Reference = L7;
+ValeurCmp = 2.2uH;
+IdModule  = Inductors:INDC2012N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/549916BA;
+Reference = PTC1;
+ValeurCmp = PTC;
+IdModule  = Resistors:RESC2012N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/549758A2;
+Reference = Q1;
+ValeurCmp = BSS84;
+IdModule  = SOT:SOT95P240-3N-GSD;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/54974E0A;
+Reference = R1;
+ValeurCmp = 36k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/549752E0;
+Reference = R2;
+ValeurCmp = 0;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A1A58D;
+Reference = R3;
+ValeurCmp = Resistor;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A1A5F4;
+Reference = R4;
+ValeurCmp = Resistor;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54A257E7;
+Reference = R5;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549DD250;
+Reference = R6;
+ValeurCmp = 160;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/54A25CB1;
+Reference = R7;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/54A25AF9;
+Reference = R8;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A33F6;
+Reference = R9;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A1DDEB;
+Reference = R10;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549966E9;
+Reference = R11;
+ValeurCmp = 270k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A422F;
+Reference = R12;
+ValeurCmp = 453k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A217DA;
+Reference = R13;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A1DEBA;
+Reference = R14;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A1DFC9;
+Reference = R15;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54995E00;
+Reference = R16;
+ValeurCmp = 2k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54995F06;
+Reference = R17;
+ValeurCmp = Resistor;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54996097;
+Reference = R18;
+ValeurCmp = Resistor;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A1EDA4;
+Reference = R19;
+ValeurCmp = 36k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/54A1E9A8;
+Reference = R20;
+ValeurCmp = 100k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/5499EE33;
+Reference = RT1;
+ValeurCmp = 10k;
+IdModule  = Resistors:RESC1608N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A5C86;
+Reference = SW1;
+ValeurCmp = DPDT;
+IdModule  = Switches:SW_CK-JS202011SCQN;
+EndCmp
+
+BeginCmp
+TimeStamp = /54974AC7/54974AFE;
+Reference = U1;
+ValeurCmp = Venus838LPx-L;
+IdModule  = Custom:Sensor_Venus838;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/54979299;
+Reference = U2;
+ValeurCmp = STM32L151CBT;
+IdModule  = QFP:QFP50P900X900-48N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/5498E20F;
+Reference = U3;
+ValeurCmp = Si4464;
+IdModule  = QFN:QFN50P400X400-21T275X275N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549DFC5F;
+Reference = U4;
+ValeurCmp = AS213;
+IdModule  = SOT:SOT65P220-6N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549A4164;
+Reference = U5;
+ValeurCmp = NCP1521;
+IdModule  = SOT:SOT95P275-5L40N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5499599B/549959DA;
+Reference = U6;
+ValeurCmp = MCP73871;
+IdModule  = QFN:QFN50P400X400-21T280X280N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/5497A2E3;
+Reference = X1;
+ValeurCmp = 8MHz;
+IdModule  = Clocks:Crystal_Abracon-ABM3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54979260/5497A3B5;
+Reference = X2;
+ValeurCmp = 32.768kHz;
+IdModule  = Clocks:Crystal_Abracon-ABS07;
+EndCmp
+
+BeginCmp
+TimeStamp = /5498E0F8/549DAB2F;
+Reference = X3;
+ValeurCmp = 27MHz;
+IdModule  = Clocks:Osc_CTS-357;
+EndCmp
+
+EndListe
