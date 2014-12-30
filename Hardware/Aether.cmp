@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-12-20 BZR 5331)-product   date = 12/29/2014 3:12:37 PM
+Cmp-Mod V01 Created by Cvpcb (2014-12-08 BZR 5318)-product   date = 12/29/2014 8:07:11 PM
 
 BeginCmp
 TimeStamp = /54974AC7/54975AB2;
@@ -85,13 +85,6 @@ IdModule  = Capacitors:CAPC2012N;
 EndCmp
 
 BeginCmp
-TimeStamp = /54979260/54A2B711;
-Reference = C11;
-ValeurCmp = 18pF;
-IdModule  = Capacitors:CAPC1608N;
-EndCmp
-
-BeginCmp
 TimeStamp = /54979260/54A26E3E;
 Reference = C12;
 ValeurCmp = 1uF;
@@ -102,13 +95,6 @@ BeginCmp
 TimeStamp = /54979260/54A297EC;
 Reference = C13;
 ValeurCmp = 0.1uF;
-IdModule  = Capacitors:CAPC1608N;
-EndCmp
-
-BeginCmp
-TimeStamp = /54979260/54A2B687;
-Reference = C14;
-ValeurCmp = 18pF;
 IdModule  = Capacitors:CAPC1608N;
 EndCmp
 
@@ -607,13 +593,6 @@ TimeStamp = /54979260/5497A2E3;
 Reference = X1;
 ValeurCmp = 8MHz;
 IdModule  = Clocks:Crystal_Abracon-ABM3;
-EndCmp
-
-BeginCmp
-TimeStamp = /54979260/5497A3B5;
-Reference = X2;
-ValeurCmp = 32.768kHz;
-IdModule  = Clocks:Crystal_Abracon-ABS07;
 EndCmp
 
 BeginCmp
