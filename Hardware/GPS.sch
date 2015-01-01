@@ -200,7 +200,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 3200 6500 4500
 Wire Wire Line
-	6500 4400 6400 4400
+	6400 4400 6600 4400
 Wire Wire Line
 	6400 3300 6500 3300
 Connection ~ 6500 3300
@@ -341,13 +341,13 @@ F 9 "~" V 7350 3550 50  0000 L CNN "Dielectric"
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	7200 3200 7200 3100
+	7200 3000 7200 3200
 Wire Wire Line
 	6400 3100 7300 3100
 Wire Wire Line
 	7800 3100 8500 3100
 Wire Wire Line
-	7900 3100 7900 3200
+	7900 3000 7900 3200
 Wire Wire Line
 	7200 3800 7200 3700
 Wire Wire Line
@@ -400,4 +400,10 @@ F 9 "X7R" V 3850 3950 50  0000 L CNN "Dielectric"
 	1    3700 3850
 	0    1    1    0   
 $EndComp
+Text Label 7200 3000 2    60   ~ 0
+GPS1
+Text Label 7900 3000 0    60   ~ 0
+GPS2
+Text Label 6600 4400 0    60   ~ 0
+GND_RF
 $EndSCHEMATC
